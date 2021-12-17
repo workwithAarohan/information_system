@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
+    <link href="{{ asset('/css/app.js')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -87,22 +88,37 @@
 
     
     <div class="container mt-5" >
+
+    <style>
+        @yield('style')
+    </style>
+</head>
+<body >
+
+    <div class="container mb-5" >
+
         <div class="row">
             <div class="col-md-2">
-          
+
       <img src="{{ asset('/image/logo.png')}}" alt="logo" style="width:6em; height:6em;">
 </div>
 
-   
-        
+
+
 
 
             <div class="col-md-3">
+
            
                   <p style="text-transform: uppercase;">Government of Nepal</p> 
       <p>Ministry of Federal Affairs and General Administration</p>  <h5>Rastriya Kitabkhana (Nijamati)
 
 </h5>
+
+
+                  <p>Government of Nepal</p>
+      <p>Ministry of Federal Affairs and General<br>Administration<br>  Rastriya Kitabkhana (Nijamati)</p>
+
 
 </div>
 
@@ -116,13 +132,13 @@
 
 </div>
 
-       
-     
-     
-    
-      
+
+
+
+
+
       </div>
-        
+
       </div>
 
 
@@ -156,7 +172,7 @@
 
     <div class="main">
         @yield('content')
-      
+
     </div>
     <div class="footer">
     @include('layouts.footer')
