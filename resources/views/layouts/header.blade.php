@@ -55,31 +55,10 @@
   </button>
 </div>
 
-<span></span>
-
 </div>
 
 </div>
 
-    <!-- <div class="col-md-2">
-      <span>
-      <i class="fas fa-envelope-square"></i>
-      info@pis.gov.np
-      </span>
-    </div> -->
-
-<!-- 
-    <div class="col-md-1">
-      <span>
-      <i class="far fa-clock"></i>  
-      12:07 PM</span>
-    </div>
-   
-    <div class="col-md-3">
-      <span>
-      <i class="fas fa-phone-alt"></i> 
-      01-5010138,01-5428975</span>
-    </div> -->
     
     
    </div>
@@ -115,9 +94,6 @@
 
 </h5>
 
-
-                  <p>Government of Nepal</p>
-      <p>Ministry of Federal Affairs and General<br>Administration<br>  Rastriya Kitabkhana (Nijamati)</p>
 
 
 </div>
@@ -166,6 +142,27 @@
   <a href="#news">News and Notices</a>
   <a href="#download">Downloads</a>
   <a href="#gallery">Gallery</a>
+</div>
+
+
+
+<div class="row">
+<div class="col-md-1 ">
+
+<i class="fas fa-bell fa-2x "></i>
+</div>
+
+
+<div class="col-md-9">
+<marquee vspace="2%" hspace="5%" behavior="" direction="left"> 
+<span ><b>Pis update campaign &nbsp;&nbsp;&nbsp; |Pis update campaign 8 &nbsp;&nbsp;&nbsp;|Pis update campaign 7 &nbsp;&nbsp;&nbsp;|Pis update campaign 6 &nbsp;&nbsp;&nbsp;|Pis update 5 </b> </span>
+</marquee>
+</div>
+
+
+
+
+
 </div>
 
 
