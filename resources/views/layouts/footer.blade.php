@@ -2,6 +2,148 @@
 <footer class="page-footer font-small indigo">
 
 <!-- Footer Links -->
+<head>
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-2 mx-auto border bg-light">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Details</h5>
+
+            <div class="icons">
+                        <div class="row mb-2">
+                            <div class="info d-flex" style="width:250px; justify-content:center;">
+                            <span class="fas fa-building fa-2x"></span>
+                            <p>Rastriya Kitabkhana (Nijamati), 
+                            Hariharbhawan, Lalitpur</p>
+                            </div>
+                        </div>
+                        
+
+                        <div class="row mb-2">
+                            
+                            <div class="info d-flex" style="width:250px">
+                            <span class="fas fa-phone-square-alt fa-2x"></span>
+                            <p>01-5555555, 01-5544444</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-2">
+                            <div class="info d-flex">
+                            <span class="fas fa-print fa-2x"></span>
+                            <p>+977 01 501027
+                                
+                            </div>
+                        </div>
+                            
+                        <div class="row mb-2">
+                            <div class="info d-flex">
+                            <span class="fas fa-envelope fa-2x"></span>
+                                <p>info@pis.gov.np</p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="info d-flex">
+                            <span class="fas fa-calendar-day fa-2x"></span>
+                                <p>Sunday-Thursday <br>10:00 AM - 5:00 PM <br>Friday<br>10:00 AM - 3:00 PM</p>                            
+                            </div>
+                        </div>
+                    </div>
+
+        </div>
+    
+        <div class="col-md-4 mt-2 mx-auto border bg-light">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Quick Messages</h5>
+               
+            <section class="mb-4">
+
+
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-9 mb-md-0 mb-5">
+                            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                            <div class="row">
+                                    <div class="col-md-12 mb-2">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Full Name">
+                        
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Grid row-->
+                                <div class="row">
+                                    <div class="col-md-12 mb-2">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Email Address">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Grid row-->
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-2">
+                                        <div class="md-form mb-0">
+                                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Contact Number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-md-12">
+
+                                        <div class="md-form">
+                                            <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea" placeholder="Message"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--Grid row-->
+
+                            </form>
+
+                            <!-- <div class="text-center text-md-left">
+                                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                            </div>
+                            <div class="status"></div> -->
+                        </div>
+                        <!--Grid column-->
+
+
+
+                    </div>
+
+                    </section>
+
+        </div>
+
+        <div class="col-md-4 mt-2 mx-auto border bg-light">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Find us on Google Map</h5>
+
+            
+                <div class="maps">
+
+                <h3 class="white-text fw-bold h3 underline-after mt-0 mb-0">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187465.93559137217!2d85.31420882126321!3d27.654246241522625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cac860f791%3A0x3febbc6f094e83b8!2sDepartment%20of%20Civil%20Personnel%20Records!5e0!3m2!1sen!2snp!4v1639729047243!5m2!1sen!2snp" width="425" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </h3>
+                
+                </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
 <div class="container text-center text-md-left">
 
   <!-- Grid row -->
@@ -22,7 +164,7 @@
       <!-- Links -->
       <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Useful Links</h5>
 
-      <ul class="pl-0">
+        <ul class="pl-0">
                                         <li class="mb-1"> <a href="http://www.mofaga.gov.np">
                                             <!-- सङ्घीय मामिला तथा सामान्य प्रशासन मन्त्रालय -->
                                             Ministry of Federal Affairs & General Administration
@@ -39,7 +181,7 @@
                                             <!-- राष्ट्रिय किताबखाना (प्रहरी) -->
                                             Rastriya Kitabkhana (Police)
                                         </a></li>
-                                </ul>
+        </ul>
 
     </div>
 
@@ -57,7 +199,7 @@
                                             Ministry of Federal Affairs & General Administration
                                             <!-- सङ्घीय मामिला तथा सामान्य प्रशासन मन्त्रालय -->
 
-                                        </a></li>
+                                    </a></li>
                                     
                                     <li class="mb-1"> <a href="https://www.moha.gov.np/">
                                             <svg style="width: 15px;" xmlns="http://www.w3.org/2000/svg" width="13.089" height="13.089" viewBox="0 0 13.089 13.089">
@@ -65,14 +207,12 @@
                                             </svg>
                                             Ministry of Home Affairs
                                             <!-- गृह मन्त्रालय -->  
-                                        </a></li>
+                                    </a></li>
                                     
                                 </ul>
 
     </div>
     <!-- Grid column -->
-
-    <hr class="clearfix w-100 d-md-none">
 
     <!-- Grid column -->
     <div class="col-md-3 mx-auto">
@@ -89,9 +229,8 @@
 </div>
 <!-- Footer Links -->
 
-                <div class="row p-3" >
-                        
-                            
+                <div class="row p-3 bg-light" >
+
                                 <div class="col-12 col-sm-3">
                                     <p class="mb-0" style="line-height: 30px;">
                                         copyright © 2021 –
@@ -130,4 +269,3 @@
                 </div>
 
 </footer>
-<!-- Footer -->
