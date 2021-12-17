@@ -10,11 +10,64 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 mt-2 mx-auto border bg-light">
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Details</h5>
 
-            <div class="icons">
+            <p class="font-weight-bold text-uppercase mt-3 mb-4 underline">Contact Details</p>
+
+            <table>
+                <tr>
+                    <td  style="align:center">
+                        <span class="fas fa-building fa-2x"></span>
+                    </td>
+                    <td >
+                    <p>Rastriya Kitabkhana (Nijamati),<br>
+                        Hariharbhawan, Lalitpur
+                            </p>
+                    </td>
+                </tr>
+
+                <tr>
+                <td  style="align:center; width: 40px;">
+                        <span class="fas fa-phone-square-alt fa-2x"></span>
+                    </td>
+                    <td >
+                    <p>01-5555555, 01-5544444</p>
+                    </td>
+                </tr>
+
+                <tr>
+                <td  style="align:center; width: 40px;">
+                        <span class="fas fa-print fa-2x"></span>
+                    </td>
+                    <td >
+                    <p>+977 01 501027 </p>
+                    </td>
+                </tr>
+
+                <tr>
+                <td>
+                        <span class="fas fa-envelope fa-2x"></span>
+                    </td>
+                    <td >
+                        <p>info@pis.gov.np</p>
+                    </td>
+                </tr>
+
+                <tr>
+                <td  style="align:center; width: 40px;">
+                        <span class="fas fa-calendar-day fa-2x"></span>
+                    </td>
+                    <td >
+                        <p>Sunday-Thursday <br>10:00 AM - 5:00 PM<br>
+                        Friday<br>10:00 AM - 3:00 PM</p> 
+                    </td>
+                </tr>
+
+
+            </table>
+
+           <!--  <div class="icons">
                         <div class="row mb-2">
-                            <div class="info d-flex" style="width:250px; justify-content:center;">
+                            <div class="info d-flex">
                             <span class="fas fa-building fa-2x"></span>
                             <p>Rastriya Kitabkhana (Nijamati), 
                             Hariharbhawan, Lalitpur</p>
@@ -24,7 +77,7 @@
 
                         <div class="row mb-2">
                             
-                            <div class="info d-flex" style="width:250px">
+                            <div class="info d-flex" >
                             <span class="fas fa-phone-square-alt fa-2x"></span>
                             <p>01-5555555, 01-5544444</p>
                             </div>
@@ -33,7 +86,7 @@
                         <div class="row mb-2">
                             <div class="info d-flex">
                             <span class="fas fa-print fa-2x"></span>
-                            <p>+977 01 501027
+                            <p>+977 01 501027 </p>
                                 
                             </div>
                         </div>
@@ -51,7 +104,7 @@
                                 <p>Sunday-Thursday <br>10:00 AM - 5:00 PM <br>Friday<br>10:00 AM - 3:00 PM</p>                            
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
         </div>
     
@@ -99,7 +152,7 @@
                                 <div class="row">
 
                                     <!--Grid column-->
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 mb-4">
 
                                         <div class="md-form">
                                             <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea" placeholder="Message"></textarea>
@@ -108,6 +161,27 @@
                                     </div>
                                 </div>
                                 <!--Grid row-->
+
+                                <div id="recaptcha-service" class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcDtIAbAAAAADYuge2RUyCpj0ZM82wu8ogrR1AJ">
+                                    <div style="width: 304px; height: 78px;">
+                                        <div>
+                                            <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcDtIAbAAAAADYuge2RUyCpj0ZM82wu8ogrR1AJ&amp;co=aHR0cHM6Ly9uaWphbWF0aS5waXMuZ292Lm5wOjQ0Mw..&amp;hl=en&amp;v=VZKEDW9wslPbEc9RmzMqaOAP&amp;size=normal&amp;cb=re7njb10pdlq" width="304" height="78" role="presentation" name="a-kfa4ylqvquxm" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox">
+
+                                            </iframe>
+                                        </div>
+                                        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;">
+                                        </textarea>
+                                    </div>
+                                        <iframe style="display: none;">
+
+                                        </iframe>
+
+                                        
+                                </div>
+
+                                <button class="btn btn-primary fw800 px-2 mt-2">
+                                    Send Messages
+                                </button>
 
                             </form>
 

@@ -1,0 +1,27 @@
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.underline::after {
+    content: "";
+    display: block;
+    width: 40px;
+    padding-top: 0px;
+    border-bottom: 5px solid rgb(0, 51, 128);
+}     
+
+
+.icons {
+    justify-content: space-around;
+}
+.btn {
+    height: 40px
+px
+;
+    line-height: 25px;
+}
+
+
+
+
