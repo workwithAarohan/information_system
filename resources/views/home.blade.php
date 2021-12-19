@@ -29,6 +29,22 @@
         box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
         border-radius: 8px;
     }
+
+    button i
+        {
+            color: rgb(156, 156, 156);
+        }
+
+        .sticky
+        {
+            position: fixed;
+            top: 200px;
+            left: 10px;
+            background: white;
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: 50px;
+        }
 @endsection
 
 @section('content')
@@ -97,6 +113,26 @@
 
             </div>
         </div>
+
+        <div class="btn-group-vertical sticky">
+            <button type="button" class="btn" style="border-bottom: 1px solid grey;">
+                <i class="fas fa-map-marker-alt"></i>
+            </button>
+            <button type="button" class="btn">
+                <i class="fas fa-envelope"></i>
+            </button>
+            <button type="button" class="btn">
+                <i class="fas fa-envelope"></i>
+            </button>
+            <button type="button" class="btn">
+                <i class="fas fa-link"></i>
+            </button>
+            <button type="button" class="btn">
+                <i ><img src="{{ asset('image/nepal-flag.gif') }}" style="width: 20px;"></i>
+            </button>
+
+        </div>
+
         <div class="row mt-4" style="height: 300px; column-gap: 12px;">
             <div class="col-md-5 p-2">
                 <img src="{{ asset('image/screen.png') }}" alt="" style="width: 100%;">
@@ -115,6 +151,8 @@
                 <h4 class="heading">Home</h4>
                 <hr class="line">
             </div>
+
+
 
             <div class="col-md-9 column">
                 <div class="row p-4">

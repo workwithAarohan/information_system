@@ -29,3 +29,6 @@ Route::get('/test', function() {
 Route::get('/drop', function() {
     return view(' layouts.dropdown');
 });
+Route::get('/testing', function() {
+    return view('testing');
+});
