@@ -26,7 +26,17 @@ Route::get('/test', function() {
     return view('test');
 });
 
+
 Route::get('/slideshow', function() {
     return view('slideshow');
+});
+
+
+Route::get('/testing', function() {
+    return view('testing');
+});
+
+Route::get('/example', function() {
+    return view('example');
 });
 
