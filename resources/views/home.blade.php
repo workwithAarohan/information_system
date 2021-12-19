@@ -31,20 +31,26 @@
     }
 
     button i
-        {
-            color: rgb(156, 156, 156);
-        }
+    {
+        color: #b1aeae;
+        padding: 10px 0;
+    }
 
-        .sticky
-        {
-            position: fixed;
-            top: 200px;
-            left: 10px;
-            background: white;
-            border: 1px solid grey;
-            border-radius: 10px;
-            width: 50px;
-        }
+    button i:hover
+    {
+        color: #005FCB;
+    }
+
+    .sticky
+    {
+        position: fixed;
+        top: 150px;
+        left: 10px;
+        background: white;
+        border: 1px solid #b1aeae;
+        border-radius: 8px;
+        width: 40px;
+    }
 @endsection
 
 @section('content')
@@ -115,20 +121,20 @@
         </div>
 
         <div class="btn-group-vertical sticky">
-            <button type="button" class="btn" style="border-bottom: 1px solid grey;">
+            <button type="button" class="btn" title="View Location" style="border-bottom: 1px solid #b1aeae;">
                 <i class="fas fa-map-marker-alt"></i>
             </button>
-            <button type="button" class="btn">
+            <button type="button" class="btn" title="Check Email" style="border-bottom: 1px solid #b1aeae;">
                 <i class="fas fa-envelope"></i>
             </button>
-            <button type="button" class="btn">
-                <i class="fas fa-envelope"></i>
+            <button type="button" class="btn" title="Archive" style="border-bottom: 1px solid #b1aeae;">
+                <i class="fas fa-archive"></i>
             </button>
-            <button type="button" class="btn">
+            <button type="button" class="btn" title="Links" style="border-bottom: 1px solid #b1aeae;">
                 <i class="fas fa-link"></i>
             </button>
             <button type="button" class="btn">
-                <i ><img src="{{ asset('image/nepal-flag.gif') }}" style="width: 20px;"></i>
+                <i ><img src="{{ asset('image/nepal-flag.gif') }}" title="Change Language" style="width: 15px;"></i>
             </button>
 
         </div>
@@ -218,5 +224,44 @@
         </div>
 
 
+
+
+        <div class="row">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                        <img src="{{ asset('image/Emblem_of_Nepal_(2020).png') }}" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                        <img src="{{ asset('image/logo.png') }}" style="width:100%; height: 500px;">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="{{ asset('image/nepal-flag.gif') }}" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+        </div>
+
+
+
+
     </div>
+
+
+    <script src="{{ asset('js/script.js') }}"></script>
 @endsection

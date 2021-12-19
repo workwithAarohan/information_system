@@ -9,6 +9,8 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+    <script src="{{ asset('js/script.js') }}"></script>
+
     <style>
 
         body
@@ -57,6 +59,11 @@
         button i
         {
             color: rgb(156, 156, 156);
+        }
+
+        button:ho
+        {
+            color: red;
         }
 
         .sticky
@@ -115,7 +122,12 @@
             <i ><img src="{{ asset('image/nepal-flag.gif') }}" style="width: 20px;"></i>
         </button>
 
-    </div>
+      </div>
+
+      <div style="margin-left: 100px;">
+        <button onclick="test();">Message</button>
+      </div>
+
 
 
     <script>

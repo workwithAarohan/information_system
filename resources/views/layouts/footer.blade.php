@@ -2,10 +2,13 @@
 <footer class="page-footer font-small indigo">
 
 <!-- Footer Links -->
-<head>
+
 <link rel="stylesheet" href="/css/footer.css">
+
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-</head>
+
+<script src="/js/footer.js"></script>
+<div>
 
 <div class="container">
     <div class="row">
@@ -228,7 +231,7 @@
 
       <!-- Links -->
       <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Rastriya Kitabkhana (Nijamati)</h5>
-      <img src="image\Emblem_of_Nepal_(2020).png" width="100" height="100" align="left">
+      <img src="image/Emblem_of_Nepal_(2020).png" width="100" height="100" align="left">
     </div>
   
 
