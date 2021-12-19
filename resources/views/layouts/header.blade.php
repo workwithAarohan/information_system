@@ -14,14 +14,15 @@
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    
+
+    <link rel="stylesheet" href="{{ asset('css/example.css') }}">
   </head>
 <body >
 
 <div class="topbar">
   <div class="row">
     <div class="col-md-6">
-   
+
   <div class="d-flex" >
       <span>
       <i class="far fa-calendar"></i>
@@ -32,10 +33,10 @@
       info@pis.gov.np
       </span>
       <span>
-      <i class="far fa-clock"></i>  
+      <i class="far fa-clock"></i>
       12:07 PM</span>
       <span>
-      <i class="fas fa-phone-alt"></i> 
+      <i class="fas fa-phone-alt"></i>
       01-5010138,01-5428975</span>
     </div>
 
@@ -59,17 +60,17 @@
 
 </div>
 
-    
-    
+
+
    </div>
 </div>
 
 
-    
+
     <div class="container mt-5" >
 
     <style>
-        @yield('style')
+        @yield('style');
     </style>
 </head>
 <body >
@@ -88,8 +89,8 @@
 
             <div class="col-md-3">
 
-           
-                  <p style="text-transform: uppercase;">Government of Nepal</p> 
+
+                  <p style="text-transform: uppercase;">Government of Nepal</p>
       <p>Ministry of Federal Affairs and General Administration</p>  <h5>Rastriya Kitabkhana (Nijamati)
 
 </h5>
@@ -128,7 +129,7 @@
   <a href="#news">Acts and Regulation</a>
 
   <div class="dropdown">
-    <button class="dropbtn">Information 
+    <button class="dropbtn">Information
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -137,7 +138,7 @@
       <a href="#">Link 3</a>
     </div>
   </div>
-  <a href="#Citizen">Citizen Chatrter</a> 
+  <a href="#Citizen">Citizen Chatrter</a>
   <a href="#publication">Publication</a>
   <a href="#news">News and Notices</a>
   <a href="#download">Downloads</a>
@@ -154,7 +155,7 @@
 
 
 <div class="col-md-9">
-<marquee vspace="2%" hspace="5%" behavior="" direction="left"> 
+<marquee vspace="2%" hspace="5%" behavior="" direction="left">
 <span ><b>Pis update campaign &nbsp;&nbsp;&nbsp; |Pis update campaign 8 &nbsp;&nbsp;&nbsp;|Pis update campaign 7 &nbsp;&nbsp;&nbsp;|Pis update campaign 6 &nbsp;&nbsp;&nbsp;|Pis update 5 </b> </span>
 </marquee>
 </div>
@@ -168,12 +169,15 @@
 
 
     <div class="main">
-        @yield('content')
+        @yield('content');
 
     </div>
     <div class="footer">
     @include('layouts.footer')
 
     </div>
+
+    <script src="{{ asset('js/script.js') }}"></script>
+
 </body>
 </html>
