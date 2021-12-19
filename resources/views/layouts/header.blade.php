@@ -10,18 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
     <link href="{{ asset('/css/app.js')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -30,14 +27,14 @@
 
     <link rel="stylesheet" href="{{ asset('css/example.css') }}">
 
-  </head>
+</head>
 <body >
 
 <div class="topbar">
   <div class="row">
     <div class="col-md-6">
 
-  <div class="d-flex" >
+    <div class="d-flex" >
       <span>
       <i class="far fa-calendar"></i>
         17 Dec 2021, Fri
@@ -82,7 +79,7 @@
 
 
     <div class="container mt-5" >
-
+     
     <style>
         @yield('style');
     </style>
@@ -145,7 +142,7 @@
 
 
 
-  
+
   
   <a href="#Citizen">Citizen Chatrter</a> 
 
@@ -153,11 +150,13 @@
     <button class="dropbtn">Information
       <i class="fa fa-caret-down"></i>
     </button>
+   
     <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <li><a href="#">Python</a></li>
+                  <li><a href="#">JQuery</a></li>
+                  <li><a href="#">Javascript</a></li>
     </div>
+    
   </div>
   <a href="#Citizen">Citizen Chatrter</a>
 
@@ -166,8 +165,6 @@
   <a href="#download">Downloads</a>
   <a href="#gallery">Gallery</a>
 </div>
-
-
 
 <div class="row">
 <div class="col-md-1 ">

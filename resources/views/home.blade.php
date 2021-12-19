@@ -572,13 +572,27 @@
                     <div class="text">Caption Three</div>
                     </div>
 
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                        <img src="{{ asset('image/img1.png') }}" style="width:100%">
+                    <div class="text">Caption Text</div>
+
+
                 </div>
                 <br>
+
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                        <img src="{{ asset('image/img2.png') }}" style="width:100%; height: 500px;">
+                    <div class="text">Caption Two</div>
 
                 <div style="text-align:center">
                   <span class="dot"></span>
                   <span class="dot"></span>
                   <span class="dot"></span>
+
                 </div>
             </div>
 
@@ -616,8 +630,15 @@
                         </div>
                         <div class="col-md-2">
 
+
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="{{ asset('image/img3.png') }}" style="width:100%">
+                <div class="text">Caption Three</div>
+
                         </div>
                     </div>
+
                 </div>
 
             </div>
