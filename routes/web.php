@@ -25,3 +25,8 @@ Route::get('/home', function () {
 Route::get('/test', function() {
     return view('test');
 });
+
+Route::get('/slideshow', function() {
+    return view('slideshow');
+});
+
