@@ -9,13 +9,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
     <link href="{{ asset('/css/app.js')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+    <script src="{{asset('js/app.js')}}"></script>
+
+
     <link rel="stylesheet" href="{{ asset('css/example.css') }}">
+
   </head>
 <body >
 
@@ -128,6 +142,26 @@
   <a href="#news">About Us</a>
   <a href="#news">Acts and Regulation</a>
 
+
+
+
+  
+  <div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Information
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+
+  
+  <a href="#Citizen">Citizen Chatrter</a> 
+
   <div class="dropdown">
     <button class="dropbtn">Information
       <i class="fa fa-caret-down"></i>
@@ -139,6 +173,7 @@
     </div>
   </div>
   <a href="#Citizen">Citizen Chatrter</a>
+
   <a href="#publication">Publication</a>
   <a href="#news">News and Notices</a>
   <a href="#download">Downloads</a>

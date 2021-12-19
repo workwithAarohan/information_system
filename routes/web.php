@@ -27,9 +27,15 @@ Route::get('/test', function() {
 });
 
 
+Route::get('/drop', function() {
+    return view(' layouts.dropdown');
+});
+
+
 Route::get('/slideshow', function() {
     return view('slideshow');
 });
+
 
 
 Route::get('/testing', function() {
