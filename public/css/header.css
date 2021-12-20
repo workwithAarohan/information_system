@@ -11,6 +11,7 @@
 
 .nav {
   background-color:blue;
+  color: blue;
 
 
   display: block;
@@ -18,7 +19,7 @@
   text-transform: uppercase;
   margin: 0px; 
   padding:0px;
-  width:100%;
+  
 }
 
 .nav li {
@@ -30,34 +31,35 @@
 
 .nav .button-dropdown {
   position: relative;
-  background:white;
+  background:blue;
 }
 
 .nav li a {
   display: block;
+  color:blue;
+  background-color:blue;
   color:white;
-  background-color:white;
   padding:10px 20px;
   text-decoration: none;
 
 }
 
-.nav li a span {
+.nav > li a span {
   display: inline-block;
   margin-left: 5px;
   font-size: 10px;
-  color: #999;
+  color: blue;
   
 }
 
-.nav li a:hover, .nav li a.dropdown-toggle.active {
-  background-color:white;
-  color: white;
+.nav > li a:hover, .nav li a.dropdown-toggle.active {
+  background-color:red;
+  color:blue;
   
 }
 
-.nav li a:hover span, .nav li a.dropdown-toggle.active span {
-  color: white;
+.nav > li a:hover span, .nav li a.dropdown-toggle.active span {
+  color: red;
 }
 
 .nav li .dropdown-menu {
@@ -104,7 +106,7 @@
     }
 
     .wrapper{
-      margin: 50px;
+  
     }
   
   
