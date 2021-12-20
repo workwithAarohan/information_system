@@ -16,14 +16,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
 
 
+
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
-    <link href="{{ asset('/css/app.js')}}" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/css/header.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <script src="{{asset('js/header.js')}}"></script>
+
+    <script src="{{asset('js/app.js')}}"></script>
 
 
     <link rel="stylesheet" href="{{ asset('css/example.css') }}">
@@ -31,14 +33,17 @@
     <link rel="stylesheet" href="{{ asset('css/drop.css') }}">
 
 
+    <script src="{{asset('js/header.js')}}"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
+    <style>
+        @yield('style');
+    </style>
 </head>
 <body >
-<div class="wrapper">
+
 <div class="topbar">
   <div class="row">
     <div class="col-md-6">
@@ -87,8 +92,11 @@
 
 
 
-
     <div class="container mt-5" >
+
+
+
+
 
 
     <style>
@@ -96,9 +104,6 @@
     </style>
 </head>
 <body >
-
-
-
 
 
     <div class="container mb-5" >
@@ -110,6 +115,8 @@
 
 
 
+
+        <div class="row">
             <div class="col-md-2">
 
       <img src="{{ asset('/image/logo.png')}}" alt="logo" style="width:6em; height:6em;">
@@ -152,7 +159,22 @@
 
 
 
-<ul class="nav bg-white">
+
+      </div>
+
+      </div>
+
+
+
+
+
+<div class="row m-0">
+
+
+    </div>
+
+
+<ul class="nav head">
   <li class="bg-white">
     <a href="#">
     <i class="fas fa-home fa-2x"></i>
@@ -218,6 +240,8 @@
 
 
 
+
+
   <li class="button-dropdown">
      <a href="javascript:void(0)" class="dropdown-toggle">
       Information <span>▼</span>
@@ -242,11 +266,7 @@
   </li>
 
 
-  <li>
-    <a href="#">
-      Downloads
-    </a>
-  </li>
+
 
   <li class="button-dropdown">
      <a href="javascript:void(0)" class="dropdown-toggle">
@@ -276,29 +296,15 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
+</div>
 
-  <a href="#Citizen">Citizen Chatrter</a>
-
-  <div class="dropdown">
-    <button class="dropbtn">Information
-      <i class="fa fa-caret-down"></i>
-    </button>
-
-    <div class="dropdown-content">
-    <li><a href="#">Python</a></li>
-                  <li><a href="#">JQuery</a></li>
-                  <li><a href="#">Javascript</a></li>
-    </div>
-
-  </div>
-  <a href="#Citizen">Citizen Chatrter</a>
 
 
 
 <div class="row">
 <div class="col-md-1 ">
 
-<i class="fas fa-bell"></i>
+<i class="fas fa-bell fa-2x "></i>
 </div>
 
 
@@ -312,6 +318,7 @@
 
 
 
+</div>
 
 
 
@@ -319,11 +326,12 @@
         @yield('content');
 
     </div>
-    <div class="footer">
+
+</div>
+<div class="footer">
     @include('layouts.footer')
 
     </div>
-</div>
 
     <script src="{{ asset('js/script.js') }}"></script>
 
