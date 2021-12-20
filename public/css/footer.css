@@ -6,7 +6,7 @@ td {
 .underline::after {
     content: "";
     display: block;
-    width: 40px;
+    width: 50px;
     padding-top: 0px;
     border-bottom: 5px solid rgb(0, 51, 128);
 }     
@@ -22,6 +22,40 @@ px
     line-height: 25px;
 }
 
+
+
+.col-md-3 {
+    font-size: 12px;
+}
+
+.mb-0 {
+    font-size: 12px;
+}
+
+.col-12 col-sm-3 {
+    font-size: 12px;
+}
+
+.title {
+    font-size: 12px;
+    color: white;
+    
+}
+
+
+
+.midfooter {
+    margin-top: 5px;
+    background-color:#1e2f41;
+    padding: 0 100px;
+}
+
+.lastfooter{
+    background-color:black;
+    color: white;
+    line-height: 10px;
+    
+}
 
 
 
