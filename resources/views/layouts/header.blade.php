@@ -143,38 +143,6 @@
     </div>
 
 
-    <div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">About Us</a>
-  <a href="#news">Acts and Regulation</a>
-
-
-
-
-
-  
-  <a href="#Citizen">Citizen Chatrter</a> 
-
-  <div class="dropdown">
-    <button class="dropbtn">Information
-      <i class="fa fa-caret-down"></i>
-    </button>
-   
-    <div class="dropdown-content">
-    <li><a href="#">Python</a></li>
-                  <li><a href="#">JQuery</a></li>
-                  <li><a href="#">Javascript</a></li>
-    </div>
-    
-  </div>
-  <a href="#Citizen">Citizen Chatrter</a>
-
-  <a href="#publication">Publication</a>
-  <a href="#news">News and Notices</a>
-  <a href="#download">Downloads</a>
-  <a href="#gallery">Gallery</a>
-</div>
-
 <ul class="nav">
   <li class="bg-white">
     <a href="#">

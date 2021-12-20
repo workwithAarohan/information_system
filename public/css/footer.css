@@ -37,20 +37,27 @@ td {
 .title {
     font-size: 12px;
     color: white;
+    margin-top: 10px;
     
 }
 
-
+.firstfooter {
+    background-color: #EBF2FB;
+}
 
 .midfooter {
     margin-top: 5px;
     background-color:#1e2f41;
     padding: 0 100px;
+    margin-left: -20px;
+    margin-right: -10px;
 }
 
 .lastfooter{
     background-color:black;
     color: white;
     line-height: 10px;
+    margin-left: -20px;
+   
     
 }
