@@ -28,7 +28,7 @@ Route::get('/test', function() {
 
 
 Route::get('/drop', function() {
-    return view(' layouts.dropdown');
+    return view(' layouts.dropdwon');
 });
 
 
@@ -46,6 +46,11 @@ Route::get('/example', function() {
     return view('example');
 });
 
+
+
+
+
 Route::get('/tab', function() {
     return view('tabMenu');
 });
+
