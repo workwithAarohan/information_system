@@ -1,66 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Back To Top</title>
 </head>
+
 <body>
-<div class="main-slider" id="main-slider">
-            <div>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/lqj-QNYsZFk?controls=1">
-                                </iframe>
 
-                </div>
-            </div>
-            <div>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/lqj-QNYsZFk?controls=1">
-                                </iframe>
+  <section class="section1">Section 1</section>
+  <section class="section2">Section 2</section>
+  <section class="section3">Section 3</section>
+  <section class="section4">Section 4</section>
 
-                </div>
-            </div>          
-</div>
+  <a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
 
 <style>
-
-.video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 50%;
-}
-
-
+ 
 </style>
 
 <script>
-  $('#main-slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      dots: true,
-      infinite: true,
-      adaptiveHeight: true,
-      arrows: false
-  });
-  
-  var video = $('#main-slider .slick-active').find('iframe').get(0).play();
 
-  $('#main-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    $('#main-slider .slick-slide').find('video').get(0).pause();
-    var video = $('#main-slider .slick-active').find('video').get(0).play();
-});
 </script>

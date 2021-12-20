@@ -13,32 +13,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
     <link href="{{ asset('/css/app.js')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <script src="{{asset('js/header.js')}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 
 
     <link rel="stylesheet" href="{{ asset('css/example.css') }}">
-    
-    <link rel="stylesheet" href="{{ asset('css/drop.css') }}">
-   
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
 
 </head>
 <body >
-<div class="wrapper">
+
 <div class="topbar">
   <div class="row">
     <div class="col-md-6">
@@ -87,29 +78,17 @@
 
 
 
-
     <div class="container mt-5" >
-
-
+     
     <style>
         @yield('style');
     </style>
 </head>
 <body >
 
-
-
-
-
     <div class="container mb-5" >
-    
-
-
 
         <div class="row">
-       
-          
-
             <div class="col-md-2">
 
       <img src="{{ asset('/image/logo.png')}}" alt="logo" style="width:6em; height:6em;">
@@ -142,163 +121,55 @@
 </div>
 
 
-    
+
+
+
 
       </div>
+
+      </div>
+
+
+
     </div>
-  
 
 
-   
+    <div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">About Us</a>
+  <a href="#news">Acts and Regulation</a>
 
 
-<ul class="nav bg-white">
-  <li class="bg-white">
-    <a href="#">
-    <i class="fas fa-home fa-2x"></i>
-    
-    </a>
-  </li>
-  <li class="button-dropdown">
-     <a href="javascript:void(0)" class="dropdown-toggle"> 
-      About Us<span>▼</span>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="#">
-          Introduction
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Aims and Goals
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Staffs
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="#">
-      Rules and Regulation
-    </a>
-  </li>
-  <li class="button-dropdown">
-    <a href="javascript:void(0)" class="dropdown-toggle">
-      Citizen charter <span>▼</span>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="#">
-          asdf
-        </a>
-      </li>
-    </ul>
-  </li>
 
-
-  <li>
-    <a href="#">
-      Publication
-    </a>
-  </li>
 
 
   
-  <li>
-    <a href="#">
-      News and Notices
-    </a>
-  </li>
-
-
-
-
-
-  <li class="button-dropdown">
-     <a href="javascript:void(0)" class="dropdown-toggle"> 
-      Information <span>▼</span>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="#">
-          General Information
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Faqs
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          General Information
-        </a>
-      </li>
-    </ul>
-  </li>
-
-
-  <li>
-    <a href="#">
-      Downloads
-    </a>
-  </li>
-
-  <li class="button-dropdown">
-     <a href="javascript:void(0)" class="dropdown-toggle"> 
-      Gallery<span>▼</span>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="#">
-          Photo Gallery
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Video Gallery
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          Audio Gallery
-        </a>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
-  <a href="#Citizen">Citizen Chatrter</a>
+  <a href="#Citizen">Citizen Chatrter</a> 
 
   <div class="dropdown">
     <button class="dropbtn">Information
       <i class="fa fa-caret-down"></i>
     </button>
-
+   
     <div class="dropdown-content">
     <li><a href="#">Python</a></li>
                   <li><a href="#">JQuery</a></li>
                   <li><a href="#">Javascript</a></li>
     </div>
-
+    
   </div>
   <a href="#Citizen">Citizen Chatrter</a>
 
-
+  <a href="#publication">Publication</a>
+  <a href="#news">News and Notices</a>
+  <a href="#download">Downloads</a>
+  <a href="#gallery">Gallery</a>
+</div>
 
 <div class="row">
 <div class="col-md-1 ">
 
-<i class="fas fa-bell"></i>
+<i class="fas fa-bell fa-2x "></i>
 </div>
 
 
@@ -312,6 +183,7 @@
 
 
 
+</div>
 
 
 
@@ -323,7 +195,6 @@
     @include('layouts.footer')
 
     </div>
-</div>
 
     <script src="{{ asset('js/script.js') }}"></script>
 

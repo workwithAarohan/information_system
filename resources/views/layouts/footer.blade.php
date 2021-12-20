@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer font-small indigo">
+<footer class="page-footer font-small indigo container-fluid">
 
 <!-- Footer Links -->
 
@@ -7,8 +7,14 @@
 
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-<script src="/js/footer.js"></script>
-<div>
+<script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+
 
 <div class="container">
     <div class="row">
@@ -179,6 +185,7 @@
         </div>
     </div>
 </div>
+
 
 
 <div class="midfooter text-center text-md-left">
