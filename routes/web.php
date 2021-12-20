@@ -53,4 +53,7 @@ Route::get('/example', function() {
 Route::get('/tab', function() {
     return view('tabMenu');
 });
+Route::get('/try', function() {
+    return view('try');
+});
 
