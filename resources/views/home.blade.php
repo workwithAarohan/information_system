@@ -196,7 +196,7 @@
         </div>
 
 
-        <div class="row mt-5 mb-3" style="column-gap: 15px;">
+        {{-- <div class="row mt-5 mb-3" style="column-gap: 15px;">
             <h4 style="color: #9e0d05; font-family: sans-serif; font-size: 16px; font-weight: bold;">
                 Rastriya Kitabkhana (Nijamati)
             </h4>
@@ -243,13 +243,129 @@
                 </div>
 
                 <iframe width="250" height="216" src="https://www.youtube.com/embed/0Oe2P6DElk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                {{-- <iframe src="https://youtu.be/embed/apKMWyDhvBE" style="width: 250px;"></iframe> --}}
+
 
                 <p class="mt-2" style="font-family: sans-serif;">उपमहानिर्देशकको सन्देश</p>
 
             </div>
 
 
+        </div> --}}
+        <div class="row mt-5 mb-3" style="column-gap: 10px;">
+            <h4 style="color: #9e0d05; font-family: sans-serif; font-size: 16px; font-weight: bold;">
+                Rastriya Kitabkhana (Nijamati)
+            </h4>
+            <hr style="background-color:#005FCB; height:5px; border-radius: 2px;  opacity: 1; margin-top: -2px; width: 80px; margin-left: 20px;">
+
+            <div class="col-md-3 offset-md-4 border mt-4 p-3 rounded" style="width: 320px;">
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <div class="div">
+                        <h5 style="color: #005FCB; font-family: sans-serif; font-size: 14px; font-weight: bold;">
+                            Photo Gallery
+                        </h5>
+                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px;margin-left: 20px; ">
+                    </div>
+
+                    <div class="div">
+                        <h5 style="color: #005FCB; font-family: sans-serif; font-size: 11px; font-weight: bold;">
+                            View all Photos
+                        </h5>
+                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; margin-left: 20px;">
+                    </div>
+                </div>
+
+                <div id="carouselCaptions" class="carousel slide"  data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h6>Sanitation</h6>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/240603745_2913323288933132_5877172252914171574_n-46369.jpg" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h6>Quiz Contest Program</h6>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h6>Sanitation Progam</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                {{-- <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" style="object-fit: cover; width: 90%; height: 216px;">
+
+                <p class="mt-2" style="font-family: sans-serif;">Sanitation Program</p> --}}
+
+            </div>
+            <div class="col-md-3 border mt-4 p-3 rounded" style="width: 320px;">
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <div class="div">
+                        <h5 style="color: #005FCB; font-family: sans-serif; font-size: 14px; font-weight: bold;">
+                            Video Gallery
+                        </h5>
+                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px;margin-left: 20px; ">
+                    </div>
+
+                    <div class="div">
+                        <h5 style="color: #005FCB; font-family: sans-serif; font-size: 11px; font-weight: bold;">
+                            View all Videos
+                        </h5>
+                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; margin-left: 20px;">
+                    </div>
+                </div>
+
+                <div id="carouselExampleCaptions" class="carousel slide"  data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <iframe  height="280" class="w-100" src="https://www.youtube.com/embed/0Oe2P6DElk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                          <h6>उपमहानिर्देशकको सन्देश</h6>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <iframe class="w-100" height="280" src="https://www.youtube.com/embed/apKMWyDhvBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                          <h6>Message from DG on PIS Update Campaign 2078-06-13</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                {{-- <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" style="object-fit: cover; width: 90%; height: 216px;">
+
+                <p class="mt-2" style="font-family: sans-serif;">Sanitation Program</p> --}}
+
+            </div>
         </div>
 
         <div class="row mb-4" style="column-gap: 10px;">
