@@ -204,6 +204,75 @@ $(document).ready(function(){
     </div>
 
 
+    <div class="row mt-5" style="column-gap: 30px;">
+        <div class="col-md-7 border">
+            <div id="carouselCaption" class="carousel slide"  data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselCaption" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselCaption" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://nijamati.pis.gov.np/public/uploads/Slider/nijamati-66501.png" class="d-block w-100" style="height: 320px; object-fit: cover; object-position: 50 % 50 % ;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{ asset('image/images.jfif') }}" class="d-block w-100" style="height: 320px; ">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaption" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCaption" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+
+        <div class="col-md-4 border" style="background-color: #F5F5F5;">
+            <div class="p-2">
+                <div class="row bg-white p-2 mb-2">
+                    <div class="col-md-3">
+                        <img src="https://nijamati.pis.gov.np/public/uploads/post/pages_1615885039-69047.jpg" alt=""
+                    class="rounded-circle mt-2" style="width: 80px; height: 60px;">
+                    </div>
+                    <div class="col">
+                        <h6 class="mt-3"><strong>Netra Prasad Subedi</strong></h6>
+                        <p class="" style="font-size: 13px;">Director General</p>
+                    </div>
+                </div>
+                <div class="row bg-white p-2 mb-2">
+                    <div class="col-md-3">
+                        <img src="https://nijamati.pis.gov.np/public/uploads/post/20210321_205736-84373.jpg" alt=""
+                    class="rounded-circle mt-2" style="width: 80px; height: 60px;">
+                    </div>
+                    <div class="col">
+                        <h6 class="mt-3"><strong>Baburaja Shrestha</strong></h6>
+                        <p class="" style="font-size: 13px;">Deputy General Director</p>
+                    </div>
+                </div>
+                <div class="row bg-white p-2" >
+                    <div class="col-md-3" >
+                        <img src="https://nijamati.pis.gov.np/public/uploads/post/prakashjung-22214.jpg" alt=""
+                    class="rounded-circle mt-2" style="width: 80px; height: 60px;">
+                    </div>
+                    <div class="col-md-7">
+                        <h6 class="mt-3"><strong>Prakashjung Karki</strong></h6>
+                        <p class="" style="font-size: 13px;">Director / Information Officer</p>
+                        <p style="font-size: 13px;">+977 01 5010138</p>
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
 
 
 

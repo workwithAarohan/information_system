@@ -123,34 +123,28 @@
         {{-- SlideShow --}}
         <div class="row mt-5" style="column-gap: 30px;">
             <div class="col-md-7 border">
-                <div class="slideshow-container mt-3">
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">1 / 3</div>
-                            <img src="https://nijamati.pis.gov.np/public/uploads/Slider/nijamati-66501.png" style="width:100%; height: 300px;">
-                        <div class="text">Caption Text</div>
+                <div id="carouselCaption" class="carousel slide mt-3"  data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselCaption" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselCaption" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">2 / 3</div>
-                            <img src="{{ asset('image/logo.png') }}" style="width:100%; height: 300px;object-fit: none;">
-                        <div class="text">Caption Two</div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://nijamati.pis.gov.np/public/uploads/Slider/nijamati-66501.png" class="d-block w-100" style="height: 320px; object-fit: cover; object-position: 50 % 50 % ;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{{ asset('image/images.jfif') }}" class="d-block w-100" style="height: 320px; ">
+                      </div>
                     </div>
-
-                    <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="{{ asset('image/nepal-flag.gif') }}" style="width:100%; height: 300px; object-fit: none;">
-                    <div class="text">Caption Three</div>
-                    </div>
-
-                </div>
-                <br>
-
-                <div style="text-align:center">
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaption" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCaption" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
 
             <div class="col-md-4 border" style="background-color: #F5F5F5;">
@@ -196,61 +190,7 @@
         </div>
 
 
-        {{-- <div class="row mt-5 mb-3" style="column-gap: 15px;">
-            <h4 style="color: #9e0d05; font-family: sans-serif; font-size: 16px; font-weight: bold;">
-                Rastriya Kitabkhana (Nijamati)
-            </h4>
-            <hr style="background-color:#005FCB; height:5px; border-radius: 2px;  opacity: 1; margin-top: -2px; width: 80px; margin-left: 20px;">
-
-            <div class="col-md-3 offset-md-4 border mt-4 p-3 rounded">
-                <div class="d-flex justify-content-between align-items-baseline">
-                    <div class="div">
-                        <h5 style="color: #005FCB; font-family: sans-serif; font-size: 14px; font-weight: bold;">
-                            Pictures
-                        </h5>
-                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px;margin-left: 20px; ">
-                    </div>
-
-                    <div class="div">
-                        <h5 style="color: #005FCB; font-family: sans-serif; font-size: 11px; font-weight: bold;">
-                            View all Photos
-                        </h5>
-                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; margin-left: 20px;">
-                    </div>
-                </div>
-
-                <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" style="object-fit: cover; width: 90%; height: 216px;">
-
-                <p class="mt-2" style="font-family: sans-serif;">Sanitation Program</p>
-
-            </div>
-
-            <div class="col-md-3 border mt-4 p-3 rounded">
-                <div class="d-flex justify-content-between align-items-baseline">
-                    <div class="div">
-                        <h5 style="color: #005FCB; font-family: sans-serif; font-size: 14px; font-weight: bold;">
-                            Video Gallery
-                        </h5>
-                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; margin-left: 20px;">
-                    </div>
-
-                    <div class="div">
-                        <h5 style="color: #005FCB; font-family: sans-serif; font-size: 11px; font-weight: bold;">
-                            View all Videos
-                        </h5>
-                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; margin-left: 20px;">
-                    </div>
-                </div>
-
-                <iframe width="250" height="216" src="https://www.youtube.com/embed/0Oe2P6DElk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-                <p class="mt-2" style="font-family: sans-serif;">उपमहानिर्देशकको सन्देश</p>
-
-            </div>
-
-
-        </div> --}}
+        {{-- Picture and Video Slideshow --}}
         <div class="row mt-5 mb-3" style="column-gap: 10px;">
             <h4 style="color: #9e0d05; font-family: sans-serif; font-size: 16px; font-weight: bold;">
                 Rastriya Kitabkhana (Nijamati)
@@ -368,6 +308,7 @@
             </div>
         </div>
 
+        {{-- Quick Links --}}
         <div class="row mb-4" style="column-gap: 10px;">
             <h4 style="color: #005FCB; font-family: sans-serif; font-size: 16px; font-weight: bold;">
                 Home
@@ -422,7 +363,7 @@
             </div>
         </div>
 
-
+        {{-- Tab Menu --}}
         <div class="row mt-5">
             <div class="d-flex justify-content-center">
                 <div>
@@ -701,6 +642,8 @@
 
 
         </div>
+
+
         {{-- <div class="row">
             <div class="col-md-7 border p-2" style="margin-right: 12px;">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
