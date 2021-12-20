@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer font-small indigo">
+<footer class="page-footer font-small indigo container-fluid">
 
 <!-- Footer Links -->
 
@@ -7,12 +7,18 @@
 
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-<script src="/js/footer.js"></script>
-<div>
+<script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4 mt-2 mx-auto border bg-light">
+        <div class="col-md-4 mt-2 mx-auto border firstfooter">
 
             <p class="font-weight-bold text-uppercase mt-3 mb-4 underline">Contact Details</p>
 
@@ -71,8 +77,8 @@
 
         </div>
     
-        <div class="col-md-4 mt-2 mx-auto border bg-light">
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4 underline" >Quick Messages</h5>
+        <div class="col-md-4 mt-2 mx-auto border firstfooter">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4 underline" style="color:black" >Quick Messages</h5>
                
             <section class="mb-4">
 
@@ -163,7 +169,7 @@
 
         </div>
 
-        <div class="col-md-4 mt-2 mx-auto border bg-light">
+        <div class="col-md-4 mt-2 mx-auto border firstfooter">
             <h5 class="font-weight-bold text-uppercase mt-3 mb-4 underline" style="color:black">Find us on Google Map</h5>
 
             
@@ -181,39 +187,40 @@
 </div>
 
 
+
 <div class="midfooter text-center text-md-left">
 
   <!-- Grid row -->
   <div class="row">
 
     <!-- Grid column -->
-    <div class="col-md-3 mx-auto">
+    <div class="col-md-3">
 
       <!-- Links -->
-      <h5 class=" title font-weight-bold text-uppercase mt-3 mb-4">Rastriya Kitabkhana (Nijamati)</h5>
+      <h5 class=" title font-weight-bold text-uppercase mt-3">Rastriya Kitabkhana (Nijamati)</h5>
       <img src="image/Emblem_of_Nepal_(2020).png" width="100" height="100" align="left">
     </div>
   
 
     <!-- Grid column -->
-    <div class="col-md-3 mx-auto">
+    <div class="col-md-3 ">
 
       <!-- Links -->
-      <h5 class="title font-weight-bold text-uppercase mt-3 mb-4">Useful Links</h5>
+      <h5 class="title font-weight-bold text-uppercase mt-3">Useful Links</h5>
 
         <ul class="pl-0">
                                         <li class="mb-1"> <a href="http://www.mofaga.gov.np" style="color: white; text-decoration:none">
                                             <!-- सङ्घीय मामिला तथा सामान्य प्रशासन मन्त्रालय -->
                                             Ministry of Federal Affairs & General Administration
-                                        </a></li>
+                                        </a></li><br>
                                         <li class="mb-1"> <a href="https://www.moha.gov.np/" style="color: white; text-decoration:none">
                                             <!-- गृह मन्त्रालय -->
                                             Ministry of Home Affairs
-                                        </a></li>
+                                        </a></li><br>
                                         <li class="mb-1"> <a href="http://www.stro.gov.np/ne/" style="color: white; text-decoration:none">
                                             <!-- राष्ट्रिय किताबखाना (शिक्षक) -->
                                             Rastriya Kitabkhana (Teacher)
-                                        </a></li>
+                                        </a></li><br>
                                         <li class="mb-1"> <a href="http://www.dppr.gov.np/home" style="color: white; text-decoration:none">
                                             <!-- राष्ट्रिय किताबखाना (प्रहरी) -->
                                             Rastriya Kitabkhana (Police)
@@ -223,10 +230,10 @@
     </div>
 
     <!-- Grid column -->
-    <div class="col-md-3 mx-auto">
+    <div class="col-md-3">
 
       <!-- Links -->
-      <h5 class="title font-weight-bold text-uppercase mt-3 mb-4">Important Website</h5>
+      <h5 class="title font-weight-bold text-uppercase mt-3">Important Website</h5>
       <ul class="link">
                                     
                                     <li class="mb-1"> <a href="http://www.mofaga.gov.np" style="color: white; text-decoration:none">
@@ -236,7 +243,7 @@
                                             Ministry of Federal Affairs & General Administration
                                             <!-- सङ्घीय मामिला तथा सामान्य प्रशासन मन्त्रालय -->
 
-                                    </a></li>
+                                    </a></li><br>
                                     
                                     <li class="mb-1"> <a href="https://www.moha.gov.np/" style="color: white; text-decoration:none">
                                             <svg style="width: 15px;" xmlns="http://www.w3.org/2000/svg" width="13.089" height="13.089" viewBox="0 0 13.089 13.089">
@@ -252,10 +259,10 @@
     <!-- Grid column -->
 
     <!-- Grid column -->
-    <div class="col-md-3 mx-auto">
+    <div class="col-md-3">
 
       <!-- Links -->
-      <h5 class="title font-weight-bold text-uppercase mt-3 mb-4">Popular Post</h5>
+      <h5 class="title font-weight-bold text-uppercase mt-3">Popular Post</h5>
 
     </div>
     <!-- Grid column -->
