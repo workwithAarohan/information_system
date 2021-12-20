@@ -15,17 +15,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
+
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
-    <link href="{{ asset('/css/app.js')}}" rel="stylesheet">
+   
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+
     <script src="{{asset('js/app.js')}}"></script>
 
 
     <link rel="stylesheet" href="{{ asset('css/example.css') }}">
+
+    <script src="{{asset('js/header.js')}}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </head>
 <body >
@@ -131,6 +139,7 @@
 
 
 
+
     </div>
 
 
@@ -166,6 +175,127 @@
   <a href="#gallery">Gallery</a>
 </div>
 
+<ul class="nav">
+  <li class="bg-white">
+    <a href="#">
+    <i class="fas fa-home fa-2x"></i>
+    
+    </a>
+  </li>
+  <li class="button-dropdown">
+     <a href="javascript:void(0)" class="dropdown-toggle"> 
+      About Us<span>▼</span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="#">
+          Introduction
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Aims and Goals
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Staffs
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#">
+      Rules and Regulation
+    </a>
+  </li>
+  <li class="button-dropdown">
+    <a href="javascript:void(0)" class="dropdown-toggle">
+      Citizen charter <span>▼</span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="#">
+          asdf
+        </a>
+      </li>
+    </ul>
+  </li>
+
+
+  <li>
+    <a href="#">
+      Publication
+    </a>
+  </li>
+
+
+  
+  
+
+
+
+
+
+  <li class="button-dropdown">
+     <a href="javascript:void(0)" class="dropdown-toggle"> 
+      Information <span>▼</span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="#">
+          General Information
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Faqs
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          General Information
+        </a>
+      </li>
+    </ul>
+  </li>
+
+
+ 
+
+  <li class="button-dropdown">
+     <a href="javascript:void(0)" class="dropdown-toggle"> 
+      Gallery<span>▼</span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="#">
+          Photo Gallery
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Video Gallery
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Audio Gallery
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+ 
+
+
+
 <div class="row">
 <div class="col-md-1 ">
 
@@ -191,7 +321,9 @@
         @yield('content');
 
     </div>
-    <div class="footer">
+    
+</div>
+<div class="footer">
     @include('layouts.footer')
 
     </div>
