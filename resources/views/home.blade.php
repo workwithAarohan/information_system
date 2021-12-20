@@ -14,15 +14,6 @@
         font-size: 18px;
     }
 
-    hr.line
-    {
-        border: 2px solid #005FCB;
-        opacity: 1;
-        border-radius: 2px;
-        margin-top: -2px;
-        width: 50%;
-    }
-
     .column
     {
         {{-- border: 1px solid lightgrey; --}}
@@ -30,13 +21,13 @@
         border-radius: 8px;
     }
 
-    button i
+    .icon
     {
         color: #b1aeae;
         padding: 10px 0;
     }
 
-    button i:hover
+    .icon:hover
     {
         color: #005FCB;
     }
@@ -51,31 +42,87 @@
         border-radius: 8px;
         width: 40px;
     }
+
+    .body-list
+    {
+        padding: 15px;
+        margin-top: 10px;
+        background-color: #337FD5;
+        margin-left: -25px;
+        color: white;
+        font-size: small;
+        font-weight: bold;
+        border-radius: 8px;
+        display: flex;
+        width: 95%;
+    }
+
+    .tabs-header
+    {
+        border-radius: 6px;
+        background: #005FCB;
+    }
+    ul
+    {
+        list-style: none;
+        margin: auto;
+        padding: 10px;
+
+    }
+
+    li
+    {
+        display: inline;
+        margin-top: 10px;
+        margin: 10px;
+    }
+
+    .link
+    {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .link:hover
+    {
+        color: #FFFFFF;
+        border-bottom: 2px solid #fff;
+    }
+
+    .tab-pane
+    {
+        background-color: none;
+    }
+
 @endsection
 
 @section('content')
     <div class="container">
 
+        {{-- Sticky Menu --}}
         <div class="btn-group-vertical sticky">
             <button type="button" class="btn" title="View Location" style="border-bottom: 1px solid #b1aeae;">
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-map-marker-alt icon"></i>
             </button>
             <button type="button" class="btn" title="Check Email" style="border-bottom: 1px solid #b1aeae;">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope icon"></i>
             </button>
             <button type="button" class="btn" title="Archive" style="border-bottom: 1px solid #b1aeae;">
-                <i class="fas fa-archive"></i>
+                <i class="fas fa-archive icon"></i>
             </button>
             <button type="button" class="btn" title="Links" style="border-bottom: 1px solid #b1aeae;">
-                <i class="fas fa-link"></i>
+                <i class="fas fa-link icon"></i>
             </button>
             <button type="button" class="btn">
-                <i ><img src="{{ asset('image/nepal-flag.gif') }}" title="Change Language" style="width: 15px;"></i>
+                <i class="icon"><img src="{{ asset('image/nepal-flag.gif') }}" title="Change Language" style="width: 15px;"></i>
             </button>
 
         </div>
-        <div class="row mt-5" style="column-gap: 10px;">
-            <div class="col-md-7">
+
+        {{-- SlideShow --}}
+        <div class="row mt-5" style="column-gap: 30px;">
+            <div class="col-md-7 border">
                 <div class="slideshow-container mt-3">
 
                     <div class="mySlides fade">
@@ -148,11 +195,12 @@
 
         </div>
 
+
         <div class="row mt-5 mb-3" style="column-gap: 15px;">
             <h4 style="color: #9e0d05; font-family: sans-serif; font-size: 16px; font-weight: bold;">
                 Rastriya Kitabkhana (Nijamati)
             </h4>
-            <hr style="border: 2px solid #005FCB; border-radius: 2px; opacity: 1; margin-top: -2px; width: 80px; ">
+            <hr style="background-color:#005FCB; height:5px; border-radius: 2px;  opacity: 1; margin-top: -2px; width: 80px; margin-left: 20px;">
 
             <div class="col-md-3 offset-md-4 border mt-4 p-3 rounded">
                 <div class="d-flex justify-content-between align-items-baseline">
@@ -160,18 +208,18 @@
                         <h5 style="color: #005FCB; font-family: sans-serif; font-size: 14px; font-weight: bold;">
                             Pictures
                         </h5>
-                        <hr style="border: 2px solid #005FCB; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; ">
+                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px;margin-left: 20px; ">
                     </div>
 
                     <div class="div">
                         <h5 style="color: #005FCB; font-family: sans-serif; font-size: 11px; font-weight: bold;">
                             View all Photos
                         </h5>
-                        <hr style="border: 2px solid #005FCB; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; ">
+                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; margin-left: 20px;">
                     </div>
                 </div>
 
-                <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" style="object-fit: cover; width: 250px; height: 216px;">
+                <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" style="object-fit: cover; width: 90%; height: 216px;">
 
                 <p class="mt-2" style="font-family: sans-serif;">Sanitation Program</p>
 
@@ -183,14 +231,14 @@
                         <h5 style="color: #005FCB; font-family: sans-serif; font-size: 14px; font-weight: bold;">
                             Video Gallery
                         </h5>
-                        <hr style="border: 2px solid #005FCB; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; ">
+                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; margin-left: 20px;">
                     </div>
 
                     <div class="div">
                         <h5 style="color: #005FCB; font-family: sans-serif; font-size: 11px; font-weight: bold;">
                             View all Videos
                         </h5>
-                        <hr style="border: 2px solid #005FCB; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; ">
+                        <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 35px; margin-left: 20px;">
                     </div>
                 </div>
 
@@ -208,13 +256,13 @@
             <h4 style="color: #005FCB; font-family: sans-serif; font-size: 16px; font-weight: bold;">
                 Home
             </h4>
-            <hr style="border: 2px solid #005FCB; border-radius: 2px; opacity: 1; margin-top: -2px; width: 40px; ">
+            <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 1px; margin-left: 20px;">
             <div class="col-md-7 border p-4 column mt-3"  style="width: 750px; margin-left: -50px;">
                 <div class="row">
                     <h5 style="color: #005FCB; font-family: sans-serif; font-size: 15px; font-weight: bold;">
                         Introduction
                     </h5>
-                    <hr style="border: 2px solid #005FCB; border-radius: 2px; opacity: 1; margin-top: -2px; width: 40px; ">
+                    <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 40px; margin-left: 20px;">
                     <div class="col-md-7 mt-3" style="height: 200px; margin-left: -40px;">
                         <p style="font-size: 12px;">
                             English version coming soon. Switch Language to Nepali to view the content in Nepali Language.
@@ -233,19 +281,19 @@
                 </h4>
 
                 <ul style="list-style-type: none">
-                    <li class="relative">
+                    <li class="body-list">
                         <p>Bids</p>
                         {{-- <a href="" class="p-3 link" >
                             <i class="fas fa-angle-right"></i>
                         </a> --}}
                     </li>
-                    <li>
+                    <li class="body-list">
                         <p>Press Release</p>
                         {{-- <a href="" class="p-3 link" >
                             <i class="fas fa-angle-right"></i>
                         </a> --}}
                     </li>
-                    <li>
+                    <li class="body-list">
                         <p>Feedback</p>
                         {{-- <a href="" class="p-3 link" >
                             <i class="fas fa-angle-right"></i>
@@ -259,98 +307,43 @@
         </div>
 
 
-        <div class="row">
-            <div class="justify-content-center">
-                <h4 style="color: #005FCB; font-family: sans-serif; font-size: 16px; font-weight: bold;">
-                    Explore Information
-                </h4>
-                <hr style="border: 2px solid #005FCB; border-radius: 2px; opacity: 1; margin-top: -2px; width: 40px; margin-left: 20px;">
+        <div class="row mt-5">
+            <div class="d-flex justify-content-center">
+                <div>
+                    <h4 style="color: #005FCB; font-family: sans-serif; font-size: 18px; font-weight: bold;">
+                        Explore Information
+                    </h4>
+                    <hr style="background-color:#005FCB; height:5px; border-radius: 2px; opacity: 1; margin-top: -2px; width: 60px; margin-left: 40px; ">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="row justify-content-center tabs-header w-75">
+                    <div class="col-md-4">
+                        <ul class="nav nav-pills" id="myTab">
+                            <li class="">
+                                <a href="#events" class="link active">Events</a>
+                            </li>
+                            <li class="">
+                                <a href="#posts" class="link">Recent Posts</a>
+                            </li>
+                            <li class="">
+                                <a href="#notices" class="link">Notices</a>
+                            </li>
+                            <li class="">
+                                <a href="#download" class="link">Download</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="mt-3 rounded p-5 mb-3" style="background-color: #EBF2FB; ">
-                <h4>Events</h4>
-                <div class="row bg-white p-4" style="">
-                    <div class="col-md-4 p-3">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-                    </div>
-                    <div class="col">
-                        <p>
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            17 Dec, 2021
-                        </p>
 
-                        <a href="">PIS Update Campaign-Week 12</a>
-
-                        <p>PIS Update Campaign-Week 10</p>
-
-                    </div>
-                </div>
-                <div class="row bg-white p-4 mt-3" style="">
-                    <div class="col-md-4 p-3">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-                    </div>
-                    <div class="col">
-                        <p>
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            17 Dec, 2021
-                        </p>
-
-                        <a href="">PIS Update Campaign-Week 12</a>
-
-                        <p>PIS Update Campaign-Week 9</p>
-
-                    </div>
-                </div>
-                <div class="row bg-white p-4 mt-3" style="">
-                    <div class="col-md-4 p-3">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-                    </div>
-                    <div class="col">
-                        <p>
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            17 Dec, 2021
-                        </p>
-
-                        <a href="">PIS Update Campaign-Week 12</a>
-
-                        <p>PIS Update Campaign-Week 8</p>
-
-                    </div>
-                </div>
-                <div class="row p-4 mt-3 justify-content-center" style="">
-                    <div class="col-md-2">
-                        <div class="btn btn-danger">
-                            View Page
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="mt-3 rounded p-4 mb-3" style="background-color: #EBF2FB; ">
-                <h4>Recent Posts</h4>
-                <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
-                    <div class="bg-white" style="width: 50%;">
-                        <div class="row">
-                            <div class="col-md-5 mt-3">
-                                <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-                            </div>
-                            <div class="col mt-3">
-                                <p>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    17 Dec, 2021
-                                </p>
-
-                                <a href="">PIS Update Campaign-Week 12</a>
-
-                                <p>PIS Update Campaign-Week 10</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=" bg-white" style="width: 50%;">
-                        <div class="row">
-                            <div class="col-md-5 p-3">
+                {{-- <div class="tab-content">
+                    <div class="tab-pane show active" id="events">
+                        <h4>Events</h4>
+                        <div class="row bg-white p-4" style="">
+                            <div class="col-md-4 p-3">
                                 <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
                             </div>
                             <div class="col">
@@ -365,19 +358,232 @@
 
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div class="row bg-white p-4 mt-3" style="">
+                            <div class="col-md-4 p-3">
+                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                            </div>
+                            <div class="col">
+                                <p>
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    17 Dec, 2021
+                                </p>
 
+                                <a href="">PIS Update Campaign-Week 12</a>
 
-                <div class="row p-4 mt-3 justify-content-center" style="">
-                    <div class="col-md-2">
-                        <div class="btn btn-danger">
-                            View Page
+                                <p>PIS Update Campaign-Week 9</p>
+
+                            </div>
+                        </div>
+                        <div class="row bg-white p-4 mt-3" style="">
+                            <div class="col-md-4 p-3">
+                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                            </div>
+                            <div class="col">
+                                <p>
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    17 Dec, 2021
+                                </p>
+
+                                <a href="">PIS Update Campaign-Week 12</a>
+
+                                <p>PIS Update Campaign-Week 8</p>
+
+                            </div>
+                        </div>
+                        <div class="row p-4 mt-3 justify-content-center" style="">
+                            <div class="col-md-2">
+                                <div class="btn btn-danger">
+                                    View Page
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="tab-pane fade" id="posts">
+                    <h4 class="mt-2">Messages tab content</h4>
+                    <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
+                </div>
+                <div class="tab-pane fade" id="notices">
+                    <h4 class="mt-2">Messages tab content</h4>
+                    <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
+                </div>
+                <div class="tab-pane fade" id="download">
+                    <h4 class="mt-2">Messages tab content</h4>
+                    <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
+                </div> --}}
+
+                <div class="tab-content">
+                    <div class="tab-pane show active" id="events" style="background-color: #EBF2FB;">
+
+                            <h4>Events</h4>
+                            <div class="row bg-white p-4" style="">
+                                <div class="col-md-4 p-3">
+                                    <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        17 Dec, 2021
+                                    </p>
+
+                                    <a href="">PIS Update Campaign-Week 12</a>
+
+                                    <p>PIS Update Campaign-Week 10</p>
+
+                                </div>
+                            </div>
+                            <div class="row bg-white p-4 mt-3" style="">
+                                <div class="col-md-4 p-3">
+                                    <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        17 Dec, 2021
+                                    </p>
+
+                                    <a href="">PIS Update Campaign-Week 12</a>
+
+                                    <p>PIS Update Campaign-Week 9</p>
+
+                                </div>
+                            </div>
+                            <div class="row bg-white p-4 mt-3" style="">
+                                <div class="col-md-4 p-3">
+                                    <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        17 Dec, 2021
+                                    </p>
+
+                                    <a href="">PIS Update Campaign-Week 12</a>
+
+                                    <p>PIS Update Campaign-Week 8</p>
+
+                                </div>
+                            </div>
+                            <div class="row p-4 mt-3 justify-content-center" style="">
+                                <div class="col-md-2">
+                                    <div class="btn btn-danger">
+                                        View Page
+                                    </div>
+                                </div>
+                            </div>
+
+
+                    </div>
+                    <div class="tab-pane" id="posts" style="background-color: #EBF2FB;">
+
+                            <h4>Recent Posts</h4>
+                            <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
+                                <div class="bg-white" style="width: 50%;">
+                                    <div class="row">
+                                        <div class="col-md-5 mt-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col mt-3">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                17 Dec, 2021
+                                            </p>
+
+                                            <a href="">PIS Update Campaign-Week 12</a>
+
+                                            <p>PIS Update Campaign-Week 10</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" bg-white" style="width: 50%;">
+                                    <div class="row">
+                                        <div class="col-md-5 p-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                17 Dec, 2021
+                                            </p>
+
+                                            <a href="">PIS Update Campaign-Week 12</a>
+
+                                            <p>PIS Update Campaign-Week 10</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row p-4 mt-3 justify-content-center" style="">
+                                <div class="col-md-2">
+                                    <div class="btn btn-danger">
+                                        View Page
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="tab-pane" id="notices" style="background-color: #EBF2FB;">
+                        <h4>News and Notices</h4>
+                        <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
+                            <div class="bg-white" style="width: 50%;">
+                                <div class="row">
+                                    <div class="col-md-5 mt-3">
+                                        <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                    </div>
+                                    <div class="col mt-3">
+                                        <p>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            17 Dec, 2021
+                                        </p>
+
+                                        <a href="">PIS Update Campaign-Week 12</a>
+
+                                        <p>PIS Update Campaign-Week 10</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" bg-white" style="width: 50%;">
+                                <div class="row">
+                                    <div class="col-md-5 p-3">
+                                        <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            17 Dec, 2021
+                                        </p>
+
+                                        <a href="">PIS Update Campaign-Week 12</a>
+
+                                        <p>PIS Update Campaign-Week 10</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-4 mt-3 justify-content-center" style="">
+                            <div class="col-md-2">
+                                <div class="btn btn-danger">
+                                    View Page
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="download" style="background-color: #EBF2FB;">
+                        <h4 class="mt-2">Messages tab content</h4>
+                        <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
+                    </div>
 
             </div>
+
+
         </div>
         {{-- <div class="row">
             <div class="col-md-7 border p-2" style="margin-right: 12px;">
@@ -649,6 +855,17 @@
 
 
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#myTab a").click(function(e){
+                e.preventDefault();
+                $(this).tab("show");
+            });
+
+
+        });
+        </script>
 
 
     <script src="{{ asset('js/script.js') }}"></script>

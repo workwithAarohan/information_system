@@ -46,3 +46,6 @@ Route::get('/example', function() {
     return view('example');
 });
 
+Route::get('/tab', function() {
+    return view('tabMenu');
+});

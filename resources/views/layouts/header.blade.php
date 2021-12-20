@@ -18,7 +18,7 @@
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
     <link href="{{ asset('/css/app.js')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -26,6 +26,11 @@
 
 
     <link rel="stylesheet" href="{{ asset('css/example.css') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </head>
 <body >
@@ -79,7 +84,7 @@
 
 
     <div class="container mt-5" >
-     
+
     <style>
         @yield('style');
     </style>
@@ -143,20 +148,20 @@
 
 
 
-  
-  <a href="#Citizen">Citizen Chatrter</a> 
+
+  <a href="#Citizen">Citizen Chatrter</a>
 
   <div class="dropdown">
     <button class="dropbtn">Information
       <i class="fa fa-caret-down"></i>
     </button>
-   
+
     <div class="dropdown-content">
     <li><a href="#">Python</a></li>
                   <li><a href="#">JQuery</a></li>
                   <li><a href="#">Javascript</a></li>
     </div>
-    
+
   </div>
   <a href="#Citizen">Citizen Chatrter</a>
 
