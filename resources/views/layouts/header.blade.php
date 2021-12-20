@@ -27,7 +27,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-
+    <style>
+        @yield('style');
+    </style>
 </head>
 <body >
 <div class="wrapper">
@@ -83,11 +85,7 @@
     <div class="container mt-5" >
 
 
-    <style>
-        @yield('style');
-    </style>
-</head>
-<body >
+    
 
 
 
@@ -142,9 +140,9 @@
 
 
    
+<div class="row m-0">
 
-
-<ul class="nav">
+<ul class="nav head">
   <li class="bg-white">
     <a href="#">
     <i class="fas fa-home fa-2x"></i>
@@ -260,7 +258,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-
+</div>
  
 
 

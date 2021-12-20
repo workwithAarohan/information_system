@@ -5,11 +5,11 @@
 }
 .body {
  
-  text-align: center;
-  padding-top: 50px;
+  text-align: auto;
+  padding-top:50px;
 }
 
-.nav {
+.head{
   background-color:blue;
   color: blue;
 
@@ -22,19 +22,19 @@
   
 }
 
-.nav li {
+.head li {
   display: inline-block;
   list-style: none;
   background:blue;
   
 }
 
-.nav .button-dropdown {
+.head .button-dropdown {
   position: relative;
   background:blue;
 }
 
-.nav li a {
+.head li a {
   display: block;
   color:blue;
   background-color:blue;
@@ -44,7 +44,7 @@
 
 }
 
-.nav > li a span {
+.head > li a span {
   display: inline-block;
   margin-left: 5px;
   font-size: 10px;
@@ -52,17 +52,17 @@
   
 }
 
-.nav > li a:hover, .nav li a.dropdown-toggle.active {
+.head > li a:hover, .head li a.dropdown-toggle.active {
   background-color:red;
   color:blue;
   
 }
 
-.nav > li a:hover span, .nav li a.dropdown-toggle.active span {
+.head > li a:hover span, .head li a.dropdown-toggle.active span {
   color: red;
 }
 
-.nav li .dropdown-menu {
+.head li .dropdown-menu {
   display: none;
   position: absolute;
   left: 0;
@@ -72,11 +72,11 @@
   text-align: left;
 }
 
-.nav li .dropdown-menu.active {
+.head li .dropdown-menu.active {
   display: block;
 }
 
-.nav li .dropdown-menu a {
+.head li .dropdown-menu a {
   width: 150px;
   
 }
@@ -106,6 +106,7 @@
     }
 
     .wrapper{
+      margin:auto;
   
     }
   
