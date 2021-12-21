@@ -57,3 +57,9 @@ Route::get('/try', function() {
     return view('try');
 });
 
+
+
+Route::get('/modal', function() {
+    return view('sub.modal');
+});
+
