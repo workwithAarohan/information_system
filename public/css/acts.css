@@ -1,0 +1,88 @@
+    /* .actcontainer {
+        background: gainsboro;
+    } */
+
+.actcontainer tr a {
+    /* border: 1px solid; */
+    background: blue;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.actcontainer tr a:hover{
+    background: red;
+}
+
+.actcontainer{
+    padding: 30px;
+}
+
+.heading{
+    background: antiquewhite;
+    margin: 2px;
+    text-align: justify;
+    height: 50px;
+}
+
+
+.halfunderline::after {
+    content: "";
+    display: block;
+    width: 70px;
+    padding-top: 0px;
+    border-bottom: 5px solid rgb(0, 51, 128);
+}  
+
+.fullunderline::after{
+    content: "";
+    display: block;
+    width: 50%;
+    padding-top: 0px;
+    border-bottom: 5px solid rgb(0, 51, 128);
+}
+
+
+.heading:hover{
+    background: silver;
+}
+
+.oddcontent{
+    background: darkgrey;
+}
+
+.oddcontent:hover{
+    background: seashell;
+}
+
+.evencontent{
+    background: skyblue;
+}
+
+.evencontent:hover{
+    background: darkkhaki;
+}
+
+.actcontainer .boxclass a {
+    
+    color: black;
+    text-decoration: none;
+}
+
+.listclass{
+    padding: 10px;
+    background: whitesmoke;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.actcontainer .boxclass .listclass:hover{
+    background-color: aliceblue;
+}
+
+.light-grey-bg{
+    background: lightblue;
+    margin: auto;
+}
