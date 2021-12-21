@@ -94,6 +94,43 @@
     {
         background-color: none;
     }
+    .scroll
+        {
+            height: 490px;
+            overflow: hidden;
+        }
+
+        .Loop::-webkit-scrollbar
+        {
+            display: none;
+        }
+
+        .Loop
+        {
+            position: relative;
+            height: 100%;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        section
+        {
+            position: relative;
+            text-align: center;
+            height: 50%;
+        }
+
+        ::scrollbar {
+            display: none;
+        }
+
+
+
+        .hey
+        {
+            position: absolute;
+            width: 100%;
+        }
 
 @endsection
 
@@ -472,65 +509,132 @@
                 <div class="tab-content">
                     <div class="tab-pane show active" id="events" style="background-color: #EBF2FB;">
 
-                            <h4>Events</h4>
-                            <div class="row bg-white p-4" style="">
-                                <div class="col-md-4 p-3">
-                                    <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-                                </div>
-                                <div class="col">
-                                    <p>
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                        17 Dec, 2021
-                                    </p>
+                        <h4>Events</h4>
+                        <div class="scroll">
 
-                                    <a href="">PIS Update Campaign-Week 12</a>
+                            <main class="Loop js-loop">
+                                <section class="">
+                                    <div class="row bg-white p-4 hey" style="">
+                                        <div class="col-md-4 p-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                17 Dec, 2021
+                                            </p>
 
-                                    <p>PIS Update Campaign-Week 10</p>
+                                            <a href="">PIS Update Campaign-Week 12</a>
 
-                                </div>
-                            </div>
-                            <div class="row bg-white p-4 mt-3" style="">
-                                <div class="col-md-4 p-3">
-                                    <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-                                </div>
-                                <div class="col">
-                                    <p>
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                        17 Dec, 2021
-                                    </p>
+                                            <p>PIS Update Campaign-Week 10</p>
 
-                                    <a href="">PIS Update Campaign-Week 12</a>
-
-                                    <p>PIS Update Campaign-Week 9</p>
-
-                                </div>
-                            </div>
-                            <div class="row bg-white p-4 mt-3" style="">
-                                <div class="col-md-4 p-3">
-                                    <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-                                </div>
-                                <div class="col">
-                                    <p>
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                        17 Dec, 2021
-                                    </p>
-
-                                    <a href="">PIS Update Campaign-Week 12</a>
-
-                                    <p>PIS Update Campaign-Week 8</p>
-
-                                </div>
-                            </div>
-                            <div class="row p-4 mt-3 justify-content-center" style="">
-                                <div class="col-md-2">
-                                    <div class="btn btn-danger">
-                                        View Page
+                                        </div>
                                     </div>
+                                </section>
+                                <section >
+                                    <div class="row bg-white p-4 mt-3 hey" style="">
+                                        <div class="col-md-4 p-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                16 Dec, 2021
+                                            </p>
+
+                                            <a href="">PIS Update Campaign-Week 11</a>
+
+                                            <p>PIS Update Campaign-Week 9</p>
+
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="three">
+                                    <div class="row bg-white p-4 mt-3 hey" style="">
+                                        <div class="col-md-4 p-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                15 Dec, 2021
+                                            </p>
+
+                                            <a href="">PIS Update Campaign-Week 10</a>
+
+                                            <p>PIS Update Campaign-Week 9</p>
+
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="four mb-3">
+                                    <div class="row bg-white p-4 mt-3 hey" style="">
+                                        <div class="col-md-4 p-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                14 Dec, 2021
+                                            </p>
+
+                                            <a href="">PIS Update Campaign-Week 9</a>
+
+                                            <p>PIS Update Campaign-Week 9</p>
+
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="one is-clone">
+                                    <div class="row bg-white p-4 hey" style="">
+                                        <div class="col-md-4 p-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                17 Dec, 2021
+                                            </p>
+
+                                            <a href="">PIS Update Campaign-Week 12</a>
+
+                                            <p>PIS Update Campaign-Week 10</p>
+
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="two is-clone">
+                                    <div class="row bg-white p-4 mt-3 hey" style="">
+                                        <div class="col-md-4 p-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                16 Dec, 2021
+                                            </p>
+
+                                            <a href="">PIS Update Campaign-Week 11</a>
+
+                                            <p>PIS Update Campaign-Week 9</p>
+
+                                        </div>
+                                    </div>
+                                </section>
+                            </main>
+
+                        </div>
+                        <div class="row p-4 mt-3 justify-content-center mb-0" style="">
+                            <div class="col-md-2">
+                                <div class="btn btn-danger">
+                                    View Page
                                 </div>
                             </div>
+                        </div>
 
 
-                    </div>
+                </div>
                     <div class="tab-pane" id="posts" style="background-color: #EBF2FB;">
 
                             <h4>Recent Posts</h4>
@@ -643,90 +747,6 @@
 
         </div>
 
-
-        {{-- <div class="row">
-            <div class="col-md-7 border p-2" style="margin-right: 12px;">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Slider/nijamati-66501.png" class="d-block" alt="..." style="width: 100%; height: 100%;">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Slider/nijamati-66501.png" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Slider/nijamati-66501.png" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-            </div>
-            <div class="col-md-4 border" style="background-color: #F5F5F5;">
-                <div class="p-2">
-                    <div class="row bg-white p-2 mb-2">
-                        <div class="col-md-3">
-                            <img src="https://nijamati.pis.gov.np/public/uploads/post/pages_1615885039-69047.jpg" alt=""
-                        class="rounded-circle mt-2" style="width: 80px; height: 60px;">
-                        </div>
-                        <div class="col">
-                            <h6 class="mt-3"><strong>Netra Prasad Subedi</strong></h6>
-                            <p class="" style="font-size: 13px;">Director General</p>
-                        </div>
-                    </div>
-                    <div class="row bg-white p-2 mb-2">
-                        <div class="col-md-3">
-                            <img src="https://nijamati.pis.gov.np/public/uploads/post/20210321_205736-84373.jpg" alt=""
-                        class="rounded-circle mt-2" style="width: 80px; height: 60px;">
-                        </div>
-                        <div class="col">
-                            <h6 class="mt-3"><strong>Baburaja Shrestha</strong></h6>
-                            <p class="" style="font-size: 13px;">Deputy General Director</p>
-                        </div>
-                    </div>
-                    <div class="row bg-white p-2" >
-                        <div class="col-md-3" >
-                            <img src="https://nijamati.pis.gov.np/public/uploads/post/prakashjung-22214.jpg" alt=""
-                        class="rounded-circle mt-2" style="width: 80px; height: 60px;">
-                        </div>
-                        <div class="col-md-7">
-                            <h6 class="mt-3"><strong>Prakashjung Karki</strong></h6>
-                            <p class="" style="font-size: 13px;">Director / Information Officer</p>
-                            <p style="font-size: 13px;">+977 01 5010138</p>
-                        </div>
-                        <div class="col-md-2">
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="btn-group-vertical sticky">
-            <button type="button" class="btn" title="View Location" style="border-bottom: 1px solid #b1aeae;">
-                <i class="fas fa-map-marker-alt"></i>
-            </button>
-            <button type="button" class="btn" title="Check Email" style="border-bottom: 1px solid #b1aeae;">
-                <i class="fas fa-envelope"></i>
-            </button>
-            <button type="button" class="btn" title="Archive" style="border-bottom: 1px solid #b1aeae;">
-                <i class="fas fa-archive"></i>
-            </button>
-            <button type="button" class="btn" title="Links" style="border-bottom: 1px solid #b1aeae;">
-                <i class="fas fa-link"></i>
-            </button>
-            <button type="button" class="btn">
-                <i ><img src="{{ asset('image/nepal-flag.gif') }}" title="Change Language" style="width: 15px;"></i>
-            </button>
-
-        </div>
 
         <div class="row mt-4" style="height: 300px; column-gap: 12px;">
             <div class="col-md-5 p-2">
