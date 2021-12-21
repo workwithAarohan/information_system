@@ -13,9 +13,6 @@
 <script src="/js/script.js"></script>
 
 
-
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-4 mt-2 mx-auto border firstfooter">

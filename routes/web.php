@@ -36,6 +36,9 @@ Route::get('/slideshow', function() {
     return view('slideshow');
 });
 
+Route::get('/actsregulations', function() {
+    return view('actsregulations');
+})->name('acts');
 
 
 Route::get('/testing', function() {
