@@ -24,6 +24,22 @@ jQuery(document).ready(function (e) {
 });
 
 
+
+
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 var today = new Date();
   var day = today.getDay();
   var daylist = ["Sun","Mon","Tue","Wed ","Thur","Fri","Sat"];
@@ -55,3 +71,4 @@ var today = new Date();
     document.getElementById('time_span').innerHTML = t_str;
     setTimeout(timer,1000);
     }
+

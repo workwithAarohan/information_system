@@ -22,6 +22,7 @@
   
 }
 
+
 .head li {
   display: inline-block;
   list-style: none;
@@ -108,13 +109,14 @@
     .wrapper{
 
       margin:auto;
+  }
   
-
-
-
-    }
-  
-  
+  #sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+ 
   
 
 

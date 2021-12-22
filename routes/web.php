@@ -49,6 +49,11 @@ Route::get('/example', function() {
     return view('example');
 });
 
+Route::get('/dropdown', function() {
+    return view('sub.newdropdown');
+});
+
+
 
 
 
