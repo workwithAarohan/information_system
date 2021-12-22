@@ -132,10 +132,95 @@
             width: 100%;
         }
 
+        .popup
+            {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.5);
+                transition: opacity 500ms;
+                visibility: visible;
+                opacity: 1;
+                z-index: 99;
+            }
+
+            .popup-box
+            {
+                height: 100px;
+                margin: 100px auto;
+                position: relative;
+                transition: all 5s ease-in-out;
+            }
+
+            .popup-box h5
+            {
+                color: white;
+                font-family: sans-serif;
+                font-size: medium;
+                font-weight: bold;
+            }
+
+            .close
+            {
+                color: black;
+                background: white;
+                padding: 0 10px;
+                border-radius: 50%;
+                font-size: 18px;
+                font-weight: 900;
+            }
+
+            .close:hover
+            {
+                background: #e02020;
+                color: white;
+            }
+
 @endsection
 
 @section('content')
     <div class="container">
+
+        {{-- Modal --}}
+        <div class="popup">
+            <div class="popup-box" style="width: 600px;">
+
+                <div class="d-flex mb-1" style="">
+                    <button class="close btn" style="">&times;</button>
+                </div>
+
+
+                <div id="carouselModal" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselModal" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselModal" data-bs-slide-to="1" aria-label="Slide 2" class="bg-dark"></button>
+                      </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row p-2" style="background: #005FCB;">
+                            <h5 class="m-auto">Online PIS Login Procedure</h5>
+                        </div>
+                        <div class="row bg-secondary">
+
+                            <img src="https://nijamati.pis.gov.np/public/uploads/file/popup notice-97155.png" class="p-0" style="height:450px; object-fit: fill; ">
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row p-2" style="background: #005FCB;">
+                            <h5 class="m-auto">Changes regarding the website of Rastriya Kitabkhana (Nijamati)</h5>
+                        </div>
+                        <div class="row bg-secondary">
+
+                            <img src="https://nijamati.pis.gov.np/public/uploads/file/popup-33242.jpg" class="p-0" style="height:450px; object-fit: fill;">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
         {{-- Sticky Menu --}}
         <div class="btn-group-vertical sticky">
@@ -760,9 +845,11 @@
                 $(this).tab("show");
             });
 
-
+            $(".close").on("click", function() {
+                $(".popup").hide();
+            });
         });
-        </script>
+    </script>
 
 
     <script src="{{ asset('js/script.js') }}"></script>
