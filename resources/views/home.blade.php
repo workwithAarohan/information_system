@@ -1,5 +1,10 @@
 @extends('layouts.header')
 
+
+@section('title')
+Home
+@endsection
+
 @section('style')
     .title
     {
