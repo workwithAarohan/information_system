@@ -8,14 +8,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>@yield('title')</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+      --}} 
 
-        
+
+
     <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
 
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
@@ -37,6 +41,8 @@
 
 
     <script src="{{asset('js/header.js')}}"></script>
+    
+    <script src="{{asset('js/datetime.js')}}"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -52,18 +58,14 @@
     <div class="col-md-6">
 
     <div class="d-flex" >
-      <span>
-      <i class="far fa-calendar"></i>
-        17 Dec 2021, Fri
-      </span>
+     
+      <h4 class="far fa-calendar" style="font-size: 15px" id="displayDate"></h4>
+      <h4 class="far fa-clock" style="font-size: 15px" id="time_span"></h4>
       <span>
       <i class="fas fa-envelope-square"></i>
       info@pis.gov.np
       </span>
-      <span>
-      <i class="far fa-clock"></i>
-      12:07 PM</span>
-      <span>
+     
       <i class="fas fa-phone-alt"></i>
       01-5010138,01-5428975</span>
     </div>
@@ -334,13 +336,49 @@
     </div>
 
 </div>
+
 <div class="footer">
     @include('layouts.footer')
 
-    </div>
+</div>
 
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/autoscroll.js') }}"></script>
+
+    <script type="text/javascript">
+      var today = new Date();
+      var day = today.getDay();
+      var daylist = ["Sun","Mon","Tue","Wed ","Thur","Fri","Sat"];
+      var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      var dateDay = date+','+daylist[day];
+    
+      
+      document.getElementById("displayDate").innerHTML = dateDay;
+    
+        timer();
+    
+        function timer(){
+        var currentTime = new Date()
+        var hours = currentTime.getHours()
+        var minutes = currentTime.getMinutes()
+        var sec = currentTime.getSeconds()
+        if (minutes < 10){
+            minutes = "0" + minutes
+        }
+        if (sec < 10){
+            sec = "0" + sec
+        }
+        var t_str = hours + ":" + minutes + ":" + sec + " ";
+        if(hours > 11){
+            t_str += "PM";
+        } else {
+        t_str += "AM";
+        }
+        document.getElementById('time_span').innerHTML = t_str;
+        setTimeout(timer,1000);
+        }
+     
+      </script>
 
 </body>
 </html>
