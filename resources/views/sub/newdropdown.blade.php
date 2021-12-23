@@ -24,8 +24,8 @@
       <a href="#">Staffs</a>
     </div>
   </div> 
-  <a href="#news">Acts and Regulation</a>
-  <a href="#contact">Citizen charter</a>
+      <a href="#news">Acts and Regulation</a>
+     <a href="#contact">Citizen charter</a>
   <a href="#contact">Publication</a>
   <a href="#contact">News and Notices</a>
   
@@ -43,16 +43,16 @@
   
   <a href="#contact">Downloads</a>
   
-  
-  <div class="dropdown">
-    <button class="dropbtn"> Gallery
+
+      <div class="dropdown">
+      <button class="dropbtn"> Gallery
       <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
+      </button>
+      <div class="dropdown-content">
       <a href="#">Link 1</a>
       <a href="#">Link 2</a>
       <a href="#">Link 3</a>
-    </div>
+      </div>
   </div> 
 
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
