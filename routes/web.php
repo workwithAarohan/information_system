@@ -66,6 +66,8 @@ Route::get('/try', function() {
     return view('try');
 });
 
+
+
 Route::get('/datetime', function() {
     return view('datetimezoom');
 });
@@ -74,3 +76,6 @@ Route::get('/modal', function() {
     return view('sub.modal');
 });
 
+Route::get('/nepali', function() {
+    return view('nepalify');
+});
