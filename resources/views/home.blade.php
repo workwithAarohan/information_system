@@ -100,88 +100,88 @@ Home
         background-color: none;
     }
     .scroll
-        {
-            height: 490px;
-            overflow: hidden;
-        }
+    {
+        height: 490px;
+        overflow: hidden;
+    }
 
-        .Loop::-webkit-scrollbar
-        {
-            display: none;
-        }
+    .Loop::-webkit-scrollbar
+    {
+        display: none;
+    }
 
-        .Loop
-        {
-            position: relative;
-            height: 100%;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-        }
+    .Loop
+    {
+        position: relative;
+        height: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
-        section
-        {
-            position: relative;
-            text-align: center;
-            height: 50%;
-        }
+    section
+    {
+        position: relative;
+        text-align: center;
+        height: 50%;
+    }
 
-        ::scrollbar {
-            display: none;
-        }
+    ::scrollbar {
+        display: none;
+    }
 
 
 
-        .hey
-        {
-            position: absolute;
-            width: 100%;
-        }
+    .hey
+    {
+        position: absolute;
+        width: 100%;
+    }
 
-        .popup
-            {
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: rgba(0, 0, 0, 0.5);
-                transition: opacity 500ms;
-                visibility: visible;
-                opacity: 1;
-                z-index: 99;
-            }
+    .popup
+    {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        transition: opacity 500ms;
+        visibility: visible;
+        opacity: 1;
+        z-index: 99;
+    }
 
-            .popup-box
-            {
-                height: 100px;
-                margin: 100px auto;
-                position: relative;
-                transition: all 5s ease-in-out;
-            }
+    .popup-box
+    {
+        height: 100px;
+        margin: 100px auto;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
 
-            .popup-box h5
-            {
-                color: white;
-                font-family: sans-serif;
-                font-size: medium;
-                font-weight: bold;
-            }
+    .popup-box h5
+    {
+        color: white;
+        font-family: sans-serif;
+        font-size: medium;
+        font-weight: bold;
+    }
 
-            .close
-            {
-                color: black;
-                background: white;
-                padding: 0 10px;
-                border-radius: 50%;
-                font-size: 18px;
-                font-weight: 900;
-            }
+    .close
+    {
+        color: black;
+        background: white;
+        padding: 0 10px;
+        border-radius: 50%;
+        font-size: 18px;
+        font-weight: 900;
+    }
 
-            .close:hover
-            {
-                background: #e02020;
-                color: white;
-            }
+    .close:hover
+    {
+        background: #e02020;
+        color: white;
+    }
 
 @endsection
 
