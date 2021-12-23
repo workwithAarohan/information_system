@@ -77,3 +77,9 @@ Route::get('/modal', function() {
     return view('sub.modal');
 });
 
+
+
+Route::get('/nepal', function() {
+    return view('layouts.nepalify');
+});
+
