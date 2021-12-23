@@ -1,89 +1,49 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <script src="{{asset('js/app.js')}}"></script>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
+<html lang="ne">
+  <head>
+    <meta charset="utf-8" />
+    <title>English to Nepali</title>
+    <style>
 
-.title {
-  color: grey;
-  font-size: 18px;
-}
+    </style>
+  </head>
 
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
+  <body>
+    <h1>English to Nepali</h1>
+    <form method="GET" action="" >
+        <label for="">English Name</label>
+        <input type="text" class="english">
 
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
+        <label for="">Auto Nepali Name</label>
+        <input id="autonepali" name="text" disabled/> <br><br>
+        <label for="">Nepali Name</label>
+        <input id="nepali" name="text"/> <br><br>
+      <input type="submit" value="Submit" />
+    </form>
 
-button:hover, a:hover {
-  opacity: 0.7;
-}
-</style>
-</head>
-<body>
+    <script src="{{ asset('js/nepalify.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        // nepalify.interceptElementById("nepali");
+        // // console.log(nepalify.format('ArohN nkr/mI'));
 
-<h2 style="text-align:center"></h2>
-<div class="row">
-    <div class="col-md-3">
+        // var nameInput = document.getElementById('nepali');
 
-   
+        // document.querySelector('form').addEventListener('submit', function (e) {
+        //     e.preventDefault();
+        //     console.log(nameInput.value);
+        // });
 
-<div class="card">
-  <img src="{{ asset('image/logo.png') }}" alt="John" style="width:100%">
-  <h1>Suman Chapagain</h1>
-  <p class="title">Employee code: 100000</p>
-  <p class="title">position: Gazzette first</p>
- <p class="title">post:Director General</p>
- <p class="title">Phone no: 9813456789</p>
- <p class="title">Email: sumanchapagin12@gmail.com </p>
-</div>
-</div>
-<div class="col-md-3">
-<div class="card">
-    <img src="{{ asset('image/logo.png') }}" alt="John" style="width:100%">
-    <h1>Suman Chapagain</h1>
-    <p class="title">Employee code: 100000</p>
-    <p class="title">position: Gazzette first</p>
-   <p class="title">post:Director General</p>
-   <p class="title">Phone no: 9813456789</p>
-   <p class="title">Email: sumanchapagin12@gmail.com </p>
-  </div>
-</div>
+        $(document).ready(function(){
+            $('.english').keyup(function(){
+                var nepaliText = $(this).val();
+                nepaliText = nepalify.format(nepaliText);
+                $('#autonepali').val(nepaliText);
+            });
 
-<div class="col-md-3">
-    <div class="card">
-        <img src="{{ asset('image/logo.png') }}" alt="John" style="width:100%">
-        <h1>Suman Chapagain</h1>
-        <p class="title">Employee code: 100000</p>
-        <p class="title">position: Gazzette first</p>
-       <p class="title">post:Director General</p>
-       <p class="title">Phone no: 9813456789</p>
-       <p class="title">Email: sumanchapagin12@gmail.com </p>
-      </div>
-    </div>
-</div>
+            nepalify.interceptElementById("nepali");
 
-</body>
+        });
+    </script>
+  </body>
 </html>

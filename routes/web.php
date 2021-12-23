@@ -52,12 +52,12 @@ Route::get('/example', function() {
 Route::get('/dropdown', function() {
     return view('sub.newdropdown');
 });
-Route::get('/profile', function() {
-    return view('sub.profile');
-});
+// Route::get('/profile', function() {
+//     return view('sub.profile');
+// });
 
 
-
+Route::get('/profile', [\App\Http\Controllers\StaffController::class, 'index'])->name('profile.index');
 
 
 
