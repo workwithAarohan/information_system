@@ -27,7 +27,8 @@ class HomeController extends Controller
     {
         return view('main.home', [
             'photos' => Gallery::where('is_active',1)->get(),
-            'events' => Event::all()
+            'events' => Event::orderBy('date', 'desc')->get(),
+            
         ]);
     }
 }

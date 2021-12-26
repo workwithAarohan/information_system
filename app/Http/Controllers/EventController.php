@@ -46,12 +46,25 @@ class EventController extends Controller
         $event= new Event();
         $event->title_en = $request->input('title_en');
         $event->title_np = $request->input('title_np');
-        $event->image = $request->input('image');
+        
         $event->date = $request->input('date');
         $event->description_np = $request->input('desc_np');
         $event->description_en = $request->input('desc_en');
-        $event->save();
+      
 
+       
+
+        if($request->hasFile('image'))
+        {
+            $image=$request->file('image');
+            $filename = $image->getClientOriginalName();
+            $Path = public_path('/image/event');
+            $image->move($Path, $filename);
+            $event->image = $filename;
+         
+        }
+        
+        $event->save();
         return redirect('/event');
     }
 
