@@ -91,6 +91,9 @@ Route::get('/nepal', function() {
     return view('layouts.nepalify');
 });
 
+Route::get('/text',[\App\Http\Controllers\Textcontroller::class, 'index'])->name('text.index');
+
+Route::resource('/event',App\Http\Controllers\EventController::class);
 
 
 Auth::routes();
