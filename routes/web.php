@@ -60,6 +60,14 @@ Route::get('/dropdown', function() {
 Route::get('/profile', [\App\Http\Controllers\StaffController::class, 'index'])->name('profile.index');
 
 
+Route::get('/navtitle', [\App\Http\Controllers\NavtitleController::class, 'index'])->name('navtitle.index');
+
+
+/* Route::get('/recposts', [\App\Http\Controllers\RecentpostsController::class, 'index'])->name('recentpost.index'); */
+
+
+Route::resource('/recposts', App\Http\Controllers\RecentpostController::class);
+
 
 Route::get('/tab', function() {
     return view('tabMenu');
@@ -89,5 +97,6 @@ Route::get('/nepali', function() {
 Route::get('/nepal', function() {
     return view('layouts.nepalify');
 });
+
 
 
