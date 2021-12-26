@@ -38,16 +38,18 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'desc' => 'required',
+            'title_np' => 'required',
+            'desc_np' => 'required',
             'image'=>'required',
             'date'=>'required',
         ]);
         $event= new Event();
-        $event->title = $request->input('title');
+        $event->title_en = $request->input('title_en');
+        $event->title_np = $request->input('title_np');
         $event->image = $request->input('image');
         $event->date = $request->input('date');
-        $event->description = $request->input('desc');
+        $event->description_np = $request->input('desc_np');
+        $event->description_en = $request->input('desc_en');
         $event->save();
 
         return redirect('/event');
@@ -93,12 +95,20 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    { 
+        $request->validate([
+            'title_np' => 'required',
+            'desc_np' => 'required',
+            'image'=>'required',
+            'date'=>'required',
+        ]);
        $event=  Event::find($id);
-       $event->title = $request->input('title');
+       $event->title_en = $request->input('title_en');
+       $event->title_np = $request->input('title_np');
        $event->image = $request->input('image');
        $event->date = $request->input('date');
-       $event->description = $request->input('desc');
+       $event->description_np = $request->input('desc_np');
+       $event->description_en= $request->input('desc_en');
        $event->save();
 
        return redirect('/event');
