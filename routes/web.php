@@ -113,6 +113,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/photo', [App\Http\Controllers\PhotoController::class, 'index'])->name('photo.index');
 
+Route::resource('/galleryType', App\Http\Controllers\GalleryTypeController::class);
+
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
 Route::resource('/photogallery', App\Http\Controllers\PhotoController::class);

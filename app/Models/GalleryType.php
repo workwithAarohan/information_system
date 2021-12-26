@@ -13,6 +13,6 @@ class GalleryType extends Model
 
     public function galleries()
     {
-        return $this->hasMany(Gallery::class);
+        return $this->hasMany(Gallery::class,'type_id');
     }
 }

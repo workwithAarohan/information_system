@@ -13,6 +13,6 @@ class Gallery extends Model
 
     public function type()
     {
-        return $this->belongsTo(GalleryType::class);
+        return $this->belongsTo(GalleryType::class, 'type_id');
     }
 }

@@ -759,7 +759,27 @@ Home
 
                             <h4>Recent Posts</h4>
                             <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
+                                @foreach ($events as $event)
                                 <div class="bg-white" style="width: 50%;">
+                                    <div class="row">
+                                        <div class="col-md-5 mt-3">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        </div>
+                                        <div class="col mt-3">
+                                            <p>
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                {{ $event->date }}
+                                            </p>
+
+                                            <a href="">{{ $event->title }}</a>
+
+                                            <p>PIS Update Campaign-Week 10</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                                {{-- <div class="bg-white" style="width: 50%;">
                                     <div class="row">
                                         <div class="col-md-5 mt-3">
                                             <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
@@ -795,7 +815,7 @@ Home
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
 
 

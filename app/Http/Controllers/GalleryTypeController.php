@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
+use App\Models\GalleryType;
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+class GalleryTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        return view('gallery.index', [
+            'galleries' => GalleryType::all(),
+        ]);
     }
 
     /**
@@ -24,7 +27,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        //
+        return view('gallery.create');
     }
 
     /**
@@ -36,40 +39,16 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title_en' => 'required',
-            'title_np' => 'required',
-            'file' => 'required',
+            'title' => 'required',
         ]);
 
-        if($request->has('is_active'))
-        {
-            $request->merge([
-                'is_active' => 1,
-            ]);
-        }
+        // $gallery = new GalleryType();   // Create Object
+        // $gallery->title = $request->input('title');
+        // $gallery->save();  //Insert
 
+        GalleryType::create($request->all());
 
-        if($request->hasFile('file'))
-        {
-            $image=$request->file('file');
-            $filename = $image->getClientOriginalName();
-            $Path = public_path('/image/photoGallery');
-            $image->move($Path, $filename);
-            // $request->image=$filename;
-            $request->merge([
-                'file' => $filename,
-            ]);
-        }
-
-        $gallery = Gallery::create([
-            'title_en' => $request->input('title_en'),
-            'title_np' => $request->input('title_np'),
-            'file' => $request->input('file'),
-            'is_active' => $request->input('is_active'),
-            'type_id' => $request->input('type_id'),
-        ]);
-
-        return redirect('/galleryType/'.$gallery->type_id);
+        return redirect('/gallery');
     }
 
     /**
@@ -78,9 +57,11 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(GalleryType $galleryType)
     {
-        //
+        return view('gallery.show', [
+            'gallery' => $galleryType
+        ]);
     }
 
     /**
@@ -89,9 +70,11 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(GalleryType $gallery)
     {
-        //
+        return view('gallery.edit', [
+            'gallery' => $gallery,        // Select * from gallery_types where id = $id;
+        ]);
     }
 
     /**
@@ -101,9 +84,17 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, GalleryType $gallery)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+        ]);
+
+        $gallery->update($request->all());
+
+        // GalleryType::create($request->all());
+
+        return redirect('/gallery');    //redirects to index page
     }
 
     /**
@@ -112,8 +103,10 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(GalleryType $gallery)
     {
-        //
+        $gallery->delete();
+
+        return redirect('gallery');
     }
 }

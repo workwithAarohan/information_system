@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,7 @@ class HomeController extends Controller
     {
         return view('main.home', [
             'photos' => Gallery::where('is_active',1)->get(),
+            'events' => Event::all()
         ]);
     }
 }

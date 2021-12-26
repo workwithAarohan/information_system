@@ -21,6 +21,8 @@ class PhotoController extends Controller
         ]);
     }
 
+    public function stor
+
     public function videoIndex()
     {
         return view('videoGallery.index', [
