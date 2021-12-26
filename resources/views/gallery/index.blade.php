@@ -23,10 +23,10 @@
                             <td>{{ $gallery->title }}</td>
                             <td>
                                 <div class="d-flex">
-                                    <a href="{{ route('gallery.edit', $gallery->id) }}" class="btn btn-secondary me-2">Update</a>
-                                    <a href="{{ route('gallery.show', $gallery->id) }}" class="btn btn-info me-2">Read</a>
+                                    <a href="{{ route('galleryType.edit', $gallery->id) }}" class="btn btn-secondary me-2">Update</a>
+                                    <a href="{{ route('galleryType.show', $gallery->id) }}" class="btn btn-info me-2">Read</a>
 
-                                    <form action="{{ route('gallery.destroy', $gallery->id) }}" method="POST">
+                                    <form action="{{ route('galleryType.destroy', $gallery->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger" type="submit">Delete</button>
@@ -39,9 +39,9 @@
                 </table>
 
             </div>
-            <div class="col bg-white p-4 rounded shadow">
+            <div class="col bg-white p-0 rounded shadow">
                 <h5 class="bg-success p-3 text-white mb-4">Create Gallery Type</h5>
-                <form action="{{ route('gallery.store') }}" method="POST">
+                <form action="{{ route('galleryType.store') }}" method="POST" class="mt-2 p-4">
 
                     <input type="hidden" name="_token" id="csrf" value="{{ csrf_token() }}">
 
@@ -56,8 +56,11 @@
                         @enderror
                     </div>
 
+                    <div class="mb-3">
+                        <input type="submit" value="Create" id="submit" class="btn btn-success ">
+                    </div>
 
-                    <input type="submit" value="Create" id="submit" class="btn btn-primary">
+
                 </form>
             </div>
         </div>
