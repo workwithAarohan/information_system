@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -91,3 +92,13 @@ Route::get('/nepal', function() {
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/photo', [App\Http\Controllers\PhotoController::class, 'index'])->name('photo.index');
+
+Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
+
+Route::resource('/photogallery', App\Http\Controllers\PhotoController::class);
