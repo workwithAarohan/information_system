@@ -119,3 +119,7 @@ Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
 Route::resource('/photogallery', App\Http\Controllers\PhotoController::class);
 
+
+Route::resource('/information', App\Http\Controllers\InformationController::class);
+
+Route::resource('/infodesc', App\Http\Controllers\Information_descController::class);

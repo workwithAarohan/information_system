@@ -633,25 +633,29 @@ Home
                         <div class="scroll">
 
                             <main class="Loop js-loop">
+                                @foreach ($events as $event)
+                                    
+                                
                                 <section class="">
                                     <div class="row bg-white p-4 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="{{ asset('image/event/'.$event->image) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
                                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                17 Dec, 2021
+                                                {{ $event->date }}
                                             </p>
 
-                                            <a href="">PIS Update Campaign-Week 12</a>
+                                            <a href=""> {{ $event->title_en }}</a>
 
-                                            <p>PIS Update Campaign-Week 10</p>
+                                            <p> {{ $event->description_en }}</p>
 
                                         </div>
                                     </div>
                                 </section>
-                                <section >
+                                @endforeach
+                                {{-- <section >
                                     <div class="row bg-white p-4 mt-3 hey" style="">
                                         <div class="col-md-4 p-3">
                                             <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
@@ -741,7 +745,7 @@ Home
 
                                         </div>
                                     </div>
-                                </section>
+                                </section> --}}
                             </main>
 
                         </div>

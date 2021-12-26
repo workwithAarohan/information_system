@@ -27,7 +27,7 @@
         <input type="submit" value="Submit">
     </form> --}}
 
-    <form action="{{ route('event.store') }}" method="post" >
+    <form action="{{ route('event.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Image</label>
