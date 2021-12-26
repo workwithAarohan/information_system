@@ -23,13 +23,13 @@
                     @endforeach
                 </div>
             </div>
-            <div class="col bg-white shadow p-0" style="height: 500px;">
+            <div class="col bg-white shadow p-0" style="height: 480px;">
                 <h4 class="bg-success p-2 w-100 text-white" style="text-align: center;">Add New Photo</h4>
                 <div class="mt-3 p-4">
                     <form action="{{ route('gallery.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="mb-3">
+                        <div class="mb-3" style="height: 80px;">
                             <label for="title_en" class="form-label">Title_en</label>
                             <input type="text" class="form-control  @error('title_en') is-invalid @enderror" name="title_en">
                             @error('title_en')
@@ -38,7 +38,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" style="height: 80px;">
                             <label for="title_np" class="form-label">Title_np</label>
                             <input type="text" class="form-control @error('title_np') is-invalid @enderror" id="title_np" name="title_np">
                             @error('title_np')
@@ -47,7 +47,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" style="height: 80px;">
                             <label for="title_np" class="form-label">Photo</label>
                             <input type="file" class="form-control @error('file') is-invalid @enderror" name="file">
                             @error('file')

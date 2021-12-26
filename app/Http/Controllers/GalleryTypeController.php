@@ -48,7 +48,7 @@ class GalleryTypeController extends Controller
 
         GalleryType::create($request->all());
 
-        return redirect('/gallery');
+        return redirect('/galleryType');
     }
 
     /**
@@ -94,7 +94,7 @@ class GalleryTypeController extends Controller
 
         // GalleryType::create($request->all());
 
-        return redirect('/gallery');    //redirects to index page
+        return redirect('/galleryType');    //redirects to index page
     }
 
     /**
@@ -103,10 +103,10 @@ class GalleryTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(GalleryType $gallery)
+    public function destroy(GalleryType $galleryType)
     {
-        $gallery->delete();
+        $galleryType->delete();
 
-        return redirect('gallery');
+        return redirect('galleryType');
     }
 }

@@ -363,7 +363,7 @@ Home
                         @foreach ($photos as $photo)
                             @if ($i==0)
                                 <div class="carousel-item active">
-                                    <img src="/image/photoGallery/{{ $photo->photo }}" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
+                                    <img src="{{ asset('image/'.$photo->file) }}" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h6>{{ $photo->english_title }}</h6>
                                     </div>
