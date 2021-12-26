@@ -33,7 +33,7 @@
     <div class="row mt-5" style="justify-content: center"> 
         <div class="col-md-6 border p-5">
     
-                <form method="POST" action="{{ route("recposts.store") }}">
+                <form method="POST" action="{{ route("recposts.store") }}"  enctype="multipart/form-data">
                 @csrf
                     
                     <label for="date" class="form-label">Date: </label>
@@ -54,7 +54,7 @@
 
                     
                     <label for="description" class="form-label">Description: </label>
-                    <input type="text" class="form-control" name="description_en" id="description_np"><br>
+                    <input type="text" class="form-control" name="description_en" id="description_en"><br>
                     
                     
                     <label for="description" class="form-label">Description: </label>

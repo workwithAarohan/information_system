@@ -15,7 +15,7 @@ class CreateRecentpostsTable extends Migration
     {
         Schema::create('recentposts', function (Blueprint $table) {
             $table->id();
-            $table->string('date');
+            $table->date('date');
             $table->string('title_en');
             $table->string('title_np');
             $table->string('photo');

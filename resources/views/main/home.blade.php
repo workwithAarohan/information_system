@@ -759,21 +759,21 @@ Home
 
                             <h4>Recent Posts</h4>
                             <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
-                                @foreach ($events as $event)
+                                @foreach ($recentposts as $recentpost)
                                 <div class="bg-white" style="width: 50%;">
                                     <div class="row">
                                         <div class="col-md-5 mt-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="{{ asset('/image/'.$recentpost->photo) }}" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
                                         </div>
                                         <div class="col mt-3">
                                             <p>
                                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                {{ $event->date }}
+                                                {{ $recentpost->date }}
                                             </p>
 
-                                            <a href="">{{ $event->title }}</a>
+                                            <a href="">{{ $recentpost->title_en }}</a>
 
-                                            <p>PIS Update Campaign-Week 10</p>
+                                            <p>{{ $recentpost->description_en }}</p>
 
                                         </div>
                                     </div>
