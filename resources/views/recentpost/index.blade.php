@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/recentpost.css">
     <title>Recent Posts</title>
 
     <style>
@@ -15,9 +16,10 @@
 
         td, th 
         {
-            border: 1px solid #dddddd;
+            border: 2px solid #dddddd;
             text-align: left;
             padding: 8px;
+            
         }
 
     </style>
@@ -26,7 +28,7 @@
 </head>
 
 <body>
-
+    <h3 class="try">Recent Posts CRUD</h3>
     <table style=" width: 50%;">
         <tr>
             <th> Date </th>
@@ -43,7 +45,7 @@
                 </td>
 
                 <td>
-                        {{ $recentpost->title }}
+                        {{ $recentpost->title_en }}
                     
                 </td>
 
@@ -61,11 +63,11 @@
             
                 <td style="display: flex; align: center;">
 
-                    <a href="{{ route('recposts.edit', $recentpost->id)}}"> Edit </a>
-               
+                    <a class="button" href="{{ route('recposts.edit', $recentpost->id)}}"> Edit </a>
+                    
 
                     &emsp;
-                    <a href="{{ route('recposts.show', $recentpost->id)}}"> 
+                    <a class="button" href="{{ route('recposts.show', $recentpost->id)}}"> 
                         Show
                     </a>
                
@@ -75,7 +77,7 @@
                         @csrf
                         @method('DELETE')
                         
-                        <button type="submit"> Delete </button>
+                        <button class="button"> Delete </button>
                     </form>
                 </td>
             </tr>
@@ -83,7 +85,7 @@
     </table>
 
     <br><br>
-    <a href="{{ route('recposts.create') }}">Add New Member</a>
+    <a class = "button" href="{{ route('recposts.create') }}">Add New Member</a>
 
 </body>
 </html>

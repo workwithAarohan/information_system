@@ -1,0 +1,30 @@
+.try::after {
+ 
+    content: "";
+    display: block;
+    width: 80px;
+    padding-top: 0px;
+    border-bottom: 5px solid rgb(0, 51, 128);
+}
+.button {
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(248, 238, 238);
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    background-color: rgb(129, 15, 236);
+  }
+
+  .button:hover{
+      background: rgb(209, 12, 12);
+  }
+
+  .display {
+      justify-content: center;
+  }
