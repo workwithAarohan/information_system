@@ -61,6 +61,14 @@ Route::get('/dropdown', function() {
 Route::get('/profile', [\App\Http\Controllers\StaffController::class, 'index'])->name('profile.index');
 
 
+Route::get('/navtitle', [\App\Http\Controllers\NavtitleController::class, 'index'])->name('navtitle.index');
+
+
+/* Route::get('/recposts', [\App\Http\Controllers\RecentpostsController::class, 'index'])->name('recentpost.index'); */
+
+
+Route::resource('/recposts', App\Http\Controllers\RecentpostController::class);
+
 
 Route::get('/tab', function() {
     return view('tabMenu');
@@ -93,6 +101,9 @@ Route::get('/nepal', function() {
 
 Route::get('/text',[\App\Http\Controllers\Textcontroller::class, 'index'])->name('text.index');
 
+
+
+
 Route::resource('/event',App\Http\Controllers\EventController::class);
 
 
@@ -105,3 +116,4 @@ Route::get('/photo', [App\Http\Controllers\PhotoController::class, 'index'])->na
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 
 Route::resource('/photogallery', App\Http\Controllers\PhotoController::class);
+
