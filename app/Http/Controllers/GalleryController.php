@@ -68,7 +68,7 @@ class GalleryController extends Controller
             'is_active' => $request->input('is_active'),
             'type_id' => $request->input('type_id'),
         ]);
-
+        
         return redirect('/galleryType/'.$gallery->type_id);
     }
 
