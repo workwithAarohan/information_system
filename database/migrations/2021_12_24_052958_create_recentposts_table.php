@@ -16,9 +16,11 @@ class CreateRecentpostsTable extends Migration
         Schema::create('recentposts', function (Blueprint $table) {
             $table->id();
             $table->string('date');
-            $table->string('title');
+            $table->string('title_en');
+            $table->string('title_np');
             $table->string('photo');
-            $table->text('description');
+            $table->text('description_en');
+            $table->text('description_np');
             $table->timestamps();
         });
     }
