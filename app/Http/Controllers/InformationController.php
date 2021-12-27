@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Information;
 
-class Information extends Controller
+class InformationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,9 @@ class Information extends Controller
      */
     public function index()
     {
-        //
+        return view('information.index', [
+            'informations' => Information::all()
+        ]);
     }
 
     /**
@@ -23,7 +26,7 @@ class Information extends Controller
      */
     public function create()
     {
-        //
+          return view('information.create');
     }
 
     /**
@@ -34,7 +37,11 @@ class Information extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $information= new Information();
+        $information->category = $request->input('category');
+        $information->save();
+
+        return redirect('/information');
     }
 
     /**
@@ -56,7 +63,10 @@ class Information extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('information.edit',[
+            "information"=>Information::find($id),
+        ]);
+        return redirect('/information');
     }
 
     /**
@@ -68,7 +78,10 @@ class Information extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $information=  Information::find($id);
+        $information->category = $request->input('category');
+         $information->save();
+         return redirect('/information');
     }
 
     /**
@@ -79,6 +92,10 @@ class Information extends Controller
      */
     public function destroy($id)
     {
-        //
+        $information= Information::find($id);
+        $information->delete();
+    
+
+        return redirect('information');
     }
 }
