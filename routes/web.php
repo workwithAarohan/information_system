@@ -24,7 +24,9 @@ Route::get('/home', function () {
 });
 
 Route::get('/test', function() {
-    return view('test');
+    return view('test' ,[
+        'gallery' => App\Models\GalleryType::find(1)
+    ]);
 });
 
 

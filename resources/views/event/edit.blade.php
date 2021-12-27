@@ -15,7 +15,7 @@
 
        
   
-            <form action="{{ route('event.update',$event->id) }}" method="post">
+            <form action="{{ route('event.update',$event->id) }}" method="post" enctype="multipart/form-data" >
                 @csrf
                 @method('put')
         <div class="mb-3">

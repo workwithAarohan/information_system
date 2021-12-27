@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Gallery;
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+class Information_desc extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -35,47 +34,7 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title_en' => 'required',
-            'title_np' => 'required',
-            'file' => 'required',
-        ]);
-
-        if($request->has('is_active'))
-        {
-            $request->merge([
-                'is_active' => 1,
-            ]);
-        }
-        else
-        {
-            $request->merge([
-                'is_active' => 0,
-            ]);
-        }
-
-
-        if($request->hasFile('file'))
-        {
-            $image=$request->file('file');
-            $filename = $image->getClientOriginalName();
-            $Path = public_path('/image/photoGallery');
-            $image->move($Path, $filename);
-            // $request->image=$filename;
-            $request->merge([
-                'file' => $filename,
-            ]);
-        }
-
-        $gallery = Gallery::create([
-            'title_en' => $request->input('title_en'),
-            'title_np' => $request->input('title_np'),
-            'file' => $request->input('file'),
-            'is_active' => $request->input('is_active'),
-            'type_id' => $request->input('type_id'),
-        ]);
-
-        return redirect('/galleryType/'.$gallery->type_id);
+        //
     }
 
     /**

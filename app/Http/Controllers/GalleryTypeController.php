@@ -70,10 +70,10 @@ class GalleryTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(GalleryType $gallery)
+    public function edit(GalleryType $galleryType)
     {
         return view('gallery.edit', [
-            'gallery' => $gallery,        // Select * from gallery_types where id = $id;
+            'gallery' => $galleryType,        // Select * from gallery_types where id = $id;
         ]);
     }
 
@@ -84,13 +84,13 @@ class GalleryTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, GalleryType $gallery)
+    public function update(Request $request, GalleryType $galleryType)
     {
         $request->validate([
             'title' => 'required',
         ]);
 
-        $gallery->update($request->all());
+        $galleryType->update($request->all());
 
         // GalleryType::create($request->all());
 

@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <div class="row bg-white p-4">
             <h5>Update Gallery</h5>
-            <form action="{{ route('gallery.update', $gallery->id) }}" method="POST">
+            <form action="{{ route('galleryType.update', $gallery->id) }}" method="POST">
                 @csrf
                 @method('PUT')
 
