@@ -47,6 +47,12 @@ class GalleryController extends Controller
                 'is_active' => 1,
             ]);
         }
+        else
+        {
+            $request->merge([
+                'is_active' => 0,
+            ]);
+        }
 
 
         if($request->hasFile('file'))
@@ -68,7 +74,7 @@ class GalleryController extends Controller
             'is_active' => $request->input('is_active'),
             'type_id' => $request->input('type_id'),
         ]);
-        
+
         return redirect('/galleryType/'.$gallery->type_id);
     }
 

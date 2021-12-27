@@ -1,27 +1,141 @@
 @extends('layouts.app')
 
+@section('style')
+
+
+    .box-wrapper
+    {
+        width: 780px;
+        margin: 100px auto 0;
+
+    }
+
+    .box-wrapper .box-title
+    {
+        font-size: 24px;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .box-container
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box-container .option_item
+    {
+        display: block;
+        position: relative;
+        width: 175px;
+        height: 175px;
+        margin: 10px;
+    }
+
+    .option_item .option_inner
+    {
+        cursor: pointer;
+        display: block;
+        border: 5px solid transparent;
+        position: relative;
+    }
+
+    .option_item .checkbox
+    {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        opacity: 0;
+    }
+
+
+    .option_item .checkbox:checked ~ .option_inner
+    {
+        border-color: #129b46;
+    }
+
+    .option_item .checkbox:checked ~ .option_inner .tickmark
+    {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        border: 20px solid;
+        border-color: #129b46 transparent transparent #129b46;
+    }
+
+    .option_item .checkbox:checked ~ .option_inner .tickmark:before
+    {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -15px;
+        width: 15px;
+        height: 5px;
+        border: 3px solid;
+        border-color: transparent transparent #fff #fff;
+        transform: rotate(-45deg);
+    }
+@endsection
+
 @section('content')
     <div class="container mt-4">
         <div class="row" style="column-gap: 20px;">
             <div class="col-md-8 bg-white p-4 shadow h-100">
-                <h4 class="mb-4">Photo Gallery</h4>
-                <div class="row" style="column-gap: 10px;">
-                    @foreach ($gallery->galleries as $value)
-                        <div class="col-md-3 mb-3" style="width: 270px;">
-                            <div class="card">
-                                <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $value->title_en }}</h5>
-                                    @if ($value->is_active)
-                                        <input type="checkbox" name="" id="" checked>
-                                    @else
-                                        <input type="checkbox" name="" id="">
-                                    @endif
+                <h4 class="mb-4">{{ $gallery->title }} Gallery</h4>
+                <form action="" class="">
+                    <div class="row" style="">
+                        @foreach ($gallery->galleries as $value)
+                            {{-- <div class="col-md-3 mb-3" style="width: 270px;">
+                                <div class="card">
+                                    <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $value->title_en }}</h5>
+                                        @if ($value->is_active)
+                                            <input type="checkbox" name="" id="" checked>
+                                        @else
+                                            <input type="checkbox" name="" id="">
+                                        @endif
+                                    </div>
                                 </div>
+                            </div> --}}
+                            <div class="col-md-3 mb-4"  style="width: 270px;">
+                                @if ($value->is_active)
+
+                                    <label for="{{ $value->id }}" class="option_item">
+                                        <input type="checkbox" name="" id="{{ $value->id }}" class="checkbox facebook" checked>
+                                        <div class="option_inner">
+                                            <div class="tickmark"></div>
+                                            <div class="p-1">
+                                                <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; padding: 0 0 0 0; ">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ $value->title_en }}</h5>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </label>
+                                @else
+                                    <label for="{{ $value->id }}" class="option_item">
+                                        <input type="checkbox" name="" id="{{ $value->id }}" class="checkbox" >
+                                        <div class="option_inner">
+                                            <div class="tickmark"></div>
+                                            <div class="p-1">
+                                                <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; padding: 0 0 0 0; ">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ $value->title_en }}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                @endif
                             </div>
-                        </div>
-                    @endforeach
-                </div>
+                        @endforeach
+                    </div>
+                </form>
             </div>
             <div class="col bg-white shadow p-0" style="height: 480px;">
                 <h4 class="bg-success p-2 w-100 text-white" style="text-align: center;">Add New Photo</h4>
