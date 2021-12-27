@@ -13,7 +13,7 @@ class Information_desc extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
