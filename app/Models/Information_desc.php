@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Information_desc extends Model
 {
     use HasFactory;
+
+    public function info()
+    {
+        return $this->belongsTo(Information::class);
+    }
 }

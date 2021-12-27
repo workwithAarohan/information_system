@@ -52,7 +52,12 @@ class InformationController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $information=Information::find($id);
+        return view('Information.show',[
+            'information'=> $information 
+        ]);
+
     }
 
     /**

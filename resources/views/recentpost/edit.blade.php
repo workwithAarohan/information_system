@@ -31,7 +31,7 @@
     <div class="row" style="justify-content: center"> 
         <div class="col-md-6 border p-5">
 
-            <form action="{{ route('recposts.update', $recentpost->id) }}" method="POST">
+            <form action="{{ route('recposts.update', $recentpost->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 
