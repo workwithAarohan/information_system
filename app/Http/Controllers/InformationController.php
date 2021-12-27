@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Information;
 
-class Information extends Controller
+class InformationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -45,7 +46,12 @@ class Information extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $information=Information::find($id);
+        return view('Information.show',[
+            'information'=> $information 
+        ]);
+
     }
 
     /**

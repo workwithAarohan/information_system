@@ -6,7 +6,7 @@
             <div class="col-md-8 bg-white p-4 shadow h-100">
                 <h4 class="mb-4">Information Description</h4>
                 <div class="row" style="column-gap: 10px;">
-                    @foreach ($information->descriptions as $value)
+                    @foreach ($information->descriptions as $description)
                         <div class="col-md-3 mb-3" style="width: 270px;">
                             <div class="card">
                                 <img src="{{ asset('image/posts/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
@@ -26,7 +26,7 @@
             <div class="col bg-white shadow p-0" style="height: 480px;">
                 <h4 class="bg-success p-2 w-100 text-white" style="text-align: center;">Add New Photo</h4>
                 <div class="mt-3 p-4">
-                    <form action="{{ route('infodesc.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('informationdesc.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-3" style="height: 80px;">
@@ -57,7 +57,7 @@
                             @enderror
                         </div>
 
-                        <input type="hidden" name="type_id" value="{{ $information->id }}">
+                        <input type="hidden" name="type_id" value="{{ $gallery->id }}">
 
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="is_active">

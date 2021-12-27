@@ -80,6 +80,7 @@ class RecentpostController extends Controller
            /*  dd($recentpost->photo); */
             
         }
+        
         $recentpost->save();
 
         return redirect('/recposts');
@@ -128,8 +129,6 @@ class RecentpostController extends Controller
         $request->validate([
 
                 'date' => 'required|string|max:255',
-    
-                'photo' => 'required',
                 
                 'title_en' => 'required|string|max:255',
 
@@ -146,12 +145,24 @@ class RecentpostController extends Controller
         $recentpost = Recentpost::find($id);
         
         $recentpost->date = $request->input('date');
-        $recentpost->photo = $request->input('photo');
         $recentpost->title_en = $request->input('title_en');
         $recentpost->title_np = $request->input('title_np');
         $recentpost->description_en = $request->input('description_en');
         $recentpost->description_np = $request->input('description_np');
+       
+        if($request->hasFile('photo'))
+        {
+            $image=$request->file('photo');
+            $filename = $image->getClientOriginalName();
+            $Path = public_path('/image/posts');
+            $image->move($Path, $filename);
+            $recentpost->photo = $filename;
+
+           /*  dd($recentpost->photo); */
+            
+        }
         $recentpost->save();
+
 
         return redirect('/recposts');
     }
