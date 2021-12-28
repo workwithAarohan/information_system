@@ -634,6 +634,9 @@ Home
 
                             <main class="Loop js-loop">
 
+
+
+
                                 @foreach ($events as $event)
                                     
                                 
@@ -645,7 +648,9 @@ Home
                                 <section class="">
                                     <div class="row bg-white p-4 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="{{ asset('image/event/'.$event->image) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
+
+                                            <img src="{{ asset('image/information/'.$event->file) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+
                                         </div>
                                         <div class="col">
                                             <p>
@@ -833,6 +838,10 @@ Home
                                         </div>
                                     </div>
                                 </div>
+
+                                @endforeach
+                         
+
                                 @endforeach --}}
 
                                 {{-- <div class="bg-white" style="width: 50%;">
@@ -872,6 +881,7 @@ Home
                                         </div>
                                     </div>
                                 </div> --}}
+
                             </div>
 
 
@@ -887,56 +897,61 @@ Home
                     <div class="tab-pane" id="notices" style="background-color: #EBF2FB;">
                         <h4>News and Notices</h4>
                         <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
-                            <div class="bg-white" style="width: 50%;">
+                            <div class="row" style="column-gap: 20px;justify-content:center;">
+                            @foreach ($news as $new)
+                            <div class="col-md-5" style="background: white; margin-bottom:20px; padding:15px;width:600px">
+                                <div class="d-flex">
+                                  <img src="{{ asset('image/information/'.$new->file) }}" alt="img" style="width:150px;height:150px;margin-right:20px;">
+                                 <div >
+                                  <h4>{{ $new->date }}</h4>
+                                  <p>{{ $new->title_en }}</p>
+                                </div>
+                                </div>
+                              </div>
+                                
+                            
+                           {{--  <div class="bg-white" style="width: 50%;">
                                 <div class="row">
                                     <div class="col-md-5 mt-3">
-                                        <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class=" d-block ">
+
+                                        <img src="{{ asset('image/information/'.$new->file) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+
                                     </div>
                                     <div class="col mt-3">
                                         <p>
                                             <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            17 Dec, 2021
+                                            {{ $new->date }}
                                         </p>
 
-                                        <a href="">PIS Update Campaign-Week 12</a>
+                                        <a href="">{{ $new->title_en }}</a>
 
-                                        <p>PIS Update Campaign-Week 10</p>
+                                        <p>{{ $new->description_en }}</p>
 
-                                    </div>
-                                </div>
-                            </div>
+
 
                             <div class=" bg-white" style="width: 50%;">
                                 <div class="row">
                                     <div class="col-md-5 p-3">
                                         <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
+
                                     </div>
-                                    <div class="col">
-                                        <p>
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            17 Dec, 2021
-                                        </p>
-
-                                        <a href="">PIS Update Campaign-Week 12</a>
-
-                                        <p>PIS Update Campaign-Week 10</p>
-
+                                </div> --}}
+                                @endforeach
+                            </div>
+                        </div>
+                            <div class="row p-4 mt-3 justify-content-center" style="">
+                                <div class="col-md-2">
+                                    <div class="btn btn-danger">
+                                        View Page
                                     </div>
                                 </div>
                             </div>
+
+                            
                         </div>
-                        <div class="row p-4 mt-3 justify-content-center" style="">
-                            <div class="col-md-2">
-                                <div class="btn btn-danger">
-                                    View Page
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
-                    <div class="tab-pane" id="download" style="background-color: #EBF2FB;">
-                        <h4 class="mt-2">Messages tab content</h4>
-                        <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
-                    </div>
+                    
 
             </div>
 
