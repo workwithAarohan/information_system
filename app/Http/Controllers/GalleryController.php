@@ -95,9 +95,11 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Gallery $gallery)
     {
-        //
+        return view('gallery_info.edit', [
+            'gallery' => $gallery
+        ]);
     }
 
     /**
@@ -107,9 +109,45 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Gallery $gallery)
     {
-        //
+        $request->validate([
+            'title_en' => 'required',
+            'title_np' => 'required',
+        ]);
+
+        if($request->has('is_active'))
+        {
+            $request->merge([
+                'is_active' => 1,
+            ]);
+        }
+        else
+        {
+            $request->merge([
+                'is_active' => 0,
+            ]);
+        }
+        
+        if($request->hasFile('file'))
+        {
+            $image=$request->file('file');
+            $filename = $image->getClientOriginalName();
+            $Path = public_path('/image/photoGallery');
+            $image->move($Path, $filename);
+            $gallery->file=$filename;
+            // $request->merge([
+            //     'file' => $filename,
+            // ]);
+        }
+
+        $gallery->title_en = $request->input('title_en');
+        $gallery->title_np = $request->input('title_np');
+        $gallery->is_active = $request->input('is_active');
+
+        $gallery->save();
+
+        return redirect('/galleryType/'.$gallery->type_id);
     }
 
     /**

@@ -92,7 +92,6 @@ class InformationdescController extends Controller
 
         return redirect('/information/'.$informationdesc->information_id);
     }
-
     /**
      * Display the specified resource.
      *
