@@ -558,7 +558,7 @@ Home
                         <h4>Events</h4>
                         <div class="row bg-white p-4" style="">
                             <div class="col-md-4 p-3">
-                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                             </div>
                             <div class="col">
                                 <p>
@@ -574,7 +574,7 @@ Home
                         </div>
                         <div class="row bg-white p-4 mt-3" style="">
                             <div class="col-md-4 p-3">
-                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                             </div>
                             <div class="col">
                                 <p>
@@ -590,7 +590,7 @@ Home
                         </div>
                         <div class="row bg-white p-4 mt-3" style="">
                             <div class="col-md-4 p-3">
-                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                             </div>
                             <div class="col">
                                 <p>
@@ -633,32 +633,39 @@ Home
                         <div class="scroll">
 
                             <main class="Loop js-loop">
+
+                                @foreach ($events as $event)
+                                    
+                                
+
                                 @foreach ($informations as $information)
+
 
 
                                 <section class="">
                                     <div class="row bg-white p-4 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="{{ asset('image/event/'.$information->image) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="{{ asset('image/event/'.$event->image) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
                                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                {{ $information->date }}
+                                                {{ $event->date }}
                                             </p>
 
-                                            <a href=""> {{ $information->title_en }}</a>
+                                            <a href=""> {{ $event->title_en }}</a>
 
-                                            <p> {{ $information->description_en }}</p>
+                                            <p> {{ $event->description_en }}</p>
 
                                         </div>
                                     </div>
                                 </section>
                                 @endforeach
+
                                 {{-- <section >
                                     <div class="row bg-white p-4 mt-3 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
@@ -676,7 +683,7 @@ Home
                                 <section class="three">
                                     <div class="row bg-white p-4 mt-3 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
@@ -694,7 +701,7 @@ Home
                                 <section class="four mb-3">
                                     <div class="row bg-white p-4 mt-3 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
@@ -713,7 +720,7 @@ Home
                                 <section class="one is-clone">
                                     <div class="row bg-white p-4 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
@@ -731,7 +738,7 @@ Home
                                 <section class="two is-clone">
                                     <div class="row bg-white p-4 mt-3 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
@@ -746,6 +753,7 @@ Home
                                         </div>
                                     </div>
                                 </section> --}}
+
                             </main>
 
                         </div>
@@ -763,30 +771,74 @@ Home
 
                             <h4>Recent Posts</h4>
                             <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
-                                @foreach ($recentposts as $recentpost)
-                                <div class="bg-white" style="width: 50%;">
-                                    <div class="row">
+                                <div class="row" style="column-gap: 20px; justify-content:center">
+
+                                    @foreach ($recentposts as $recentpost)
+                                        
+                                            <div class="col-md-5" style="background: white; margin-bottom:20px; width:600px; padding:15px">
+                                                <div class="d-flex" >
+                                                    <img src="{{  asset('/image/information/'.$recentpost->file) }}" alt="" style="width: 150px; height: 150px; object-fit: cover; margin-right: 20px" class=" d-block ">
+                                                    
+                                                    <div>
+                                                        <p>
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            {{ $recentpost->date }} 
+                                                        </p> 
+
+                                                        <a href={{ route('infodesc.show', $recentpost->id) }}>{{ $recentpost->title_en }}</a>
+
+                                                        {{-- <p>{{ $recentpost->desc_en }}</p> --}}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- <div class="col-md-5"  style="background: white; margin-bottom:20px; width:600px; padding:15px">
+                                                <div class="d-flex">
+                                                    <img src="{{ asset('/image/information/img1.png') }}" alt="" style="width: 150px; height: 150px; object-fit: cover;  margin-right: 20px" class=" d-block">
+                                                    <h4>Date: </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5"  style="background: white; margin-bottom:20px; width:600px;padding:15px">
+                                                <div class="d-flex">
+                                                    <img src="{{ asset('/image/information/img1.png') }}" alt="" style="width: 150px; height: 150px; object-fit: cover;  margin-right: 20px" class=" d-block">
+                                                    <h4>Date: </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5"  style="background: white; margin-bottom:20px; width:600px; padding:15px">
+                                                <div class="d-flex">
+                                                    <img src="{{ asset('/image/information/img1.png') }}" alt="" style="width: 150px; height: 150px; object-fit: cover;  margin-right: 20px" class=" d-block">
+                                                    <h4>Date: </h4>
+                                                </div>
+                                            </div> --}}
+                                        
+                                    @endforeach
+                                </div>
+
+                              {{--   @foreach ($recentposts as $recentpost)
+                                <div class="bg-white" style="width: 50%; ">
+                                    <div class="row" >
                                         <div class="col-md-5 mt-3">
-                                            <img src="{{ asset('/image/'.$recentpost->photo) }}" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="{{ asset('/image/information/'.$recentpost->file) }}" alt="" style="width: 150px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
-                                        <div class="col mt-3">
+                                        <div class="col-md-5 mt-3">
                                             <p>
                                                 <i class="fa fa-calendar" aria-hidden="true"></i>
                                                 {{ $recentpost->date }}
                                             </p>
 
-                                            <a href="">{{ $recentpost->title_en }}</a>
+                                            <a href={{ route('infodesc.show', $recentpost->id) }}>{{ $recentpost->title_en }}</a>
 
                                             <p>{{ $recentpost->description_en }}</p>
 
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
+                                @endforeach --}}
+
                                 {{-- <div class="bg-white" style="width: 50%;">
                                     <div class="row">
                                         <div class="col-md-5 mt-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
                                         <div class="col mt-3">
                                             <p>
@@ -805,7 +857,7 @@ Home
                                 <div class=" bg-white" style="width: 50%;">
                                     <div class="row">
                                         <div class="col-md-5 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
@@ -838,7 +890,7 @@ Home
                             <div class="bg-white" style="width: 50%;">
                                 <div class="row">
                                     <div class="col-md-5 mt-3">
-                                        <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class=" d-block ">
                                     </div>
                                     <div class="col mt-3">
                                         <p>
@@ -857,7 +909,7 @@ Home
                             <div class=" bg-white" style="width: 50%;">
                                 <div class="row">
                                     <div class="col-md-5 p-3">
-                                        <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                        <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
                                     </div>
                                     <div class="col">
                                         <p>

@@ -11,6 +11,6 @@ class Information_desc extends Model
 
     public function info()
     {
-        return $this->belongsTo(Information::class);
+        return $this->belongsTo(Information::class, 'information_id');
     }
 }

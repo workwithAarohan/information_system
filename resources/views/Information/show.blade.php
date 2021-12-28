@@ -72,67 +72,17 @@
                             </tr>
                         @endforeach
                     </table>
-                {{-- 
+                
                     <br><br>
-                    <a class = "button" href="{{ route('infodesc.create') }}">Add New Member</a> --}}
-                
+                    <a class = "button" href="{{ route('infodesc.create', $information->id) }}">Add New Member</a>
+                    
+                   
                 
                 </div>
             </div>
 
 
-            <div class="col bg-white shadow p-0" style="height: auto;">
-                <h4 class="bg-success p-2 w-100 text-white" style="text-align: center;">Add New Information</h4>
-                <div class="mt-3 p-4">
-
-                    <form action="{{ route('infodesc.store') }}" method="post" enctype="multipart/form-data">
-                        @csrf
-
-                        <label for="date" class="form-label">Date: </label>
-                    <input type="date" class="form-control" name="date"><br>
-                    
-
-                    
-                    <label for="title" class="form-label">Title in English: </label>
-                    <input type="text" class="form-control" name="title_en" id="title_en"><br>
-                    
-                    <label for="title" class="form-label">Title in Nepali: </label>
-                    <input type="text" class="form-control" name="title_np" id="title_np"><br>
-                        
-                    
-                    <label for="image">Image file input: </label>
-                    <input type="file" class="form-control" name="file"><br><br>
-                    
-
-                    
-                    <label for="description" class="form-label">Description in English: </label>
-                    <input type="text" class="form-control" name="desc_en" id="description_en"><br>
-                    
-                    
-                    <label for="description" class="form-label">Description in Nepali: </label>
-                    <input type="text" class="form-control" name="desc_np" id="description_np"><br>
-                
-
-                        <input type="hidden" name="information_id" value="{{ $information->id }}">
-
-                        {{-- <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="is_active">
-                            <label class="form-check-label @error('is_active') is-invalid @enderror" for="flexCheckDefault">
-                              is_active
-                            </label>
-                            @error('is_active')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div> --}}
-
-                        <div class="mb-3">
-                            <input type="submit" value="Add" class="btn btn-success form-control">
-                        </div>
-                    </form>
-                </div>
-            </div>
+           
         </div>
     </div>
 
