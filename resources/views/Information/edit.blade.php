@@ -24,7 +24,7 @@
             <input type="text" class="form-control" id="exampleInputPassword1" name="category" id="desc1" value="{{ $information->category}}">
           </div>
        
-        <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="submit" class="btn btn-danger">Edit</button>
       </form>
     </div>
 </div>

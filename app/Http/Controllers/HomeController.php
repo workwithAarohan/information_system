@@ -31,10 +31,13 @@ class HomeController extends Controller
             'photos' => Gallery::where('is_active',1)->get(),
 
 
-            'events' => Information_desc::where('information_id', 1)
+            'events' => Information_desc::where('information_id', 3)
                 ->orderBy('date','desc')
                 ->get(),
-            'recentposts' => Information_desc::where('information_id', 2)
+            'recentposts' => Information_desc::where('information_id', 5)
+                ->orderBy('date','desc')
+                ->get(),
+                'news' => Information_desc::where('information_id', 6)
                 ->orderBy('date','desc')
                 ->get(),
 
