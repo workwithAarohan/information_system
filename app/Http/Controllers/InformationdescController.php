@@ -91,7 +91,6 @@ class InformationdescController extends Controller
 
         return redirect('/infodesc');
     }
-
     /**
      * Display the specified resource.
      *
