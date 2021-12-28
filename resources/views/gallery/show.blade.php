@@ -81,41 +81,33 @@
 @endsection
 
 @section('content')
-    <div class="container mt-4">
+    <div class="container">
         <div class="row" style="column-gap: 20px;">
-            <div class="col-md-8 bg-white p-4 shadow h-100">
-                <h4 class="mb-4">{{ $gallery->title }} Gallery</h4>
-                <form action="" class="">
-                    <div class="row" style="">
-                        @foreach ($gallery->galleries as $value)
-                            {{-- <div class="col-md-3 mb-3" style="width: 270px;">
-                                <div class="card">
-                                    <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $value->title_en }}</h5>
-                                        @if ($value->is_active)
-                                            <input type="checkbox" name="" id="" checked>
-                                        @else
-                                            <input type="checkbox" name="" id="">
-                                        @endif
-                                    </div>
-                                </div>
-                            </div> --}}
-                            <div class="col-md-3 mb-4"  style="width: 270px;">
-                                @if ($value->is_active)
+            <div class="col-md-8 bg-white p-4 shadow" >
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <h4 class="mb-4">{{ $gallery->title }} Gallery</h4>
+                    <input type="submit" id="submitButton" class="btn btn-primary fw-bold d-none" value="Save Changes">
+                </div>
 
-                                    <label for="{{ $value->id }}" class="option_item">
-                                        <input type="checkbox" name="" id="{{ $value->id }}" class="checkbox facebook" checked>
+                <form action="" class="">
+                    <div class="row justify-content-center">
+                        @foreach ($gallery->galleries as $value)
+
+                            <div class="col-md-3 mb-4 "  style="width: 270px;">
+                                @if ($value->is_active)
+                                    <label for="gallery{{ $value->id }}" class="option_item">
+                                        <input type="checkbox" name="" id="gallery{{ $value->id }}" class="checkbox facebook" checked>
                                         <div class="option_inner">
                                             <div class="tickmark"></div>
                                             <div class="p-1">
                                                 <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; padding: 0 0 0 0; ">
-                                                <div class="card-body">
+                                                <div class="card-body d-flex justify-content-between">
                                                     <h5 class="card-title">{{ $value->title_en }}</h5>
+                                                    <p>
+                                                        <a href="{{ route('gallery.edit', $value->id) }}" class="btn btn-secondary">Edit</a>
+                                                    </p>
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     </label>
                                 @else
@@ -125,8 +117,11 @@
                                             <div class="tickmark"></div>
                                             <div class="p-1">
                                                 <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; padding: 0 0 0 0; ">
-                                                <div class="card-body">
+                                                <div class="card-body d-flex justify-content-between">
                                                     <h5 class="card-title">{{ $value->title_en }}</h5>
+                                                    <p>
+                                                        <a href="{{ route('gallery.edit', $value->id) }}" class="btn btn-secondary">Edit</a>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -199,6 +194,9 @@
     <script>
 
         $(document).ready(function(){
+            $('#gallery7').click(function() {
+               $('#submitButton').show();
+            });
 
             nepalify.interceptElementById("title_np");
 
