@@ -124,4 +124,5 @@ Route::resource('/photogallery', App\Http\Controllers\PhotoController::class);
 
 Route::resource('/information', App\Http\Controllers\InformationController::class);
 
-Route::resource('/infodesc', App\Http\Controllers\InformationdescController::class);
+Route::resource('/infodesc', App\Http\Controllers\InformationdescController::class, ['except' => 'create']);
+Route::get('/infodesc/{information}/create', [App\Http\Controllers\InformationdescController::class, 'create'])->name('infodesc.create');

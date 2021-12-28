@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Information_desc;
+use App\Models\Information;
 
 class InformationdescController extends Controller
 {
@@ -22,9 +23,12 @@ class InformationdescController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //
+        return view('Information_desc.create', [
+            'information' => Information::find($id)
+        ]);
 
     }
 
@@ -101,7 +105,15 @@ class InformationdescController extends Controller
     public function show($id)
     {
         //
+        $informationdesc=Information_desc::findOrFail($id);
 
+        /*    dd($information->descriptions); */
+   
+        //    dd($informationdesc->info->category);
+        
+           return view('Information_desc.show',[
+               'informationdesc'=> $informationdesc,
+           ]);
 
     }
 
