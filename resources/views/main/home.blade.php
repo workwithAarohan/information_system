@@ -354,9 +354,6 @@ Home
 
                             <?php $i++; ?>
                         @endforeach
-                      {{-- <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> --}}
                     </div>
                     <div class="carousel-inner">
                         <?php $i=0;  ?>
@@ -378,24 +375,6 @@ Home
                             @endif
                             <?php $i++; ?>
                         @endforeach
-                      {{-- <div class="carousel-item active">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h6>Sanitation</h6>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/240603745_2913323288933132_5877172252914171574_n-46369.jpg" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h6>Quiz Contest Program</h6>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h6>Sanitation Progam</h6>
-                        </div>
-                      </div> --}}
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -405,11 +384,7 @@ Home
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
-
-                {{-- <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" style="object-fit: cover; width: 90%; height: 216px;">
-
-                <p class="mt-2" style="font-family: sans-serif;">Sanitation Program</p> --}}
+                </div>
 
             </div>
             <div class="col-md-3 border mt-4 p-3 rounded" style="width: 320px;">
@@ -456,11 +431,9 @@ Home
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
 
-                {{-- <img src="https://nijamati.pis.gov.np/public/uploads/Imagefile/3-58914.jpg" style="object-fit: cover; width: 90%; height: 216px;">
 
-                <p class="mt-2" style="font-family: sans-serif;">Sanitation Program</p> --}}
 
             </div>
         </div>
@@ -497,21 +470,12 @@ Home
                 <ul style="list-style-type: none">
                     <li class="body-list">
                         <p>Bids</p>
-                        {{-- <a href="" class="p-3 link" >
-                            <i class="fas fa-angle-right"></i>
-                        </a> --}}
                     </li>
                     <li class="body-list">
                         <p>Press Release</p>
-                        {{-- <a href="" class="p-3 link" >
-                            <i class="fas fa-angle-right"></i>
-                        </a> --}}
                     </li>
                     <li class="body-list">
                         <p>Feedback</p>
-                        {{-- <a href="" class="p-3 link" >
-                            <i class="fas fa-angle-right"></i>
-                        </a> --}}
                     </li>
 
                 </ul>
@@ -552,213 +516,33 @@ Home
                 </div>
             </div>
             <div class="mt-3 rounded p-5 mb-3" style="background-color: #EBF2FB; ">
-
-                {{-- <div class="tab-content">
-                    <div class="tab-pane show active" id="events">
-                        <h4>Events</h4>
-                        <div class="row bg-white p-4" style="">
-                            <div class="col-md-4 p-3">
-                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    17 Dec, 2021
-                                </p>
-
-                                <a href="">PIS Update Campaign-Week 12</a>
-
-                                <p>PIS Update Campaign-Week 10</p>
-
-                            </div>
-                        </div>
-                        <div class="row bg-white p-4 mt-3" style="">
-                            <div class="col-md-4 p-3">
-                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    17 Dec, 2021
-                                </p>
-
-                                <a href="">PIS Update Campaign-Week 12</a>
-
-                                <p>PIS Update Campaign-Week 9</p>
-
-                            </div>
-                        </div>
-                        <div class="row bg-white p-4 mt-3" style="">
-                            <div class="col-md-4 p-3">
-                                <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                            </div>
-                            <div class="col">
-                                <p>
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    17 Dec, 2021
-                                </p>
-
-                                <a href="">PIS Update Campaign-Week 12</a>
-
-                                <p>PIS Update Campaign-Week 8</p>
-
-                            </div>
-                        </div>
-                        <div class="row p-4 mt-3 justify-content-center" style="">
-                            <div class="col-md-2">
-                                <div class="btn btn-danger">
-                                    View Page
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="posts">
-                    <h4 class="mt-2">Messages tab content</h4>
-                    <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
-                </div>
-                <div class="tab-pane fade" id="notices">
-                    <h4 class="mt-2">Messages tab content</h4>
-                    <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
-                </div>
-                <div class="tab-pane fade" id="download">
-                    <h4 class="mt-2">Messages tab content</h4>
-                    <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis natoque penatibus et magnis.</p>
-                </div> --}}
-
                 <div class="tab-content">
                     <div class="tab-pane show active" id="events" style="background-color: #EBF2FB;">
-
                         <h4>Events</h4>
                         <div class="scroll">
-
                             <main class="Loop js-loop">
-
-
-
-
                                 @foreach ($events as $event)
-                                    
-                                
+                                    <section class="">
+                                        <div class="row bg-white p-4 hey" style="">
+                                            <div class="col-md-4 p-3">
 
-                                @foreach ($informations as $information)
+                                                <img src="{{ asset('image/information/'.$event->file) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
 
+                                            </div>
+                                            <div class="col">
+                                                <p>
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                    {{ $event->date }}
+                                                </p>
 
+                                                <a href=""> {{ $event->title_en }}</a>
 
-                                <section class="">
-                                    <div class="row bg-white p-4 hey" style="">
-                                        <div class="col-md-4 p-3">
+                                                <p> {{ $event->description_en }}</p>
 
-                                            <img src="{{ asset('image/information/'.$event->file) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-
+                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                {{ $event->date }}
-                                            </p>
-
-                                            <a href=""> {{ $event->title_en }}</a>
-
-                                            <p> {{ $event->description_en }}</p>
-
-                                        </div>
-                                    </div>
-                                </section>
+                                    </section>
                                 @endforeach
-
-                                {{-- <section >
-                                    <div class="row bg-white p-4 mt-3 hey" style="">
-                                        <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                                        </div>
-                                        <div class="col">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                16 Dec, 2021
-                                            </p>
-
-                                            <a href="">PIS Update Campaign-Week 11</a>
-
-                                            <p>PIS Update Campaign-Week 9</p>
-
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="three">
-                                    <div class="row bg-white p-4 mt-3 hey" style="">
-                                        <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                                        </div>
-                                        <div class="col">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                15 Dec, 2021
-                                            </p>
-
-                                            <a href="">PIS Update Campaign-Week 10</a>
-
-                                            <p>PIS Update Campaign-Week 9</p>
-
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="four mb-3">
-                                    <div class="row bg-white p-4 mt-3 hey" style="">
-                                        <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                                        </div>
-                                        <div class="col">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                14 Dec, 2021
-                                            </p>
-
-                                            <a href="">PIS Update Campaign-Week 9</a>
-
-                                            <p>PIS Update Campaign-Week 9</p>
-
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <section class="one is-clone">
-                                    <div class="row bg-white p-4 hey" style="">
-                                        <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                                        </div>
-                                        <div class="col">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                17 Dec, 2021
-                                            </p>
-
-                                            <a href="">PIS Update Campaign-Week 12</a>
-
-                                            <p>PIS Update Campaign-Week 10</p>
-
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="two is-clone">
-                                    <div class="row bg-white p-4 mt-3 hey" style="">
-                                        <div class="col-md-4 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 4-37432.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                                        </div>
-                                        <div class="col">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                16 Dec, 2021
-                                            </p>
-
-                                            <a href="">PIS Update Campaign-Week 11</a>
-
-                                            <p>PIS Update Campaign-Week 9</p>
-
-                                        </div>
-                                    </div>
-                                </section> --}}
-
                             </main>
 
                         </div>
@@ -771,197 +555,76 @@ Home
                         </div>
 
 
-                </div>
+                    </div>
                     <div class="tab-pane" id="posts" style="background-color: #EBF2FB;">
 
-                            <h4>Recent Posts</h4>
-                            <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
-                                <div class="row" style="column-gap: 20px; justify-content:center">
+                        <h4>Recent Posts</h4>
+                        <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
+                            <div class="row" style="column-gap: 20px; justify-content:center">
 
-                                    @foreach ($recentposts as $recentpost)
-                                        
-                                            <div class="col-md-5" style="background: white; margin-bottom:20px; width:600px; padding:15px">
-                                                <div class="d-flex" >
-                                                    <img src="{{  asset('/image/information/'.$recentpost->file) }}" alt="" style="width: 150px; height: 150px; object-fit: cover; margin-right: 20px" class=" d-block ">
-                                                    
-                                                    <div>
-                                                        <p>
-                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                            {{ $recentpost->date }} 
-                                                        </p> 
+                                @foreach ($recentposts as $recentpost)
 
-                                                        <a href={{ route('infodesc.show', $recentpost->id) }}>{{ $recentpost->title_en }}</a>
+                                    <div class="col-md-5" style="background: white; margin-bottom:20px; width:600px; padding:15px">
+                                        <div class="d-flex" >
+                                            <img src="{{  asset('/image/information/'.$recentpost->file) }}" alt="" style="width: 150px; height: 150px; object-fit: cover; margin-right: 20px" class=" d-block ">
 
-                                                        {{-- <p>{{ $recentpost->desc_en }}</p> --}}
-                                                    </div>
-                                                </div>
+                                            <div>
+                                                <p>
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                    {{ $recentpost->date }}
+                                                </p>
+
+                                                <a href={{ route('infodesc.show', $recentpost->id) }}>{{ $recentpost->title_en }}</a>
+
+                                                {{-- <p>{{ $recentpost->desc_en }}</p> --}}
                                             </div>
-
-                                            {{-- <div class="col-md-5"  style="background: white; margin-bottom:20px; width:600px; padding:15px">
-                                                <div class="d-flex">
-                                                    <img src="{{ asset('/image/information/img1.png') }}" alt="" style="width: 150px; height: 150px; object-fit: cover;  margin-right: 20px" class=" d-block">
-                                                    <h4>Date: </h4>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5"  style="background: white; margin-bottom:20px; width:600px;padding:15px">
-                                                <div class="d-flex">
-                                                    <img src="{{ asset('/image/information/img1.png') }}" alt="" style="width: 150px; height: 150px; object-fit: cover;  margin-right: 20px" class=" d-block">
-                                                    <h4>Date: </h4>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5"  style="background: white; margin-bottom:20px; width:600px; padding:15px">
-                                                <div class="d-flex">
-                                                    <img src="{{ asset('/image/information/img1.png') }}" alt="" style="width: 150px; height: 150px; object-fit: cover;  margin-right: 20px" class=" d-block">
-                                                    <h4>Date: </h4>
-                                                </div>
-                                            </div> --}}
-                                        
-                                    @endforeach
-                                </div>
-
-                              {{--   @foreach ($recentposts as $recentpost)
-                                <div class="bg-white" style="width: 50%; ">
-                                    <div class="row" >
-                                        <div class="col-md-5 mt-3">
-                                            <img src="{{ asset('/image/information/'.$recentpost->file) }}" alt="" style="width: 150px; height: 150px; object-fit: cover;" class=" d-block ">
-                                        </div>
-                                        <div class="col-md-5 mt-3">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                {{ $recentpost->date }}
-                                            </p>
-
-                                            <a href={{ route('infodesc.show', $recentpost->id) }}>{{ $recentpost->title_en }}</a>
-
-                                            <p>{{ $recentpost->description_en }}</p>
-
                                         </div>
                                     </div>
-                                </div>
 
                                 @endforeach
-                         
-
-                                @endforeach --}}
-
-                                {{-- <div class="bg-white" style="width: 50%;">
-                                    <div class="row">
-                                        <div class="col-md-5 mt-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/document-icon-36553-68664.png" alt="" style="width: 150px; height: 150px; object-fit: cover;" class=" d-block ">
-                                        </div>
-                                        <div class="col mt-3">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                17 Dec, 2021
-                                            </p>
-
-                                            <a href="">PIS Update Campaign-Week 12</a>
-
-                                            <p>PIS Update Campaign-Week 10</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class=" bg-white" style="width: 50%;">
-                                    <div class="row">
-                                        <div class="col-md-5 p-3">
-                                            <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-                                        </div>
-                                        <div class="col">
-                                            <p>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                17 Dec, 2021
-                                            </p>
-
-                                            <a href="">PIS Update Campaign-Week 12</a>
-
-                                            <p>PIS Update Campaign-Week 10</p>
-
-                                        </div>
-                                    </div>
-                                </div> --}}
-
                             </div>
 
 
-                            <div class="row p-4 mt-3 justify-content-center" style="">
-                                <div class="col-md-2">
-                                    <div class="btn btn-danger">
-                                        View Page
-                                    </div>
+                        </div>
+
+
+                        <div class="row p-4 mt-3 justify-content-center" style="">
+                            <div class="col-md-2">
+                                <div class="btn btn-danger">
+                                    View Page
                                 </div>
                             </div>
+                        </div>
 
                     </div>
                     <div class="tab-pane" id="notices" style="background-color: #EBF2FB;">
                         <h4>News and Notices</h4>
                         <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
                             <div class="row" style="column-gap: 20px;justify-content:center;">
-                            @foreach ($news as $new)
-                            <div class="col-md-5" style="background: white; margin-bottom:20px; padding:15px;width:600px">
-                                <div class="d-flex">
-                                  <img src="{{ asset('image/information/'.$new->file) }}" alt="img" style="width:150px;height:150px;margin-right:20px;">
-                                 <div >
-                                  <h4>{{ $new->date }}</h4>
-                                  <p>{{ $new->title_en }}</p>
-                                </div>
-                                </div>
-                              </div>
-                                
-                            
-                           {{--  <div class="bg-white" style="width: 50%;">
-                                <div class="row">
-                                    <div class="col-md-5 mt-3">
-
-                                        <img src="{{ asset('image/information/'.$new->file) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
-
+                                @foreach ($news as $new)
+                                    <div class="col-md-5" style="background: white; margin-bottom:20px; padding:15px;width:600px">
+                                        <div class="d-flex">
+                                            <img src="{{ asset('image/information/'.$new->file) }}" alt="img" style="width:150px;height:150px;margin-right:20px;">
+                                        <div >
+                                            <h4>{{ $new->date }}</h4>
+                                            <p>{{ $new->title_en }}</p>
+                                        </div>
                                     </div>
-                                    <div class="col mt-3">
-                                        <p>
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            {{ $new->date }}
-                                        </p>
-
-                                        <a href="">{{ $new->title_en }}</a>
-
-                                        <p>{{ $new->description_en }}</p>
-
-
-
-                            <div class=" bg-white" style="width: 50%;">
-                                <div class="row">
-                                    <div class="col-md-5 p-3">
-                                        <img src="https://nijamati.pis.gov.np/public/uploads/Publication/PIS Update Cmapaign Week 7-70132.jpg" alt="" style="width: 200px; height: 150px; object-fit: cover;" class=" d-block ">
-
-                                    </div>
-                                </div> --}}
+                                </div>
                                 @endforeach
                             </div>
                         </div>
-                            <div class="row p-4 mt-3 justify-content-center" style="">
-                                <div class="col-md-2">
-                                    <div class="btn btn-danger">
-                                        View Page
-                                    </div>
+                        <div class="row p-4 mt-3 justify-content-center" style="">
+                            <div class="col-md-2">
+                                <div class="btn btn-danger">
+                                    View Page
                                 </div>
                             </div>
-
-                            
                         </div>
-                        
                     </div>
-                    
-
+                </div>
             </div>
-
-
         </div>
-
-
-
-
-
     </div>
 
     <script>
