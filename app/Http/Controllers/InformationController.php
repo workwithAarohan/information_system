@@ -54,8 +54,13 @@ class InformationController extends Controller
     {
         
         $information=Information::find($id);
+
+     /*    dd($information->descriptions); */
+
+        $information->descriptions = $information->descriptions()->orderBy('date','desc')->get();
+        
         return view('Information.show',[
-            'information'=> $information 
+            'information'=> $information,
         ]);
 
     }

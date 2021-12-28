@@ -42,15 +42,15 @@ class InformationdescController extends Controller
 
             'date' => 'required|string|max:255',
 
-            'photo' => 'required',
+            'file' => 'required',
             
             'title_en' => 'required|string|max:255',
 
             'title_np' => 'required|string|max:255',
 
-            'description_en' => 'required|string|max:255',
+            'desc_en' => 'required|string|max:255',
 
-            'description_np' => 'required|string|max:255',
+            'desc_np' => 'required|string|max:255',
 
 
         ]);
@@ -60,7 +60,7 @@ class InformationdescController extends Controller
         {
             $image=$request->file('file');
             $filename = $image->getClientOriginalName();
-            $Path = public_path('/image/posts');
+            $Path = public_path('/image/information');
             $image->move($Path, $filename);
             // $request->image=$filename;
             $request->merge([
@@ -69,13 +69,14 @@ class InformationdescController extends Controller
         }
 
 
-        $informationdesc = new Informationdesc();
+        $informationdesc = new Information_desc();
 
         $informationdesc->date = $request->input('date');
         $informationdesc->title_en = $request->input('title_en');
         $informationdesc->title_np = $request->input('title_np');
-        $informationdesc->description_en = $request->input('description_en');
-        $informationdesc->description_np = $request->input('description_np');
+        $informationdesc->desc_en = $request->input('desc_en');
+        $informationdesc->desc_np = $request->input('desc_np');
+        $informationdesc->file = $request->input('file');
         $informationdesc->information_id = $request->input('information_id');
 
        /*  $gallery = Gallery::create([
@@ -89,7 +90,7 @@ class InformationdescController extends Controller
         
         $informationdesc->save();
 
-        return redirect('/infodesc');
+        return redirect('/information/'.$informationdesc->information_id);
     }
     /**
      * Display the specified resource.
@@ -100,6 +101,8 @@ class InformationdescController extends Controller
     public function show($id)
     {
         //
+
+
     }
 
     /**
@@ -111,6 +114,10 @@ class InformationdescController extends Controller
     public function edit($id)
     {
         //
+        $informationdesc = Information_desc::find($id);
+
+        return view('information_desc.edit', compact("informationdesc")
+    );
     }
 
     /**
@@ -123,6 +130,50 @@ class InformationdescController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([
+
+            'date' => 'required|string|max:255',
+            
+            'title_en' => 'required|string|max:255',
+
+            'title_np' => 'required|string|max:255',
+
+            'desc_en' => 'required|string|max:255',
+
+            'desc_np' => 'required|string|max:255',
+
+
+    ]);
+
+    $informationdesc = Information_desc::find($id);
+
+    
+    if($request->hasFile('file'))
+    {
+        $image=$request->file('file');
+        $filename = $image->getClientOriginalName();
+        $Path = public_path('/image/posts');
+        $image->move($Path, $filename);
+        $informationdesc->file  = $filename;
+
+       /*  dd($informationdesc->photo); */
+        
+    }
+
+    
+    $informationdesc->date = $request->input('date');
+    $informationdesc->title_en = $request->input('title_en');
+    $informationdesc->title_np = $request->input('title_np');
+    $informationdesc->desc_en = $request->input('desc_en');
+    $informationdesc->desc_np = $request->input('desc_np');
+    
+    $informationdesc->information_id = $request->input('information_id');
+   
+   
+    $informationdesc->save();
+
+
+    return redirect('/information/'.$informationdesc->information_id);
     }
 
     /**
@@ -134,5 +185,10 @@ class InformationdescController extends Controller
     public function destroy($id)
     {
         //
+        $informationdesc = Information_desc::find($id);
+
+        $informationdesc->delete();
+
+        return redirect()->back();
     }
 }
