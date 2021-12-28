@@ -31,7 +31,7 @@ class HomeController extends Controller
             'photos' => Gallery::where('is_active',1)->get(),
 
 
-            'events' => Information_desc::where('information_id', 1)
+            'informations' => Information_desc::where('information_id', 1)
                 ->orderBy('date','desc')
                 ->get(),
             'recentposts' => Information_desc::where('information_id', 2)

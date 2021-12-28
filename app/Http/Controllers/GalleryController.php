@@ -41,6 +41,7 @@ class GalleryController extends Controller
             'file' => 'required',
         ]);
 
+        dd($request->input('code'));
         if($request->has('is_active'))
         {
             $request->merge([
@@ -54,18 +55,31 @@ class GalleryController extends Controller
             ]);
         }
 
-
-        if($request->hasFile('file'))
+        if($request->input('code')!=1)
         {
-            $image=$request->file('file');
-            $filename = $image->getClientOriginalName();
-            $Path = public_path('/image/photoGallery');
-            $image->move($Path, $filename);
-            // $request->image=$filename;
+            if($request->hasFile('file'))
+            {
+                $image=$request->file('file');
+                $filename = $image->getClientOriginalName();
+                $Path = public_path('/image/photoGallery');
+                $image->move($Path, $filename);
+                // $request->image=$filename;
+                $request->merge([
+                    'file' => $filename,
+                ]);
+            }
+
+        }
+
+        else
+        {
             $request->merge([
-                'file' => $filename,
+                'file' => $request->input('video'),
             ]);
         }
+
+
+
 
         $gallery = Gallery::create([
             'title_en' => $request->input('title_en'),
@@ -84,9 +98,11 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Gallery $gallery)
     {
-        //
+        return view('gallery_info.show', [
+            'gallery' => $gallery
+        ]);
     }
 
     /**
@@ -128,7 +144,7 @@ class GalleryController extends Controller
                 'is_active' => 0,
             ]);
         }
-        
+
         if($request->hasFile('file'))
         {
             $image=$request->file('file');
@@ -156,8 +172,10 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Gallery $gallery)
     {
-        //
+        $gallery->delete();
+
+        return redirect()->back();
     }
 }

@@ -15,4 +15,15 @@ class Gallery extends Model
     {
         return $this->belongsTo(GalleryType::class, 'type_id');
     }
+
+    /**
+     *
+     * Accessor
+     *
+     * Change created_at data format
+     */
+    public function getCreatedAtAttribute($value)
+    {
+        return date('d/m/Y', strtotime($value));
+    }
 }
