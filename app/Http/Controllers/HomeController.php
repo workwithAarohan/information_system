@@ -6,6 +6,7 @@ use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\Recentpost;
 use Illuminate\Http\Request;
+use App\Models\Information_desc;
 
 class HomeController extends Controller
 {
@@ -31,6 +32,8 @@ class HomeController extends Controller
 
             'events' => Event::orderBy('date','desc')->get(),
             'recentposts' => Recentpost::orderBy('date','desc')->get(),
+            'informations' => Information_desc::all(),
+            'recentposts' => Information_desc::where('information_id',2)->orderBy('date','desc')->get(),
 
         ]);
     }

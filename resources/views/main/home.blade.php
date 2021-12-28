@@ -633,23 +633,23 @@ Home
                         <div class="scroll">
 
                             <main class="Loop js-loop">
-                                @foreach ($events as $event)
+                                @foreach ($informations as $information)
                                     
                                 
                                 <section class="">
                                     <div class="row bg-white p-4 hey" style="">
                                         <div class="col-md-4 p-3">
-                                            <img src="{{ asset('image/event/'.$event->image) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                            <img src="{{ asset('image/event/'.$information->image) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
                                         </div>
                                         <div class="col">
                                             <p>
                                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                {{ $event->date }}
+                                                {{ $information->date }}
                                             </p>
 
-                                            <a href=""> {{ $event->title_en }}</a>
+                                            <a href=""> {{ $information->title_en }}</a>
 
-                                            <p> {{ $event->description_en }}</p>
+                                            <p> {{ $information->description_en }}</p>
 
                                         </div>
                                     </div>
