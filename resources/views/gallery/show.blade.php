@@ -66,6 +66,21 @@
         border-color: #129b46 transparent transparent #129b46;
     }
 
+    .option_item .option_inner .Button
+    {
+        position: absolute;
+        top: 2px;
+        right: 4px;
+    }
+
+    .option_item .option_inner .Button .FormButton
+    {
+        background: transparent;
+        padding: 6px;
+        border: none;
+        color: #203AB1;
+    }
+
     .option_item .checkbox:checked ~ .option_inner .tickmark:before
     {
         content: "";
@@ -77,6 +92,26 @@
         border: 3px solid;
         border-color: transparent transparent #fff #fff;
         transform: rotate(-45deg);
+    }
+
+    .tab-button
+    {
+        border: none;
+        background: transparent;
+    }
+
+    .tab-button.active:after
+    {
+        content: "";
+        display: block;
+        width: auto;
+        padding-top: 0px;
+        border-bottom: 2px solid black;
+    }
+
+    .tab-button.active
+    {
+        font-weight: bold;
     }
 @endsection
 
@@ -93,46 +128,98 @@
                     <div class="row justify-content-center">
                         @foreach ($gallery->galleries as $value)
 
-                            <div class="col-md-3 mb-4 "  style="width: 270px;">
-                                @if ($value->is_active)
-                                    <label for="gallery{{ $value->id }}" class="option_item">
-                                        <input type="checkbox" name="" id="gallery{{ $value->id }}" class="checkbox facebook" checked>
-                                        <div class="option_inner">
-                                            <div class="tickmark"></div>
-                                            <div class="p-1">
-                                                <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; padding: 0 0 0 0; ">
-                                                <div class="card-body d-flex justify-content-between">
-                                                    <h5 class="card-title">{{ $value->title_en }}</h5>
-                                                    <p>
-                                                        <a href="{{ route('gallery.edit', $value->id) }}" class="btn btn-secondary">Edit</a>
-                                                    </p>
+                            <div class="col-md-4 mb-4 "  style="">
+                                @if ($gallery->id == 1)
+                                    @if ($value->is_active)
+                                        <label for="gallery{{ $value->id }}" class="option_item">
+                                            <input type="checkbox" name="" id="gallery{{ $value->id }}" class="checkbox" checked>
+                                            <div class="option_inner">
+                                                <div class="tickmark"></div>
+                                                <div class="Button d-flex">
+                                                    <a href="{{ route('gallery.edit', $value->id) }}" class="FormButton">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                    <form action="{{ route('gallery.destroy', $value->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="FormButton" type="submit">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                                <div class="p-1">
+                                                    <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; padding: 0 0 0 0; ">
+                                                    <div class="card-body d-flex justify-content-between">
+                                                        <a href="{{ route('gallery.show', $value->id) }}" class="card-title" style="text-decoration: none; font-size: small; font-weight: bold;">
+                                                            {{ $value->title_en }}
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </label>
-                                @else
-                                    <label for="{{ $value->id }}" class="option_item">
-                                        <input type="checkbox" name="" id="{{ $value->id }}" class="checkbox" >
-                                        <div class="option_inner">
-                                            <div class="tickmark"></div>
-                                            <div class="p-1">
-                                                <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; padding: 0 0 0 0; ">
-                                                <div class="card-body d-flex justify-content-between">
-                                                    <h5 class="card-title">{{ $value->title_en }}</h5>
-                                                    <p>
-                                                        <a href="{{ route('gallery.edit', $value->id) }}" class="btn btn-secondary">Edit</a>
-                                                    </p>
+                                        </label>
+                                    @else
+                                        <label for="{{ $value->id }}" class="option_item">
+                                            <input type="checkbox" name="" id="{{ $value->id }}" class="checkbox" >
+                                            <div class="option_inner">
+                                                <div class="tickmark"></div>
+                                                <div class="Button d-flex">
+                                                    <a href="{{ route('gallery.edit', $value->id) }}" class="FormButton">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                    <form action="{{ route('gallery.destroy', $value->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="FormButton" type="submit">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                                <div class="p-1">
+                                                    <img src="{{ asset('image/photoGallery/'. $value->file) }}" class="card-img-top" style="height: 280px; object-fit: cover; padding: 0 0 0 0; ">
+                                                    <div class="card-body d-flex justify-content-between">
+                                                        <a href="{{ route('gallery.show', $value->id) }}" class="card-title" style="text-decoration: none; font-size: small; font-weight: bold;">
+                                                            {{ $value->title_en }}
+                                                        </a>
+
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </label>
+                                    @endif
+                                @elseif ($gallery->id == 2)
+                                <label for="gallery{{ $value->id }}" class="option_item">
+                                    <input type="checkbox" name="" id="gallery{{ $value->id }}" class="checkbox" checked>
+                                    <div class="option_inner">
+                                        <div class="tickmark"></div>
+                                        <div class="Button d-flex">
+                                            <a href="{{ route('gallery.edit', $value->id) }}" class="FormButton">
+                                                <i class="fas fa-pen"></i>
+                                            </a>
+                                            <form action="{{ route('gallery.destroy', $value->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="FormButton" type="submit">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
                                         </div>
-                                    </label>
+                                        <div class="p-1">
+                                            <iframe  height="280" class="w-100" src="{{ $value->file }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <div class="card-body d-flex justify-content-between">
+                                                <a href="{{ route('gallery.show', $value->id) }}" class="card-title" style="text-decoration: none; font-size: small; font-weight: bold;">
+                                                    {{ $value->title_en }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
                                 @endif
                             </div>
                         @endforeach
                     </div>
                 </form>
             </div>
-            <div class="col bg-white shadow p-0" style="height: 480px;">
+            <div class="col bg-white shadow p-0" style="height: 480px; ">
                 <h4 class="bg-success p-2 w-100 text-white" style="text-align: center;">Add New Photo</h4>
                 <div class="mt-3 p-4">
                     <form action="{{ route('gallery.store') }}" method="post" enctype="multipart/form-data">
@@ -156,17 +243,47 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="mb-3" style="height: 80px;">
-                            <label for="title_np" class="form-label">Photo</label>
-                            <input type="file" class="form-control @error('file') is-invalid @enderror" name="file">
-                            @error('file')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                        <div class="mb-3" style="height: 90px;">
+                            @if ($gallery->id ==1)
+                                <label for="photo" class="form-label">Photo</label>
+                                <input type="file" class="form-control @error('file') is-invalid @enderror" name="file" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" id="photo">
+                                @error('file')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            @elseif (($gallery->id ==2))
+                                <label for="video" class="form-label">Video</label>
+                                <input type="text" name="file" class="form-control" placeholder="Video-Link" id="#video">
+                            @endif
+                            {{-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <button class="tab-button active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Photo</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="tab-button" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Video Link</button>
+                                </li>
+                              </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <input type="file" class="form-control @error('file') is-invalid @enderror" name="file" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" id="photo">
+                                    @error('file')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="tab-pane" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                    <input type="text" name="file" class="form-control" placeholder="Video-Link" id="#video">
+
+                                </div>
+                            </div> --}}
+
                         </div>
 
                         <input type="hidden" name="type_id" value="{{ $gallery->id }}">
+
+                        <input type="hidden" name="code" id="code">
 
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="is_active">
@@ -194,11 +311,16 @@
     <script>
 
         $(document).ready(function(){
-            $('#gallery7').click(function() {
-               $('#submitButton').show();
+            nepalify.interceptElementById("title_np");
+
+            $('#video').on('change',function(){
+                alert('Help');
+                $('#code').val("1");
             });
 
-            nepalify.interceptElementById("title_np");
+            $('#photo').change(function(){
+                $('#code').val("0");
+            });
 
         });
     </script>

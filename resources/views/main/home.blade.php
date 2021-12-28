@@ -363,14 +363,14 @@ Home
                         @foreach ($photos as $photo)
                             @if ($i==0)
                                 <div class="carousel-item active">
-                                    <img src="{{ asset('image/'.$photo->file) }}" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
+                                    <img src="{{ asset('image/photoGallery/'.$photo->file) }}" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h6>{{ $photo->english_title }}</h6>
                                     </div>
                                 </div>
                             @else
                                 <div class="carousel-item">
-                                    <img src="/image/photoGallery/{{ $photo->photo }}" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
+                                    <img src="{{ asset('image/photoGallery/'.$photo->file) }}" class="d-block w-100" style="height: 280px; object-fit: cover; object-position: 50 % 50 % ;">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h6>{{ $photo->english_title }}</h6>
                                     </div>
@@ -633,9 +633,15 @@ Home
                         <div class="scroll">
 
                             <main class="Loop js-loop">
+
                                 @foreach ($events as $event)
                                     
                                 
+
+                                @foreach ($informations as $information)
+
+
+
                                 <section class="">
                                     <div class="row bg-white p-4 hey" style="">
                                         <div class="col-md-4 p-3">
