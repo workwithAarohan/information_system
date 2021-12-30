@@ -7,6 +7,9 @@
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet">
     <script src="{{asset('js/app.js')}}"></script>
     <link rel="stylesheet" href="/css/informationdesc.css">
+
+  
+
     <title>informationdescs</title>
 </head>
 <body>
@@ -63,6 +66,12 @@
      nepalify.interceptElementById("description_np");
 
 
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('.summernote').summernote();
     });
 </script>
 

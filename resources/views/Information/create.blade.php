@@ -14,8 +14,12 @@
     <form action="{{ route('information.store') }}" method="post">
         @csrf
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">category</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" name="category">
+            <label for="code" class="form-label">Code: </label>
+            <input type="text" class="form-control" id="code" name="code">
+          </div>
+        <div class="mb-3">
+          <label for="category" class="form-label">Category: </label>
+          <input type="text" class="form-control" id="category" name="category">
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
