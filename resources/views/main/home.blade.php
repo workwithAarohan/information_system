@@ -535,7 +535,7 @@ Home
                                                     {{ $event->date }}
                                                 </p>
 
-                                                <a href=""> {{ $event->title_en }}</a>
+                                                <a href=> {{ $event->title_en }}</a>
 
                                                 <p> {{ $event->description_en }}</p>
 
