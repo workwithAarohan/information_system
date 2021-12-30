@@ -15,8 +15,10 @@ class CreateGalleryTypesTable extends Migration
     {
         Schema::create('gallery_types', function (Blueprint $table) {
             $table->id();
+
+            $table->string('code')->unique();
             $table->string('title');
-            
+
             $table->timestamps();
         });
     }

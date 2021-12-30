@@ -11,7 +11,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">Code</th>
                             <th scope="col">Gallery Type</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -19,7 +19,7 @@
                     <tbody>
                         @foreach ($galleries as $gallery)
                         <tr>
-                            <td>{{ $gallery->id }}</td>
+                            <td>{{ $gallery->code }}</td>
                             <td>{{ $gallery->title }}</td>
                             <td>
                                 <div class="d-flex">
@@ -44,6 +44,17 @@
                 <form action="{{ route('galleryType.store') }}" method="POST" class="mt-2 p-4">
 
                     <input type="hidden" name="_token" id="csrf" value="{{ csrf_token() }}">
+
+                    <div class="mb-3">
+                        <label for="code" class="form-label">Code: </label>
+                        <input type="text" name="code" id="code" class="form-control @error('code') is-invalid @enderror">
+
+                        @error('code')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
                     <div class="mb-3">
                         <label for="title" class="form-label">Title: </label>

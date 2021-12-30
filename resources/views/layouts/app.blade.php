@@ -20,6 +20,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    {{-- CKEditor --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
+
     <style>
         @yield('style');
     </style>
@@ -88,5 +91,13 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/nepalify.js') }}"></script>
+    <link rel="stylesheet" href="/css/recentpost.css">
+    
+    <script>
+        @yield('script');
+    </script>
 </body>
 </html>

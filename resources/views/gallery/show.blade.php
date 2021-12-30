@@ -121,7 +121,7 @@
             <div class="col-md-8 bg-white p-4 shadow" >
                 <div class="d-flex justify-content-between align-items-baseline">
                     <h4 class="mb-4">{{ $gallery->title }} Gallery</h4>
-                    <input type="submit" id="submitButton" class="btn btn-primary fw-bold d-none" value="Save Changes">
+                    <input type="submit" id="submitButton" class="btn btn-primary fw-bold" value="Save Changes">
                 </div>
 
                 <form action="" class="">

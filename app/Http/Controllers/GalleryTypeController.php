@@ -39,6 +39,7 @@ class GalleryTypeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'code' => 'required|unique:gallery_types',
             'title' => 'required',
         ]);
 
