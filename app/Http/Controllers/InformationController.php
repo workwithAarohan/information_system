@@ -37,7 +37,22 @@ class InformationController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+
+            'code' => 'required|string|unique:information',
+
+            
+
+            'category' => 'required|string|max:255',
+
+
+        ]);
+
+
+
         $information= new Information();
+        $information->code = $request->input('code');
         $information->category = $request->input('category');
         $information->save();
 

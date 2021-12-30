@@ -7,6 +7,7 @@ use App\Models\Gallery;
 use App\Models\Recentpost;
 use Illuminate\Http\Request;
 use App\Models\Information_desc;
+use App\Models\Information;
 
 class HomeController extends Controller
 {
@@ -30,13 +31,25 @@ class HomeController extends Controller
         return view('main.home', [
             'photos' => Gallery::where('is_active',1)->get(),
 
-            'events' => Information_desc::where('information_id', 3),
-
-            'recentposts' => Information_desc::where('information_id', 5)
-                ->orderBy('date','desc')
+            'events' => Information_desc::where(
+                'information_id', Information::where(
+                    'code', '01')
+                    ->pluck('id')
+                )->orderBy('date','desc')
                 ->get(),
-            'news' => Information_desc::where('information_id', 6)
-                ->orderBy('date','desc')
+
+            'recentposts' => Information_desc::where(
+                'information_id', Information::where(
+                    'code', '02')
+                    ->pluck('id')
+                ) ->orderBy('date','desc')
+                ->get(),
+
+            'news' => Information_desc::where(
+                'information_id', Information::where(
+                    'code', '03')
+                    ->pluck('id')
+                ) ->orderBy('date','desc')
                 ->get(),
 
 
