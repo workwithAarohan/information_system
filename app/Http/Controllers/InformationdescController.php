@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Information_desc;
 use App\Models\Information;
+use Illuminate\Support\Facades\File;
 
 class InformationdescController extends Controller
 {
@@ -197,7 +198,14 @@ class InformationdescController extends Controller
     public function destroy($id)
     {
         //
-        $informationdesc = Information_desc::find($id);
+        $informationdesc = Information_desc::findOrFail($id);
+
+        $image_path = public_path('/image/information/'.$informationdesc->file);
+
+        if (file_exists($image_path))
+        {
+            File::delete($image_path);
+        }
 
         $informationdesc->delete();
 
