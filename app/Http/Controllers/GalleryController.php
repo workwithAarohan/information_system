@@ -41,7 +41,6 @@ class GalleryController extends Controller
             'file' => 'required',
         ]);
 
-        dd($request->input('code'));
         if($request->has('is_active'))
         {
             $request->merge([
@@ -55,31 +54,17 @@ class GalleryController extends Controller
             ]);
         }
 
-        if($request->input('code')!=1)
+        if($request->hasFile('file'))
         {
-            if($request->hasFile('file'))
-            {
-                $image=$request->file('file');
-                $filename = $image->getClientOriginalName();
-                $Path = public_path('/image/photoGallery');
-                $image->move($Path, $filename);
-                // $request->image=$filename;
-                $request->merge([
-                    'file' => $filename,
-                ]);
-            }
-
-        }
-
-        else
-        {
+            $image=$request->file('file');
+            $filename = $image->getClientOriginalName();
+            $Path = public_path('/image/photoGallery');
+            $image->move($Path, $filename);
+            // $request->image=$filename;
             $request->merge([
-                'file' => $request->input('video'),
+                'file' => $filename,
             ]);
         }
-
-
-
 
         $gallery = Gallery::create([
             'title_en' => $request->input('title_en'),
