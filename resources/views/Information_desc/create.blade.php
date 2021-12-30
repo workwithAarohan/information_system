@@ -57,19 +57,43 @@
             </div>
         </div>
     </div>
-
+   	
+<script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/nepalify.js') }}"></script>
     <link rel="stylesheet" href="/css/recentpost.css">
 
     <script>
 
+ClassicEditor
+                .create( document.querySelector( '#description_en' ))
+                    .catch( error => {
+                        console.error( error );
+                    });
+                .create( document.querySelector( '#description_np' ) )
+                    .catch( error => {
+                        console.error( error );
+                    });
+
         $(document).ready(function(){
 
             nepalify.interceptElementById("title_np");
             nepalify.interceptElementById("description_np");
 
-        });
+            ClassicEditor
+                .create( document.querySelector( '#description_en' ))
+                    .catch( error => {
+                        console.error( error );
+                    });
+                .create( document.querySelector( '#description_np' ) )
+                    .catch( error => {
+                        console.error( error );
+                    });
+            });
     </script>
+    
+
+
+
 
 @endsection
