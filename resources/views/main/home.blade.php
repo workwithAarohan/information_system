@@ -515,90 +515,101 @@ Home
                     </div>
                 </div>
             </div>
-            <div class="mt-3 rounded p-5 mb-3" style="background-color: #EBF2FB; ">
+            <div class="mt-3 rounded p-5 mb-3" style="background-color: #EBF2FB;  ">
                 <div class="tab-content">
                     <div class="tab-pane show active" id="events" style="background-color: #EBF2FB;">
                         <h4>Events</h4>
-                        <div class="scroll">
-                            <main class="Loop js-loop">
-                                @foreach ($events as $event)
-                                    <section class="">
-                                        <div class="row bg-white p-4 hey" style="">
-                                            <div class="col-md-4 p-3">
+                        @if (count($events)!=0)
+                            <div class="scroll">
+                                <main class="Loop js-loop">
+                                    @foreach ($events as $event)
+                                        <section class="">
+                                            <div class="row bg-white p-4 hey" style="">
+                                                <div class="col-md-4 p-3">
 
-                                                <img src="{{ asset('image/information/'.$event->file) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
+                                                    <img src="{{ asset('image/information/'.$event->file) }}" alt="" style="width: 200px; height: 150px; object-fit: cover;" class="mx-auto d-block ">
 
+                                                </div>
+                                                <div class="col">
+                                                    <p>
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        {{ $event->date }}
+                                                    </p>
+
+                                                    <a href=> {{ $event->title_en }}</a>
+
+                                                    <p> {{ $event->description_en }}</p>
+
+                                                </div>
                                             </div>
-                                            <div class="col">
-                                                <p>
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    {{ $event->date }}
-                                                </p>
+                                        </section>
+                                    @endforeach
+                                </main>
 
-                                                <a href=> {{ $event->title_en }}</a>
-
-                                                <p> {{ $event->description_en }}</p>
-
-                                            </div>
-                                        </div>
-                                    </section>
-                                @endforeach
-                            </main>
-
-                        </div>
-                        <div class="row p-4 mt-3 justify-content-center mb-0" style="">
-                            <div class="col-md-2">
-                                <div class="btn btn-danger">
-                                    View Page
+                            </div>
+                            <div class="row p-4 mt-3 justify-content-center mb-0" style="">
+                                <div class="col-md-2">
+                                    <div class="btn btn-danger">
+                                        View Page
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @else
+                            <h5 style="transform: translate(50%,50%);">No event found.</h5>
+                        @endif
+
 
 
                     </div>
                     <div class="tab-pane" id="posts" style="background-color: #EBF2FB;">
 
                         <h4>Recent Posts</h4>
-                        <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
-                            <div class="row" style="column-gap: 20px; justify-content:center">
 
-                                @foreach ($recentposts as $recentpost)
+                        @if (count($recentposts)!=0)
+                            <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
+                                <div class="row" style="column-gap: 20px; justify-content:center">
 
-                                    <div class="col-md-5" style="background: white; margin-bottom:20px; width:600px; padding:15px">
-                                        <div class="d-flex" >
-                                            <img src="{{  asset('/image/information/'.$recentpost->file) }}" alt="" style="width: 150px; height: 150px; object-fit: cover; margin-right: 20px" class=" d-block ">
+                                    @foreach ($recentposts as $recentpost)
 
-                                            <div>
-                                                <p>
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    {{ $recentpost->date }}
-                                                </p>
+                                        <div class="col-md-5" style="background: white; margin-bottom:20px; width:600px; padding:15px">
+                                            <div class="d-flex" >
+                                                <img src="{{  asset('/image/information/'.$recentpost->file) }}" alt="" style="width: 150px; height: 150px; object-fit: cover; margin-right: 20px" class=" d-block ">
 
-                                                <a href={{ route('infodesc.show', $recentpost->id) }}>{{ $recentpost->title_en }}</a>
+                                                <div>
+                                                    <p>
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        {{ $recentpost->date }}
+                                                    </p>
 
-                                                {{-- <p>{{ $recentpost->desc_en }}</p> --}}
+                                                    <a href={{ route('infodesc.show', $recentpost->id) }}>{{ $recentpost->title_en }}</a>
+
+                                                    {{-- <p>{{ $recentpost->desc_en }}</p> --}}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                @endforeach
+                                    @endforeach
+                                </div>
+
+
                             </div>
-
-
-                        </div>
-
-
-                        <div class="row p-4 mt-3 justify-content-center" style="">
-                            <div class="col-md-2">
-                                <div class="btn btn-danger">
-                                    View Page
+                            <div class="row p-4 mt-3 justify-content-center" style="">
+                                <div class="col-md-2">
+                                    <div class="btn btn-danger">
+                                        View Page
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @else
+                            <h5 style="transform: translate(50%,50%);">No recent post found.</h5>
+                        @endif
+
+
 
                     </div>
                     <div class="tab-pane" id="notices" style="background-color: #EBF2FB;">
                         <h4>News and Notices</h4>
+                        @if (count($news)!=0)
                         <div class="d-flex justify-content-center mt-4" style="column-gap: 50px;">
                             <div class="row" style="column-gap: 20px;justify-content:center;">
                                 @foreach ($news as $new)
@@ -621,6 +632,9 @@ Home
                                 </div>
                             </div>
                         </div>
+                        @else
+                            <h5 style="transform: translate(50%,50%);">No event found.</h5>
+                        @endif
                     </div>
                 </div>
             </div>
