@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
  
   
         <!-- fonts style -->
@@ -30,10 +31,11 @@
         @yield('style');
     </style>
 
+
 </head>
 
 <body>
-    
+
 <!-- Banner -->
 {{-- <a href="https://therichpost.com" class="btn w-full btn-primary text-truncate rounded-0 py-2 border-0 position-relative" style="z-index: 1000;"> <strong>For more admin teplates:</strong> The design system for Bootstrap 5. Browse all →
 </a> --}}
@@ -121,11 +123,11 @@
                 </div>
             </div>
         </header>
-        
+
         <!-- Main -->
         <main class="py-6 bg-surface-secondary">
             <div class="container-fluid">
-                
+
                 @yield('content')
                 <!-- Card stats -->
                 {{-- <div class="row g-6 mb-6">
@@ -285,10 +287,10 @@
                     </div>
                     <div class="card-footer border-0 py-5"> <span class="text-muted text-sm">Showing 10 items out of 250 results found</span> </div>
                 </div> --}}
-           
+
             </div>
         </main>
-    
+
     </div>
 </div>
  

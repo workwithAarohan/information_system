@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.dashboard')
 
 @section('style')
 
@@ -243,8 +243,8 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="mb-3" style="height: 90px;">
-                            @if ($gallery->id ==1)
+                        <div class="mb-3" style="height: 80px;">
+                            @if ($gallery->code =='01')
                                 <label for="photo" class="form-label">Photo</label>
                                 <input type="file" class="form-control @error('file') is-invalid @enderror" name="file" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" id="photo">
                                 @error('file')
@@ -252,7 +252,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            @elseif (($gallery->id ==2))
+                            @elseif (($gallery->code == '02'))
                                 <label for="video" class="form-label">Video</label>
                                 <input type="text" name="file" class="form-control" placeholder="Video-Link" id="#video">
                             @endif
