@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.dashboard')
 
 @section('content')
     <div class="container mt-4">
@@ -79,10 +79,7 @@
                    
                 
                 </div>
-            </div>
-
-
-           
+            </div>   
         </div>
     </div>
 

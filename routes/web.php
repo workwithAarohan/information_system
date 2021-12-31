@@ -23,6 +23,14 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin.content');
+});
+
 Route::get('/test', function() {
     return view('test' ,[
         'gallery' => App\Models\GalleryType::find(1)
