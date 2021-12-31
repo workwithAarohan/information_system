@@ -515,7 +515,9 @@ Home
                     </div>
                 </div>
             </div>
+
             <div class="mt-3 rounded p-5 mb-3" style="background-color: #EBF2FB;  ">
+
                 <div class="tab-content">
                     <div class="tab-pane show active" id="events" style="background-color: #EBF2FB;">
                         <h4>Events</h4>
@@ -652,6 +654,9 @@ Home
                 $(".popup").hide();
             });
         });
+
+
+    
     </script>
 
 
