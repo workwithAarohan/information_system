@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.content')
 
 @section('content')
     <div class="container mt-4">
@@ -8,7 +8,7 @@
                 @csrf
                 @method('PUT')
 
-                <div class="mb-3">
+                <div class="mb-3 mt-4">
                     <label for="title" class="form-label">Title: </label>
                     <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{ $gallery->title }}">
 
