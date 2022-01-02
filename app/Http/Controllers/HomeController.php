@@ -8,6 +8,7 @@ use App\Models\Recentpost;
 use Illuminate\Http\Request;
 use App\Models\Information_desc;
 use App\Models\Information;
+use App\Models\Header;
 
 class HomeController extends Controller
 {
@@ -58,7 +59,8 @@ class HomeController extends Controller
             'photos' => Gallery::where('is_active',1)->get(),
             'events' => $events,
             'recentposts' => $posts,
-            'news' => $news
+            'news' => $news,
+            'headers'=> Header::all()
 
             // 'events' => Information_desc::where(
             //     'information_id', Information::where(

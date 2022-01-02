@@ -48,8 +48,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        @yield('style');
-    </style>
+      @yield('style');
+      </style>
+      
 </head>
 <body >
 
@@ -97,66 +98,26 @@
 
 
 
-    <div class="container mt-5" >
+    <div class="container-fluid mt-2" >
 
+      @foreach ($headers as $header)
+         
+   <div class="row " style=" background-image: url('{{ asset('image/event/'.$header->Background) }}');">
+        <div class="col-md-2">
+            <img src={{ asset('image/event/'.$header->logo) }} alt="logo" style="height:100px; width:150px; margin:10px;">
+        </div>
 
-
-
-
-
-    <style>
-        @yield('style')
-    </style>
-</head>
-<body >
-
-
-    <div class="container mb-5" >
-
-
-
-
-        <div class="row">
-
-
-
-
-        <div class="row">
-            <div class="col-md-2">
-
-      <img src="{{ asset('/image/logo.png')}}" alt="logo" style="width:6em; height:6em;">
-</div>
-
-
-
-
-
-            <div class="col-md-3">
-
-
-                  <p style="text-transform: uppercase;">Government of Nepal</p>
-      <p>Ministry of Federal Affairs and General Administration</p>  <h5>Rastriya Kitabkhana (Nijamati)
-
-</h5>
-
-
-
-</div>
-
-<div class="col-md-5" >
-       <p>"निजामती सेवा दिवस २०७८-८२ को नारा : "व्यावसायिक र सिर्जनशील प्रशासन : विकास, समृद्धि र सुशासन"</p>
-
-</div>
-
-<div class="col-md-2">
-<img src="{{ asset('/image/nepal-flag.gif')}}" alt="logo" style="width:7em; height:6em;">
-
-</div>
-
-
-
-
-      </div>
+        <div class="col-md-4" >
+            <p>{{ $header->Title_np }}</p>
+            <h5><b><p style="color:red">{{ $header->Department_np }}</p></b></h5>
+           <h4><b> <p>{{ $header->Topic_np }}</p></b></h4>
+        </div>
+        <div class="col-md-4 ">
+            <h5 class="text-center mt-3">{{ $header->slogan }}</h5>
+        </div>
+        <div class="col-md-2">
+           <img src="{{ asset('image/event/' .$header->Flag) }}" alt="aa" srcset="" style="height: 100px;margin:10px;">
+        </div>
     </div>
 
 
@@ -164,19 +125,8 @@
 
 
 
-
+    @endforeach
       </div>
-
-      </div>
-
-
-
-
-
-<div class="row m-0">
-
-
-    </div>
 
 
 
