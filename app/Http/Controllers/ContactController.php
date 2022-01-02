@@ -43,17 +43,25 @@ class ContactController extends Controller
         //
         $request->validate([
 
-            'location' => 'required|string|max:255',
+            'location_en' => 'required|string|max:255',
 
-            'contact_no' => 'required|string|max:255',
+            'contact_en' => 'required|string|max:255',
             
-            'helpline_no' => 'required|string|max:255',
+            'helpline_en' => 'required|string|max:255',
 
             'email' => 'required|string|email|max:255',
 
             'mapper' => 'required|string|max:255',
 
-            'working_time' => 'required|string|max:255',
+            'working_en' => 'required|string|max:255',
+
+            'location_np' => 'required|string|max:255',
+
+            'contact_np' => 'required|string|max:255',
+            
+            'helpline_np' => 'required|string|max:255',
+
+            'working_np' => 'required|string|max:255',
 
             
 
@@ -64,12 +72,16 @@ class ContactController extends Controller
 
         $contact = new Contact();
 
-        $contact->location = $request->input('location');
-        $contact->contact_no = $request->input('contact_no');
-        $contact->helpline_no = $request->input('helpline_no');
+        $contact->location_en = $request->input('location_en');
+        $contact->contact_en = $request->input('contact_en');
+        $contact->helpline_en = $request->input('helpline_en');
         $contact->email = $request->input('email');
         $contact->mapper = $request->input('mapper');
-        $contact->working_time = $request->input('working_time');
+        $contact->working_en = $request->input('working_en');
+        $contact->location_np = $request->input('location_np');
+        $contact->contact_np = $request->input('contact_np');
+        $contact->helpline_np = $request->input('helpline_np');
+        $contact->working_np = $request->input('working_np');
         
         
         $contact->save();
@@ -97,6 +109,10 @@ class ContactController extends Controller
     public function edit($id)
     {
         //
+        $contact = Contact::find($id);
+        return view('contact.edit', [
+            'contact' => $contact       
+        ]);
     }
 
     /**
@@ -109,6 +125,48 @@ class ContactController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $request->validate([
+
+            'location_en' => 'required|string|max:255',
+
+            'contact_en' => 'required|string|max:255',
+            
+            'helpline_en' => 'required|string|max:255',
+
+            'email' => 'required|string|email|max:255',
+
+            'mapper' => 'required|string|max:255',
+
+            'working_en' => 'required|string|max:255',
+
+            'location_np' => 'required|string|max:255',
+
+            'contact_np' => 'required|string|max:255',
+            
+            'helpline_np' => 'required|string|max:255',
+
+            'working_np' => 'required|string|max:255',
+
+        ]);
+
+        $contact = Contact::find($id);
+
+        $contact->location_en = $request->input('location_en');
+        $contact->contact_en = $request->input('contact_en');
+        $contact->helpline_en = $request->input('helpline_en');
+        $contact->email = $request->input('email');
+        $contact->mapper = $request->input('mapper');
+        $contact->working_en = $request->input('working_en');
+        $contact->location_np = $request->input('location_np');
+        $contact->contact_np = $request->input('contact_np');
+        $contact->helpline_np = $request->input('helpline_np');
+        $contact->working_np = $request->input('working_np');
+        
+        
+        $contact->save();
+        return redirect('/contact');
+
     }
 
     /**
