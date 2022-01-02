@@ -136,4 +136,17 @@ Route::resource('/infodesc', App\Http\Controllers\InformationdescController::cla
 
 Route::get('/infodesc/{information}/create', [App\Http\Controllers\InformationdescController::class, 'create'])->name('infodesc.create');
 
+
 Route::resource('/contact', App\Http\Controllers\ContactController::class);
+
+
+
+Route::resource('/header',App\Http\Controllers\HeaderController::class);
+
+
+Route::get('/nav', function()
+{
+    return view('admin.nav');
+});
+
+

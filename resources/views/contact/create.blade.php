@@ -1,8 +1,11 @@
+
 @extends('admin.dashboard')
+
 
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
+
             <div class="col-md-7 bg-white shadow p-0" style="height: auto;">
                 <h4 class="bg-success p-2 w-100 text-white" style="text-align: center;">Contact Details</h4>
                 <div class="mt-3 p-4">
@@ -49,6 +52,7 @@
                         </div>
                         <div class="mb-3">
                             <input type="submit" id="submit" value="Add" class="btn btn-success form-control">
+
                         </div>
                     </form>
                 </div>
@@ -57,5 +61,7 @@
     </div>
 
 
+
   
+
 @endsection

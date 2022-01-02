@@ -1,4 +1,8 @@
-@extends('admin.content')
+@extends('admin.nav')
+
+@section('title')
+    Gallery
+@endsection
 
 @section('content')
     <div class="container">
@@ -39,7 +43,7 @@
                 </table>
 
             </div>
-            <div class="col bg-white p-0 rounded shadow">
+            <div class="col bg-white p-0 rounded shadow" style="height: 330px;">
                 <h5 class="bg-success p-3 text-white mb-4">Create Gallery Type</h5>
                 <form action="{{ route('galleryType.store') }}" method="POST" class="mt-2 p-4">
 
