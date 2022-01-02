@@ -7,36 +7,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body style="background-color: black">
-  <div class="container" style="margin:100px;">
-    <div class="row" style="column-gap: 20px;justify-content:center;background-color:aqua;padding:20px;">
-      <div class="col-md-5" style="background: white; margin-bottom:20px; padding:15px;width:600px">
-        <div class="d-flex">
-          <img src="{{ asset('image/img1.png') }}" alt="img" style="width:150px;height:150px;margin-right:20px;">
-         <div class="para">
-          <h4>date</h4>
-          <p>sujan</p>
-        </div>
-        </div>
+<body>
+  <div class="container ">
+    <div class="row" >
+      <div class="col-md-4">
+        <img src={{ asset('image/information/bookpic.jpg') }} alt="logo" style="height:100px; width:150px; margin:10px;">
       </div>
-      <div class="col-md-5"style="background: white; margin-bottom:20px; padding:15px; width:600px">
-        <div class="d-flex">
-          <img src="{{ asset('image/img1.png') }}" alt="img" style="width:150px;height:150px;margin-right:20px;">
-          <h4>date</h4>
-        </div>
-      </div>
-      <div class="col-md-5"style="background: white;margin-bottom:20px; padding:15px;width:600px">
-        <div class="d-flex">
-          <img src="{{ asset('image/img1.png') }}" alt="img" style="width:150px;height:150px;margin-right:20px;">
-          <h4>date</h4>
-        
-        </div>
-      </div>
-      <div class="col-md-5"style="background: white; margin-bottom:20px; padding:15px;width:600px">
-        <div class="d-flex">
-          <img src="{{ asset('image/img1.png') }}" alt="img" style="width:150px;height:150px;margin-right:20px;">
-          <h4>date</h4>
-        </div>
+    
+      <div class="col-md-4">
+        <p>{{ $header->Title_en }}</p>
       </div>
     </div>
   </div>

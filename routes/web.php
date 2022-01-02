@@ -134,3 +134,6 @@ Route::resource('/information', App\Http\Controllers\InformationController::clas
 
 Route::resource('/infodesc', App\Http\Controllers\InformationdescController::class, ['except' => 'create']);
 Route::get('/infodesc/{information}/create', [App\Http\Controllers\InformationdescController::class, 'create'])->name('infodesc.create');
+ 
+
+Route::resource('/header',App\Http\Controllers\HeaderController::class);
