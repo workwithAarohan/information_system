@@ -135,13 +135,9 @@ Route::resource('/information', App\Http\Controllers\InformationController::clas
 Route::resource('/infodesc', App\Http\Controllers\InformationdescController::class, ['except' => 'create']);
 Route::get('/infodesc/{information}/create', [App\Http\Controllers\InformationdescController::class, 'create'])->name('infodesc.create');
 
- 
+
 
 Route::resource('/header',App\Http\Controllers\HeaderController::class);
-
-
-Route::get('/contact/create', [\App\Http\Controllers\ContactController::class, 'create'])->name('contact.create');
-Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 
 
 Route::get('/nav', function()
