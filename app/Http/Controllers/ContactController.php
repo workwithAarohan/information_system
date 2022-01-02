@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Contact;
 
-class Information_desc extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,11 @@ class Information_desc extends Controller
      */
     public function index()
     {
-       
+        //
+        return view('contact.index', [
+            'contacts' => Contact::all()
+        ]); 
+
     }
 
     /**
@@ -24,6 +29,7 @@ class Information_desc extends Controller
     public function create()
     {
         //
+        return view('contact.create');
     }
 
     /**
@@ -35,6 +41,40 @@ class Information_desc extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+
+            'location' => 'required|string|max:255',
+
+            'contact_no' => 'required|string|max:255',
+            
+            'helpline_no' => 'required|string|max:255',
+
+            'email' => 'required|string|email|max:255',
+
+            'mapper' => 'required|string|max:255',
+
+            'working_time' => 'required|string|max:255',
+
+            
+
+        ]);
+
+
+        
+
+        $contact = new Contact();
+
+        $contact->location = $request->input('location');
+        $contact->contact_no = $request->input('contact_no');
+        $contact->helpline_no = $request->input('helpline_no');
+        $contact->email = $request->input('email');
+        $contact->mapper = $request->input('mapper');
+        $contact->working_time = $request->input('working_time');
+        
+        
+        $contact->save();
+
+        return redirect('/contact');
     }
 
     /**
