@@ -2,8 +2,8 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- 
-  
+
+
         <!-- fonts style -->
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
         <link href="https://therichpost.com/responsivestyle/index.css" rel="stylesheet">
@@ -15,13 +15,13 @@
        <link rel="dns-prefetch" href="//fonts.gstatic.com">
        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-   
+
        <!-- Styles -->
        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-   
+
        {{-- CKEditor --}}
        <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
-   
+
 
 
 
@@ -115,11 +115,7 @@
                             <div class="mx-n1"> <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1"> <span class=" pe-2"> <i class="bi bi-pencil"></i> </span> <span>Edit</span> </a> <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1"> <span class=" pe-2"> <i class="bi bi-plus"></i> </span> <span>Create</span> </a> </div>
                         </div>
                     </div> <!-- Nav -->
-                    <ul class="nav nav-tabs mt-4 overflow-x border-0">
-                        <li class="nav-item "> <a href="#" class="nav-link active">All files</a> </li>
-                        <li class="nav-item"> <a href="#" class="nav-link font-regular">Shared</a> </li>
-                        <li class="nav-item"> <a href="#" class="nav-link font-regular">File requests</a> </li>
-                    </ul>
+                    
                 </div>
             </div>
         </header>
@@ -293,13 +289,13 @@
 
     </div>
 </div>
- 
+
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/nepalify.js') }}"></script>
     <link rel="stylesheet" href="/css/recentpost.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-    
+
     <script>
         @yield('script');
     </script>

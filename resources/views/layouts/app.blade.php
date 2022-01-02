@@ -95,7 +95,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/nepalify.js') }}"></script>
     <link rel="stylesheet" href="/css/recentpost.css">
-    
+
     <script>
         @yield('script');
     </script>

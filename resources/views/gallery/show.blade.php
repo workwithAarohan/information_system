@@ -1,4 +1,8 @@
-@extends('admin.dashboard')
+@extends('admin.nav')
+
+@section('title')
+    {{ $gallery->title_en }} Gallery
+@endsection
 
 @section('style')
 
@@ -308,20 +312,9 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/nepalify.js') }}"></script>
-    <script>
-
+    @section('script')
         $(document).ready(function(){
             nepalify.interceptElementById("title_np");
-
-            $('#video').on('change',function(){
-                alert('Help');
-                $('#code').val("1");
-            });
-
-            $('#photo').change(function(){
-                $('#code').val("0");
-            });
-
         });
-    </script>
+    @endsection
 @endsection
