@@ -1,5 +1,5 @@
 
-@extends('admin.dashboard')
+@extends('admin.nav')
 
 @section('content')
 
