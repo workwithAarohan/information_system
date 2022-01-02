@@ -1,76 +1,135 @@
-@extends('admin.dashboard')
+@extends('admin.nav')
 
 @section('content')
     
-<div class="col-md-4 mt-2 mx-auto border firstfooter">
+<link rel="stylesheet" href="/css/recentpost.css">
 
-    <p class="font-weight-bold text-uppercase mt-3 mb-4 underline">Contact Details</p>
-
-    @foreach ($contacts as $contact)
-        
-
+    <p class="fw-bold text-uppercase mt-3 mb-4 underline"><u>Contact Details</u></p>
    
-        <table>
+        <table class="table border">
             <tr>
-                <td  style="align:center">
-                    <span class="fas fa-building fa-2x"></span>
-                </td>
-                <td >
-                    {{ $contact->location }}
-                </td>
+                <th>
+                    Location in English
+                </th>
+                {{-- <th>
+                    Location in Nepali
+                </th> --}}
+                <th>
+                    Contact No. in English
+                </th>
+                {{-- <th>
+                    Contact No. in Nepali
+                </th> --}}
+                <th>
+                    Helpline No. in English
+                </th>
+                {{-- <th>
+                    Helpline No. in Nepali
+                </th> --}}
+                <th>
+                    Email in English
+                </th>
+                <th>
+                    Mapper in English
+                </th>
+                <th>
+                    Working Hours in English
+                </th>
+                {{-- <th>
+                    Working Hours in English
+                </th> --}}
+                <th>
+                    Action
+                </th>
             </tr>
 
-            <tr>
-            <td  style="align:center; width: 40px;">
-                    <span class="fas fa-phone-square-alt fa-2x"></span>
-                </td>
-                <td >
-                    {{ $contact->contact_no }}
-                </td>
-            </tr>
-
-            <tr>
-            <td  style="align:center; width: 40px;">
-                    <span class="fas fa-print fa-2x"></span>
-                </td>
-                <td >
-                    {{ $contact->helpline_no }}
-                </td>
-            </tr>
-
-            <tr>
-            <td>
-                    <span class="fas fa-envelope fa-2x"></span>
-                </td>
-                <td >
-                    {{ $contact->email }}
-                </td>
-            </tr>
-
-            <tr>
-            <td  style="align:center; width: 40px;">
-                    <span class="fas fa-calendar-day fa-2x"></span>
-                </td>
-                <td >
-                    {{ $contact->mapper }} 
-                </td>
-            </tr>
-
-            <tr>
-                <td  style="align:center; width: 40px;">
-                        <span class="fas fa-calendar-day fa-2x"></span>
-                    </td>
+            
+            @foreach ($contacts as $contact)
+                <tr>
+            
+                
                     <td >
-                        {{ $contact->working_time }} 
+                        {{ $contact->location_en}}
                     </td>
-                </tr>
+                
 
+                
+             
+                    {{-- <td >
+                        {{ $contact->location_np }}
+                    </td> --}}
+                
+
+                
+             
+                    <td >
+                        {{ $contact->contact_en }}
+                    </td>
+                
+
+            
+                    {{-- <td >
+                        {{ $contact->contact_np }}
+                    </td> --}}
+                
+
+                
+               
+                    <td >
+                        {{ $contact->helpline_en }}
+                    </td>
+                
+
+                
+                    
+                    {{-- <td >
+                        {{ $contact->helpline_np }}
+                    </td> --}}
+                
+
+        
+                    <td >
+                        {{ $contact->email }}
+                    </td>
+                
+
+
+                    <td >
+                        {{ $contact->mapper }} 
+                    </td>
+                
+
+                    <td >
+                        {{ $contact->working_en }} 
+                    </td>
+                
+
+
+                    {{-- <td >
+                        {{ $contact->working_np }} 
+                    </td> --}}
+
+
+                    <td style="display: flex; align: center;">
+                
+                        <a class="button" href="{{ route('contact.edit', $contact->id)}}"> Edit </a>
+    
+                        &emsp;
+                        <form action="{{ route('contact.destroy', $contact->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            
+                            <button class="button"> Delete </button>
+                        </form>
+                    </td>
+
+
+
+
+                </tr>
+            @endforeach
+            
 
         </table>
-
-    @endforeach
-
-</div>
-
 
 @endsection
