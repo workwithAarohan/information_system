@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
+    <title>@yield('title')</title>
 
     {{-- Style --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    {{-- Fonts --}}
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     {{-- Script --}}
     <script src="{{ asset('js/app.js') }}"></script>
@@ -67,44 +70,44 @@
         </nav>
 
 
-        <div class="d-flex">
+        <div class="d-flex" style="justify-content: space-between;">
 
             {{-- Sidebar --}}
-            <div class="d-flex flex-column flex-shrink-0 p-3 border me-4" style="width: 280px; background: white; height: 100vh; margin-top: -66px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 border me-5" style="width: 280px; background: white; margin-top: -66px;">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none" style="margin-top: 64px;">
                 <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
                 <span class="fs-4">Dashboard</span>
                 </a>
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                    <a href="{{ route('home') }}" class="nav-link active text-dark fw-bold" aria-current="page" style="">
-                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                    Home
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('galleryType.index') }}" class="nav-link link-dark fw-bold" style="color: #000000">
-                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                    Gallery
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('information.index') }}" class="nav-link link-dark fw-bold">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                        Information
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link link-dark fw-bold">
-                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                    Products
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link link-dark fw-bold">
+                    <li class="nav-item">
+                        <a href="{{ route('home') }}" class="nav-link link-dark fw-bold" aria-current="page" style="">
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                        Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('galleryType.index') }}" class="nav-link link-dark fw-bold" style="color: #000000">
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                        Gallery
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('information.index') }}" class="nav-link link-dark fw-bold">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                            Information
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('header.index') }}" class="nav-link link-dark fw-bold">
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                            Banner
+                        </a>
+                    </li>
+                    <li>
+                    <a href="{{ route('contact.index') }}" class="nav-link link-dark fw-bold">
                     <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                    Customers
+                        Contact Information
                     </a>
                 </li>
                 </ul>

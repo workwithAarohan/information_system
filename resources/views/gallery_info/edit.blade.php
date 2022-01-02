@@ -1,10 +1,16 @@
-@extends('admin.dashboard')
+@extends('admin.nav')
+
+@section('title')
+    Edit {{ $gallery->title_en }}
+@endsection
 
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4 bg-white shadow p-0" style="height: 480px;">
-                <h4 class="bg-success p-2 w-100 text-white" style="text-align: center;">Edit {{ $gallery->type->title }}</h4>
+                <h4 class="bg-success p-2 w-100 text-white" style="text-align: center;">
+                    Edit {{ $gallery->type->title }}
+                </h4>
                 <div class="mt-3 p-4">
                     <form action="{{ route('gallery.update', $gallery->id) }}" method="post" enctype="multipart/form-data">
                         @csrf

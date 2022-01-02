@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.nav')
 
 @section('title')
     {{ $gallery->title_en }}
